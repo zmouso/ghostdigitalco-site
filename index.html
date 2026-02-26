@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghost Digital Co | Websites for Trades & B2B</title>
+  <meta name="description" content="Premium websites for trades and B2B suppliers. Designed to turn visitors into calls and quote requests. Delivered in 7-10 days." />
+  <style>
+    :root{
+      --bg:#020406;
+      --bg-alt:#080B12;
+      --border:rgba(255,255,255,0.08);
+      --text:#F8FAFC;
+      --text-muted:#94A3B8;
+      --accent:#9FE6FF;
+      --radius:12px;
+      --font:"Inter",system-ui,-apple-system,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:var(--bg);color:var(--text)}
+    body{font-family:var(--font);line-height:1.6}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    h1,h2,h3{font-weight:700;letter-spacing:-0.03em;line-height:1.1}
+    h1{font-size:clamp(2.5rem,8vw,4rem);margin-bottom:24px}
+    h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:32px}
+    .eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);font-weight:800;margin-bottom:16px;display:block}
+    .lead{font-size:1.2rem;color:var(--text-muted);max-width:650px;margin-bottom:40px}
+    header{padding:40px 0;border-bottom:1px solid var(--border)}
+    .nav{display:flex;justify-content:space-between;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border-radius:8px;font-weight:700;border:none;cursor:pointer;font-size:.95rem;text-decoration:none}
+    .btn-primary{background:var(--accent);color:#000}
+    .btn-secondary{background:transparent;border:1px solid var(--border);color:#fff}
+    .btn-selected,.btn-added{border:1px solid var(--accent);color:var(--accent);background:transparent}
+    section{padding:80px 0}
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;margin-top:48px}
+    .card{background:var(--bg-alt);border:1px solid var(--border);padding:48px;border-radius:var(--radius);display:flex;flex-direction:column}
+    .price{font-size:3rem;font-weight:800;margin:24px 0}
+    .price span{font-size:1rem;color:var(--text-muted)}
+    .card ul{list-style:none;margin-bottom:32px}
+    .card li{margin-bottom:12px;color:var(--text-muted)}
+    .contact-wrap{max-width:640px;margin:0 auto;background:var(--bg-alt);padding:48px;border-radius:var(--radius);border:1px solid var(--border)}
+    .form-group{margin-bottom:24px}
+    label{display:block;font-size:.75rem;font-weight:800;color:var(--text-muted);margin-bottom:8px;text-transform:uppercase}
+    input,textarea{width:100%;padding:14px;background:#000;border:1px solid var(--border);border-radius:6px;color:#fff}
+    input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+    .selection-pill{display:inline-block;padding:6px 14px;border:1px solid var(--accent);color:var(--accent);border-radius:50px;font-size:.85rem;margin-bottom:16px}
+    footer{padding:60px 0;border-top:1px solid var(--border);text-align:center;color:var(--text-muted);font-size:.85rem}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <strong>GHOST · DIGITAL CO</strong>
+    <a href="#contact" class="btn btn-secondary">Request Quote</a>
+  </div>
+</header>
+
+<main>
+
+<section class="container">
+  <span class="eyebrow">Knoxville, Tennessee</span>
+  <h1>Websites that turn clicks into calls.</h1>
+  <p class="lead">We build premium, conversion-focused websites for trades and B2B suppliers. Delivered in 7–10 days.</p>
+  <a href="#pricing" class="btn btn-primary">See Pricing</a>
+</section>
+
+<section id="pricing" class="container">
+  <span class="eyebrow">Investment</span>
+  <h2>Simple, fixed pricing.</h2>
+
+  <div class="pricing-grid">
+
+    <div class="card">
+      <h3>Website Build</h3>
+      <div class="price">$1,500</div>
+      <ul>
+        <li>5-Page Professional Build</li>
+        <li>Lead-Capture Architecture</li>
+        <li>Mobile Optimized</li>
+        <li>Delivered in 7–10 Days</li>
+      </ul>
+      <button class="btn btn-primary" id="select-build-btn">Select Build</button>
+    </div>
+
+    <div class="card">
+      <h3>Site Care</h3>
+      <div class="price">$125<span>/mo</span></div>
+      <ul>
+        <li>Hosting + SSL</li>
+        <li>Lead Monitoring</li>
+        <li>Up to 30 min updates/month</li>
+        <li>Email Support</li>
+      </ul>
+      <button class="btn btn-secondary" id="add-care-btn">Add Care +$125/mo</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <div class="contact-wrap">
+    <div id="selection-pill-container" style="display:none;">
+      <span class="selection-pill" id="selected-package-display"></span>
+    </div>
+
+    <h2>Start Your Project</h2>
+
+    <form action="https://formspree.io/f/mreajqyy" method="POST">
+      <input type="hidden" name="selected_package" id="package-hidden-input" value="Unspecified" />
+      <input type="hidden" name="_subject" value="New Ghost Digital Co Lead" />
+      <input type="hidden" name="_redirect" value="./thanks.html" />
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;">Send Request</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Ghost Digital Co
+</footer>
+
+<script>
+let buildSelected=false;
+let careAdded=false;
+
+const selectBuildBtn=document.getElementById('select-build-btn');
+const addCareBtn=document.getElementById('add-care-btn');
+const hiddenInput=document.getElementById('package-hidden-input');
+const pill=document.getElementById('selected-package-display');
+const pillContainer=document.getElementById('selection-pill-container');
+
+function updateUI(){
+  let selection="Unspecified";
+  if(buildSelected){
+    selection=careAdded?"Website Build + Care":"Website Build";
+  }
+
+  hiddenInput.value=selection;
+
+  if(buildSelected){
+    pill.innerText=selection;
+    pillContainer.style.display="block";
+    selectBuildBtn.innerText="Build Selected ✓";
+    selectBuildBtn.classList.add("btn-selected");
+    selectBuildBtn.classList.remove("btn-primary");
+  }else{
+    pillContainer.style.display="none";
+    selectBuildBtn.innerText="Select Build";
+    selectBuildBtn.classList.remove("btn-selected");
+    selectBuildBtn.classList.add("btn-primary");
+  }
+
+  if(careAdded){
+    addCareBtn.innerText="Care Added ✓";
+    addCareBtn.classList.add("btn-added");
+  }else{
+    addCareBtn.innerText="Add Care +$125/mo";
+    addCareBtn.classList.remove("btn-added");
+  }
+}
+
+selectBuildBtn.addEventListener('click',()=>{
+  buildSelected=!buildSelected;
+  if(!buildSelected) careAdded=false;
+  updateUI();
+});
+
+addCareBtn.addEventListener('click',()=>{
+  if(!buildSelected){
+    buildSelected=true;
+    careAdded=true;
+  }else{
+    careAdded=!careAdded;
+  }
+  updateUI();
+});
+
+updateUI();
+</script>
+
+</body>
+</html>
