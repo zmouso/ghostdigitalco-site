@@ -93,12 +93,9 @@
   <header>
     <div class="container nav">
       <a href="#top" class="logo">
-        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ghost Digital Co logo">
-          <path d="M20 4L32.5 9.5L36 22V30L26 37L20 34.8L14 37L4 30V22L7.5 9.5L20 4Z"
-                stroke="var(--accent)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-          <path d="M14 33.8C16 32.2 18 35.2 20 33.8C22 32.2 24 35.2 26 33.8"
-                stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <rect x="14" y="16.5" width="12" height="2.3" fill="var(--accent)" rx="1.15"/>
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4L34 12V30L20 38L6 30V12L20 4Z" stroke="var(--accent)" stroke-width="2" fill="none"/>
+          <rect x="15" y="16" width="10" height="2" fill="var(--accent)"/>
         </svg>
         GHOST · DIGITAL CO
       </a>
@@ -176,6 +173,7 @@
           <input type="hidden" name="_subject" value="New Ghost Digital Co Lead">
           <input type="hidden" name="_next" value="https://zmouso.github.io/ghostdigitalco-site/thanks.html">
           <input type="text" name="_gotcha" style="display:none">
+          
           <input type="hidden" name="selected_package" id="package-hidden-input" value="Unspecified" />
 
           <div class="form-group">
@@ -284,7 +282,9 @@
       pendingBuildSelection = false;
       pendingCareAddition = false;
       modalContent.classList.remove('active');
-      setTimeout(() => { modal.style.display = 'none'; }, 300);
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
     }
 
     function openModal(title, message) {
@@ -296,11 +296,17 @@
 
     selectBuildBtn.addEventListener('click', () => {
       if (buildSelected) {
-        buildSelected = false; careAdded = false;
+        buildSelected = false;
+        careAdded = false;
+        pendingBuildSelection = false;
+        pendingCareAddition = false;
         updateUI();
       } else {
         pendingBuildSelection = true;
-        openModal("Selection Confirmed", "You've selected the Website Build package. Click Continue to complete the intake form.");
+        openModal(
+          "Selection Confirmed", 
+          "You've selected the Website Build package. Click Continue to complete the intake form and start your digital scaling process."
+        );
       }
     });
 
@@ -309,15 +315,24 @@
         careAdded = !careAdded;
         updateUI();
       } else {
-        pendingBuildSelection = true; pendingCareAddition = true;
-        openModal("Website Build Required", "Site Care is an add-on. Click Continue to select Website Build + Care.");
+        pendingBuildSelection = true;
+        pendingCareAddition = true;
+        openModal(
+          "Website Build Required", 
+          "Site Care is an add-on. Click Continue to select Website Build + Care and complete the intake form."
+        );
       }
     });
 
     modalClose.onclick = handleContinue;
-    modal.addEventListener('click', (e) => { if (e.target === modal) dismissModal(); });
-    window.addEventListener('keydown', (e) => { if (e.key === "Escape" && modal.style.display === 'flex') dismissModal(); });
-
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) dismissModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === "Escape" && modal.style.display === 'flex') {
+        dismissModal();
+      }
+    });
     updateUI();
   </script>
 </body>
