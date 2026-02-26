@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ghost Digital Co builds precise, professional websites for businesses serious about growth. Based in Knoxville, TN.">
-<title>Ghost Digital Co — Powerful. Invisible. Effective. | Knoxville, TN</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ghost Digital Co builds professional websites for local service businesses. Based in Knoxville, TN." />
+<title>Ghost Digital Co — Professional Websites for Professional Trades | Knoxville, TN</title>
+
 <style>
 :root{
   --black:#050810;
@@ -18,7 +19,6 @@
   --light:#F1F5F9;
   --gray:#1E293B;
   --white:#FFFFFF;
-  --accent:#3B82F6;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -48,7 +48,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .hew span{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--blue-glow)}
 #home h1{font-size:clamp(56px,9vw,118px);font-weight:900;line-height:.88;color:var(--white);letter-spacing:-2px;text-transform:uppercase;margin-bottom:40px}
 #home h1 em{font-style:normal;display:block;background:linear-gradient(135deg,var(--blue-bright) 0%,var(--blue-glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hsub{font-size:18px;font-weight:300;color:var(--silver);max-width:500px;line-height:1.8;margin-bottom:52px;padding-left:20px;border-left:2px solid var(--blue-bright)}
+.hsub{font-size:18px;font-weight:300;color:var(--silver);max-width:520px;line-height:1.8;margin-bottom:52px;padding-left:20px;border-left:2px solid var(--blue-bright)}
 .hbtns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:80px}
 .btn-blue{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:18px 44px;text-decoration:none;transition:all .25s;box-shadow:0 4px 24px rgba(37,99,235,.5)}
 .btn-blue:hover{background:var(--blue-bright);transform:translateY(-3px);box-shadow:0 8px 32px rgba(59,130,246,.6)}
@@ -74,7 +74,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .ey::before{content:'';width:24px;height:2px;background:var(--blue-bright);flex-shrink:0}
 .st{font-size:clamp(36px,4.5vw,60px);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-1px;color:var(--gray);margin-bottom:24px}
 .st.lt{color:var(--white)}
-.sb{font-size:17px;font-weight:300;color:#64748B;line-height:1.8;max-width:540px}
+.sb{font-size:17px;font-weight:300;color:#64748B;line-height:1.8;max-width:560px}
 
 /* PROCESS */
 #process{background:var(--light)}
@@ -86,6 +86,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .pnum{font-size:64px;font-weight:900;color:rgba(37,99,235,.1);line-height:1;margin-bottom:20px}
 .pc h3{font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:12px}
 .pc p{font-size:14px;color:#64748B;line-height:1.7}
+
+/* WHAT YOU'RE PAYING FOR */
+#paying-for{background:var(--white);border-top:1px solid rgba(0,0,0,0.05)}
+.pay-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:24px;margin-top:48px}
+.pay-card{padding:32px;border:1px solid rgba(37,99,235,0.1);background:var(--light);position:relative}
+.pay-card h4{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:12px}
+.pay-card p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* RECENT BUILDS */
+#recent{background:var(--light);border-top:1px solid rgba(0,0,0,0.05)}
+.rb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.rb-card{background:var(--white);border:1px solid rgba(37,99,235,.12);padding:28px;transition:all .25s;position:relative;overflow:hidden}
+.rb-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-glow));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.rb-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(37,99,235,.12)}
+.rb-card:hover::before{transform:scaleX(1)}
+.rb-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--blue);background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.15);padding:6px 10px;margin-bottom:14px}
+.rb-title{font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;color:var(--gray);margin-bottom:10px}
+.rb-desc{font-size:14px;color:#64748B;line-height:1.65;margin-bottom:14px}
+.rb-metrics{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.rb-metrics li{font-size:12px;color:var(--muted);background:var(--light);border:1px solid rgba(0,0,0,0.06);padding:7px 10px}
 
 /* SERVICES */
 #work{background:var(--dark)}
@@ -103,18 +123,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .wlist li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;transition:color .3s}
 .wlist li::before{content:'';width:5px;height:5px;background:var(--blue-bright);border-radius:50%;flex-shrink:0;box-shadow:0 0 4px var(--blue-bright)}
 .wc:hover .wlist li{color:var(--silver)}
-.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
-.who-card{background:rgba(255,255,255,.02);border:1px solid rgba(37,99,235,.12);padding:36px;transition:all .3s}
-.who-card:hover{background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.3)}
-.who-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue-bright);margin-bottom:12px}
-.who-title{font-size:18px;font-weight:800;color:var(--white);margin-bottom:10px}
-.who-body{font-size:14px;color:var(--muted);line-height:1.65}
 
 /* PRICING */
 #pricing{background:var(--black);position:relative;overflow:hidden}
 #pricing::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(37,99,235,.08) 0%,transparent 65%);pointer-events:none}
 .prgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px;position:relative;z-index:1}
-.prc{background:rgba(255,255,255,.03);padding:52px 40px;border:1px solid rgba(255,255,255,.06);transition:all .3s}
+.prc{background:rgba(255,255,255,.03);padding:52px 40px;border:1px solid rgba(255,255,255,.06);transition:all .3s;display:flex;flex-direction:column}
 .prc:not(.feat):hover{transform:translateY(-6px);border-color:rgba(37,99,235,.3);box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .prc.feat{background:var(--blue);border-color:var(--blue);box-shadow:0 0 60px rgba(37,99,235,.3)}
 .pbadge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue-glow);background:rgba(37,99,235,.15);padding:5px 14px;margin-bottom:28px;border:1px solid rgba(37,99,235,.3)}
@@ -127,7 +141,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .prc.feat .prwhy{background:rgba(0,0,0,.15);border-left-color:rgba(255,255,255,.4)}
 .prdiv{height:1px;background:rgba(255,255,255,.08);margin-bottom:32px}
 .prdiv.f{background:rgba(255,255,255,.2)}
-.prft{list-style:none;margin-bottom:44px}
+.prft{list-style:none;margin-bottom:44px;flex-grow:1}
 .prft li{font-size:14px;color:rgba(255,255,255,.75);padding:10px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.04)}
 .prft li::before{content:'';width:6px;height:6px;background:var(--blue-bright);border-radius:50%;flex-shrink:0;box-shadow:0 0 6px var(--blue-bright)}
 .prc.feat .prft li::before{background:rgba(255,255,255,.8);box-shadow:none}
@@ -135,9 +149,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .prbtn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
 .prbtn.f{background:var(--black);border-color:var(--black)}
 .prbtn.f:hover{background:var(--steel)}
-.retnote{margin-top:48px;padding:32px 40px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);display:flex;align-items:center;gap:28px;flex-wrap:wrap;position:relative;z-index:1}
-.retnote p{font-size:15px;color:var(--silver);line-height:1.6;flex:1}
-.retnote strong{color:var(--blue-glow)}
+.guar-line{display:block;text-align:center;font-size:11px;font-weight:600;color:rgba(255,255,255,0.45);margin-top:16px;text-transform:uppercase;letter-spacing:1px}
+
+/* COMPARE TABLE */
+.comp-wrapper{margin-top:80px;overflow-x:auto;position:relative;z-index:1}
+.comp-table{width:100%;border-collapse:collapse;min-width:600px}
+.comp-table th{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--silver);padding:20px;border-bottom:1px solid rgba(255,255,255,0.1);text-align:left}
+.comp-table td{padding:18px 20px;font-size:14px;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.05)}
+.comp-table tr td:first-child{font-weight:700;color:var(--white);text-transform:uppercase;font-size:11px;letter-spacing:1px;width:25%}
+.comp-table tr td:last-child{color:var(--blue-glow);font-weight:600}
 
 /* ABOUT */
 #about{background:var(--light)}
@@ -155,6 +175,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(
 .abico{width:44px;height:44px;background:var(--white);border:1px solid rgba(37,99,235,.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .abpt h4{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:6px}
 .abpt p{font-size:14px;color:#64748B;line-height:1.65}
+
+/* FAQ */
+#faq{background:var(--white);border-top:1px solid rgba(0,0,0,0.05)}
+.faq-grid{max-width:800px;margin:48px auto 0}
+.faq-item{margin-bottom:20px;border:1px solid rgba(0,0,0,0.05)}
+.faq-q{padding:20px;background:var(--light);font-size:15px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:0.5px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:all 0.3s ease;background:var(--white)}
+.faq-a p{padding:20px 0;font-size:14px;color:var(--muted);line-height:1.7}
+/* FIXED: raise max-height so answers don’t get chopped */
+.faq-item.active .faq-a{max-height:800px}
 
 /* CONTACT */
 #contact{background:var(--steel);position:relative;overflow:hidden}
@@ -187,14 +217,14 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 .fbn{font-size:24px;font-weight:900;letter-spacing:5px;text-transform:uppercase;color:var(--white);margin-bottom:12px}
 .fbn span{background:linear-gradient(135deg,var(--blue-bright),var(--blue-glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ftag{font-size:10px;font-weight:400;letter-spacing:5px;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-.fdesc{font-size:14px;color:#334155;line-height:1.75}
+.fdesc{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75}
 .fcol h4{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
 .fcol ul{list-style:none}
 .fcol ul li{margin-bottom:12px}
-.fcol ul li a{font-size:14px;color:#334155;text-decoration:none;transition:color .2s}
+.fcol ul li a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s}
 .fcol ul li a:hover{color:var(--blue-glow)}
 .fbot{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.fbot p{font-size:12px;color:#1E293B}
+.fbot p{font-size:12px;color:rgba(255,255,255,0.5)}
 .fbot span{color:var(--blue-bright)}
 
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
@@ -214,8 +244,8 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
   .hproof{display:flex;flex-wrap:wrap;border:none;gap:8px}
   .pi{padding:16px 20px;border:1px solid rgba(37,99,235,.2)!important;flex:1;min-width:120px}
   .pgrid{grid-template-columns:1fr 1fr}
+  .rb-grid{grid-template-columns:1fr}
   .wgrid{grid-template-columns:1fr}
-  .who-grid{grid-template-columns:1fr}
   .prgrid{grid-template-columns:1fr}
   .abgrid{grid-template-columns:1fr}
   .abbox{display:none}
@@ -223,7 +253,6 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
   .ftop{grid-template-columns:1fr 1fr}
   .frow{grid-template-columns:1fr}
   footer{padding:40px 24px 24px}
-  .retnote{flex-direction:column;align-items:flex-start}
 }
 @media(max-width:480px){
   .pgrid{grid-template-columns:1fr}
@@ -231,22 +260,25 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 }
 </style>
 </head>
+
 <body>
 
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 4L34 12V30L20 38L6 30V12L20 4Z" stroke="var(--accent)" stroke-width="2" fill="none"/>
-      <rect x="15" y="16" width="10" height="2" fill="var(--accent)"/>
+    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px">
+      <path d="M20 4L34 12V30L20 38L6 30V12L20 4Z" stroke="var(--blue-bright)" stroke-width="2" fill="none"/>
+      <rect x="15" y="16" width="10" height="2" fill="var(--blue-bright)"/>
     </svg>
     <span class="nm">GHOST</span><span class="ns"></span><span class="nd">Digital Co</span>
   </a>
   <ul class="nav-links">
     <li><a href="#process">Process</a></li>
+    <li><a href="#paying-for">What You Get</a></li>
+    <li><a href="#recent">Recent Builds</a></li>
     <li><a href="#work">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="ncta">Start a Project</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="ncta">Get Started</a></li>
   </ul>
 </nav>
 
@@ -256,17 +288,17 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
   <div class="hgl"></div>
   <div class="hgl2"></div>
   <div class="hi">
-    <div class="hew"><div class="hel"></div><span>Web Design &amp; Development &mdash; Knoxville, TN</span></div>
-    <h1>We Do<br>The Work.<br><em>You Get<br>The Credit.</em></h1>
-    <p class="hsub">Ghost Digital Co builds precise, professional websites for businesses serious about growth. We work behind the scenes so you look incredible in front of everyone else.</p>
+    <div class="hew"><div class="hel"></div><span>Local Web Design &mdash; Knoxville, TN</span></div>
+    <h1>We Build<br>The Website.<br><em>You Book<br>The Jobs.</em></h1>
+    <p class="hsub">Ghost Digital Co builds professional websites for local service businesses. We don’t just make it look good — we build a site designed to turn visitors into calls.</p>
     <div class="hbtns">
-      <a href="#contact" class="btn-blue">Start Your Project &rarr;</a>
-      <a href="#work" class="btn-out">See What We Build</a>
+      <a href="#contact" class="btn-blue">Get Started Now &rarr;</a>
+      <a href="#recent" class="btn-out">See Recent Builds</a>
     </div>
     <div class="hproof">
-      <div class="pi"><div class="pn pn-blue">7</div><div class="pl">Days to Launch</div></div>
+      <div class="pi"><div class="pn pn-blue">7</div><div class="pl">Day Delivery</div></div>
       <div class="pi"><div class="pn">$800</div><div class="pl">Starting Price</div></div>
-      <div class="pi"><div class="pn pn-blue">100%</div><div class="pl">Custom Built</div></div>
+      <div class="pi"><div class="pn pn-blue">100%</div><div class="pl">Done-For-You</div></div>
     </div>
   </div>
 </section>
@@ -274,22 +306,14 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 <div class="mq" aria-hidden="true">
   <div class="mq-inner">
     <div class="mqi">
-      <span class="mqt">Web Design</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">New Builds</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Site Redesigns</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">More Calls. More Jobs.</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">Professional Web Design</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">Lead Capture</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
       <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">SEO Setup</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Quote Forms</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">Local SEO Foundation</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">Booking Systems</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
       <span class="mqt">Brand Showcases</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Monthly Maintenance</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Web Design</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">New Builds</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Site Redesigns</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">SEO Setup</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Quote Forms</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Brand Showcases</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-      <span class="mqt">Monthly Maintenance</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+      <span class="mqt">Direct Execution</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     </div>
   </div>
 </div>
@@ -297,71 +321,130 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 <section class="sec" id="process">
   <div class="con">
     <p class="ey reveal">How It Works</p>
-    <h2 class="st reveal">Simple Process.<br>Serious Results.</h2>
+    <h2 class="st reveal">A Simple Path To<br>A Better Website.</h2>
     <div class="pgrid">
-      <div class="pc reveal"><div class="pnum">01</div><h3>Discovery Call</h3><p>We learn your business, goals, and what your customers need to see. 30 minutes is all it takes.</p></div>
-      <div class="pc reveal"><div class="pnum">02</div><h3>We Build It</h3><p>We handle all design, copy, and development. You don't write a word or click a button. We disappear and get to work.</p></div>
-      <div class="pc reveal"><div class="pnum">03</div><h3>You Review</h3><p>We show you the finished site and make adjustments. We don't launch until you're completely satisfied.</p></div>
-      <div class="pc reveal"><div class="pnum">04</div><h3>You Launch</h3><p>Your site goes live and you take all the credit. Most projects go from kickoff to launch in under 7 days.</p></div>
+      <div class="pc reveal"><div class="pnum">01</div><h3>Discovery Call</h3><p>We jump on a 30-minute call to learn your business and what you want more of (calls, quotes, bookings).</p></div>
+      <div class="pc reveal"><div class="pnum">02</div><h3>We Build It</h3><p>Design, copywriting, structure, and contact flows — handled. You keep working while we do the build.</p></div>
+      <div class="pc reveal"><div class="pnum">03</div><h3>You Review</h3><p>We send the draft and refine it. No launch until it’s clean and you’re confident.</p></div>
+      <div class="pc reveal"><div class="pnum">04</div><h3>You Launch</h3><p>Your site goes live in 7 days with a clear call path and solid local foundation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why-not">
+  <div class="con">
+    <p class="ey reveal">The Reality</p>
+    <h2 class="st reveal">Why Not Just Use<br>Wix or AI?</h2>
+    <p class="sb reveal">Tools are cheap, but your time is expensive. DIY builders give you a blank screen and expect you to do the strategy, writing, and setup. Business owners use Ghost when they want it handled — correctly.</p>
+  </div>
+</section>
+
+<section class="sec" id="paying-for">
+  <div class="con">
+    <p class="ey reveal">What You Get</p>
+    <h2 class="st reveal">What You're<br>Paying For.</h2>
+    <div class="pay-grid">
+      <div class="pay-card reveal">
+        <h4>Strategy + Copywriting</h4>
+        <p>Clear, trade-friendly writing that tells customers what you do, where you work, and why they should call you.</p>
+      </div>
+      <div class="pay-card reveal">
+        <h4>Conversion Layout</h4>
+        <p>We place the “call / quote” path where people actually see it (especially on mobile).</p>
+      </div>
+      <div class="pay-card reveal">
+        <h4>Speed + Optimization</h4>
+        <p>A fast site that loads clean on phones. No bloated junk. Just performance.</p>
+      </div>
+      <div class="pay-card reveal">
+        <h4>Setup + Support</h4>
+        <p>We set it up, connect tracking, and keep it stable so your website doesn’t become another problem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="recent">
+  <div class="con">
+    <p class="ey reveal">Proof</p>
+    <h2 class="st reveal">Recent<br>Builds.</h2>
+    <p class="sb reveal">Placeholders for now — swap these with real screenshots / links as you finish builds. Don’t skip proof.</p>
+
+    <div class="rb-grid">
+      <div class="rb-card reveal">
+        <span class="rb-tag">HVAC</span>
+        <div class="rb-title">Knoxville Service HVAC</div>
+        <div class="rb-desc">Single-page funnel + quote form + click-to-call built for mobile.</div>
+        <ul class="rb-metrics">
+          <li>Sticky CTA</li>
+          <li>Quote Form</li>
+          <li>Local Pages</li>
+        </ul>
+      </div>
+
+      <div class="rb-card reveal">
+        <span class="rb-tag">Roofing</span>
+        <div class="rb-title">Oak Ridge Roofing Co.</div>
+        <div class="rb-desc">Service pages + before/after gallery + simple lead capture flow.</div>
+        <ul class="rb-metrics">
+          <li>Gallery</li>
+          <li>Service Pages</li>
+          <li>Tracking</li>
+        </ul>
+      </div>
+
+      <div class="rb-card reveal">
+        <span class="rb-tag">Plumbing</span>
+        <div class="rb-title">Farragut Plumbing</div>
+        <div class="rb-desc">Fast site rebuild with clear emergency call path + scheduling request.</div>
+        <ul class="rb-metrics">
+          <li>Emergency CTA</li>
+          <li>Scheduler</li>
+          <li>Speed Pass</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="work">
   <div class="con">
-    <p class="ey reveal">What We Build</p>
-    <h2 class="st lt reveal">Sites That Work<br>Like Your Business.</h2>
-    <p class="sb reveal" style="color:var(--silver)">We build websites for local businesses that need more than a pretty page — something that shows what they carry, earns trust fast, and turns visitors into calls and quotes.</p>
+    <p class="ey reveal">Our Services</p>
+    <h2 class="st lt reveal">What We Build.</h2>
+    <p class="sb reveal" style="color:var(--silver)">Websites for local trades that need more than a digital business card — built to get calls.</p>
     <div class="wgrid">
       <div class="wc reveal">
         <div class="wi">&#127981;</div>
-        <div class="wt">Product &amp; Brand Showcase</div>
-        <p class="wb">We display your inventory, equipment lines, and brand partners in a clean organized layout. Customers see exactly what you carry before they ever pick up the phone.</p>
+        <div class="wt">Brand Showcase</div>
+        <p class="wb">We show people why you’re the best choice — not just what you do.</p>
         <ul class="wlist">
-          <li>Brand logos &amp; partner pages</li>
-          <li>Equipment categories</li>
-          <li>Product photo galleries</li>
-          <li>Featured &amp; new arrivals</li>
+          <li>Professional brand layout</li>
+          <li>Job site photo galleries</li>
+          <li>Customer trust signals</li>
+          <li>Fast mobile performance</li>
         </ul>
       </div>
       <div class="wc reveal">
         <div class="wi">&#128203;</div>
-        <div class="wt">Quote &amp; Contact Systems</div>
-        <p class="wb">We build quote request forms, contact pages, and call-to-action systems that turn website visitors into real leads — without them having to hunt for a way to reach you.</p>
+        <div class="wt">Booking Tools</div>
+        <p class="wb">Quote forms and phone buttons that make it easy to reach you immediately.</p>
         <ul class="wlist">
-          <li>Quote request forms</li>
-          <li>Contact &amp; inquiry pages</li>
+          <li>Easy quote request forms</li>
           <li>Click-to-call buttons</li>
-          <li>Google Maps integration</li>
+          <li>Lead routing to email</li>
+          <li>Frictionless contact path</li>
         </ul>
       </div>
       <div class="wc reveal">
         <div class="wi">&#127959;</div>
-        <div class="wt">Full Website Builds</div>
-        <p class="wb">The whole package. Homepage, about, services, brands, and contact — all built and launched in under 7 days. You get a site that looks like you spent 10x more.</p>
+        <div class="wt">Full Web Design</div>
+        <p class="wb">A complete website with your services, your photos, and a local SEO foundation — delivered fast.</p>
         <ul class="wlist">
-          <li>Custom design &amp; copy</li>
-          <li>Mobile optimized</li>
-          <li>SEO basics included</li>
-          <li>Launched in 7 days</li>
+          <li>Done-for-you build</li>
+          <li>Zero tech stress</li>
+          <li>Local SEO foundation</li>
+          <li>Straightforward process</li>
         </ul>
-      </div>
-    </div>
-    <div class="who-grid">
-      <div class="who-card reveal">
-        <div class="who-label">Who We Work With</div>
-        <div class="who-title">Equipment Resellers</div>
-        <p class="who-body">Restaurant, commercial, industrial — if you sell or service equipment, we know your business and exactly what your customers need to see.</p>
-      </div>
-      <div class="who-card reveal">
-        <div class="who-label">Who We Work With</div>
-        <div class="who-title">Trades &amp; Service Co.</div>
-        <p class="who-body">Plumbers, electricians, HVAC, roofers — local service companies that need more calls, more quotes, and less hassle managing their online presence.</p>
-      </div>
-      <div class="who-card reveal">
-        <div class="who-label">Who We Work With</div>
-        <div class="who-title">Local Businesses</div>
-        <p class="who-body">Restaurants, retailers, startups — if you have customers who search for you online, you need a site that earns their trust the moment they land on it.</p>
       </div>
     </div>
   </div>
@@ -369,65 +452,116 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 
 <section class="sec" id="pricing">
   <div class="con">
-    <p class="ey reveal">Transparent Pricing</p>
-    <h2 class="st lt reveal">No Surprises.<br>No Hidden Fees.</h2>
+    <p class="ey reveal">Pricing</p>
+    <h2 class="st lt reveal">Professional Work.<br>Simple Pricing.</h2>
+
     <div class="prgrid">
       <div class="prc reveal">
-        <div class="pbadge">Entry</div>
+        <div class="pbadge">Small Business</div>
         <div class="prname">Launch</div>
         <div class="pram"><span class="prsup">$</span>800</div>
-        <p class="prnote">One-time build fee</p>
-        <div class="prwhy">Best for businesses that need a clean, professional online presence fast — without overcomplicating it. Get found. Get calls. Get moving.</div>
+        <p class="prnote">One-time payment</p>
+        <div class="prwhy">For businesses that need a professional website fast — without the headache of doing it themselves.</div>
         <div class="prdiv"></div>
         <ul class="prft">
-          <li>Up to 5 pages</li>
-          <li>Mobile optimized</li>
-          <li>Contact form</li>
-          <li>Basic SEO setup</li>
-          <li>7-day delivery</li>
-          <li>1 round of revisions</li>
+          <li>Copywriting + page messaging</li>
+          <li>Click-to-call + sticky CTA</li>
+          <li>On-page local SEO foundation</li>
+          <li>Speed/performance pass</li>
+          <li>Analytics + tracking</li>
         </ul>
         <a href="#contact" class="prbtn">Get Started</a>
+        <span class="guar-line">Deposit to start. Unlimited first-draft revisions until it’s right.</span>
       </div>
+
       <div class="prc feat reveal">
         <div class="pbadge f">Most Popular</div>
         <div class="prname">Pro</div>
         <div class="pram"><span class="prsup">$</span>1,500</div>
-        <p class="prnote" style="color:rgba(255,255,255,.6)">One-time build fee</p>
-        <div class="prwhy">Built for businesses that sell products, carry brands, or need customers to request quotes before buying. Everything a real operation needs to look credible and capture leads.</div>
+        <p class="prnote" style="color:rgba(255,255,255,.6)">One-time payment</p>
+        <div class="prwhy">A full site that covers your services and positions you like the local leader.</div>
         <div class="prdiv f"></div>
         <ul class="prft">
-          <li>Up to 10 pages</li>
-          <li>Brand &amp; product showcase</li>
-          <li>Quote request system</li>
-          <li>Google Maps + SEO</li>
-          <li>Priority delivery</li>
-          <li>2 rounds of revisions</li>
+          <li>Advanced copywriting + positioning</li>
+          <li>Google Business Profile checklist</li>
+          <li>On-page local SEO foundation + structure</li>
+          <li>Extreme performance pass</li>
+          <li>Full conversion tracking</li>
         </ul>
         <a href="#contact" class="prbtn f">Get Started</a>
+        <span class="guar-line" style="color:rgba(255,255,255,0.75)">Deposit to start. Unlimited first-draft revisions until it’s right.</span>
       </div>
+
       <div class="prc reveal">
-        <div class="pbadge">Full Service</div>
+        <div class="pbadge">Large Scale</div>
         <div class="prname">Authority</div>
         <div class="pram"><span class="prsup">$</span>3,000</div>
-        <p class="prnote">One-time build fee</p>
-        <div class="prwhy">For established businesses that want a dominant online presence. No limits, no compromises — the site your competition wishes they had.</div>
+        <p class="prnote">One-time payment</p>
+        <div class="prwhy">For established companies that need a bigger presence and more complex lead flows.</div>
         <div class="prdiv"></div>
         <ul class="prft">
-          <li>Unlimited pages</li>
-          <li>Full brand showcase</li>
-          <li>Advanced forms &amp; flows</li>
-          <li>Blog or news section</li>
-          <li>Rush delivery</li>
-          <li>Unlimited revisions</li>
+          <li>Multi-page architecture</li>
+          <li>Full positioning build</li>
+          <li>Complex lead integrations</li>
+          <li>Rush execution option</li>
+          <li>White-glove support</li>
         </ul>
         <a href="#contact" class="prbtn">Get Started</a>
       </div>
     </div>
-    <div class="retnote reveal">
+
+    <div class="comp-wrapper reveal">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>DIY Builder</th>
+            <th>Cheap AI</th>
+            <th>Ghost Digital Co</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Time Required</td>
+            <td>Nights + Weekends</td>
+            <td>Still DIY</td>
+            <td>30-Min Intake</td>
+          </tr>
+          <tr>
+            <td>Messaging/Copy</td>
+            <td>You Write It</td>
+            <td>Generic</td>
+            <td>Professional</td>
+          </tr>
+          <tr>
+            <td>Lead Focus</td>
+            <td>Not Included</td>
+            <td>Random</td>
+            <td>Built For Calls</td>
+          </tr>
+          <tr>
+            <td>Support</td>
+            <td>Email Ticket</td>
+            <td>None</td>
+            <td>Direct Partner</td>
+          </tr>
+          <tr>
+            <td>Results</td>
+            <td>"Looks OK"</td>
+            <td>"Cheap"</td>
+            <td>Built To Convert</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="retnote reveal" style="margin-top:48px;padding:32px 40px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.2);display:flex;align-items:center;gap:28px;flex-wrap:wrap;position:relative;z-index:1">
       <div style="font-size:32px">&#128260;</div>
-      <p><strong>Monthly Care Plans from $200/month</strong> &mdash; Text changes, new photos, updated info. We handle it quietly so your site stays current and you never have to think about it.</p>
-      <a href="#contact" class="btn-blue" style="white-space:nowrap;flex-shrink:0">Ask About Retainers</a>
+      <p style="font-size:15px;color:var(--silver);line-height:1.6;flex:1">
+        <strong style="color:var(--blue-glow)">Care & Management from $200/month</strong>
+        &mdash; We handle updates, technical security, and changes so your website stays solid.
+      </p>
+      <a href="#contact" class="btn-blue" style="white-space:nowrap;flex-shrink:0">Ask About Management</a>
     </div>
   </div>
 </section>
@@ -437,20 +571,49 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
     <div class="abgrid">
       <div class="reveal-left">
         <div class="abbox">
-          <div class="abq">Behind the scenes.<br><em>In front of<br>everyone else.</em></div>
-          <p class="abs">We work quietly in the background building things that make your business impossible to ignore. You show up looking like a million dollars. Nobody needs to know how it happened.</p>
+          <div class="abq">We Build The Website.<br><em>You Own The<br>Local Market.</em></div>
+          <p class="abs">Ghost Digital Co helps Knoxville service businesses look professional and get more calls. We handle the web stuff so you can stay in the field.</p>
           <div class="abtag"><p>Knoxville, TN</p></div>
         </div>
       </div>
       <div>
-        <p class="ey reveal">About Ghost Digital Co</p>
+        <p class="ey reveal">About Us</p>
         <h2 class="st reveal">The Work Speaks<br>For Itself.</h2>
-        <p class="sb reveal">Most small businesses have websites that hurt them more than they help. We fix that. Fast, clean, built specifically for your business — delivered before your competitors even respond to your quote request.</p>
+        <p class="sb reveal">Wix and Squarespace are for hobbies. Ghost Digital Co is for business. We build websites that act like sales tools — not digital brochures.</p>
         <div class="abpts">
-          <div class="abpt reveal"><div class="abico">&#9889;</div><div><h4>Fast Turnaround</h4><p>Most sites go live in 7 days or less. No waiting months for a professional online presence.</p></div></div>
-          <div class="abpt reveal"><div class="abico">&#127919;</div><div><h4>Built to Convert</h4><p>Every page is designed with one goal — turning visitors into calls, quotes, and customers.</p></div></div>
-          <div class="abpt reveal"><div class="abico">&#128123;</div><div><h4>We Stay Invisible</h4><p>We do the work behind the scenes. Your clients see a world-class website. They never need to know how it got there.</p></div></div>
+          <div class="abpt reveal"><div class="abico">&#9889;</div><div><h4>Done-For-You</h4><p>You never have to learn a builder or write your own pages. We do all of it.</p></div></div>
+          <div class="abpt reveal"><div class="abico">&#127919;</div><div><h4>Focus on Calls</h4><p>Everything we build is designed with one goal: getting a local customer to contact you.</p></div></div>
+          <div class="abpt reveal"><div class="abico">&#128123;</div><div><h4>Fast Delivery</h4><p>Your website goes live in 7 days or less. No waiting for weeks.</p></div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="con">
+    <p class="ey reveal">Questions</p>
+    <h2 class="st reveal">Frequently<br>Asked.</h2>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <div class="faq-q">Why not Wix/Squarespace? <span>+</span></div>
+        <div class="faq-a"><p>Builders hand you tools and expect you to do the strategy, writing, and setup. We deliver a finished website built for calls, with a clean structure and clear messaging.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">What do you need from me? <span>+</span></div>
+        <div class="faq-a"><p>About 30 minutes for intake: your services, service area, photos (if you have them), and what you want more of (calls, quotes, bookings). After that, we build.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How fast is delivery? <span>+</span></div>
+        <div class="faq-a"><p>Launch and Pro drafts typically land within 7 days after intake. Revisions depend on response speed, but we move fast.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How does payment work? <span>+</span></div>
+        <div class="faq-a"><p>Deposit to start. We deliver a first draft, then revise until it’s right. Final payment is due before launch.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Do you offer monthly management? <span>+</span></div>
+        <div class="faq-a"><p>Yes. Starting at $200/month, we handle hosting, security, updates, and content changes so your site stays stable and current.</p></div>
       </div>
     </div>
   </div>
@@ -462,35 +625,46 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
     <h2 class="st lt reveal">Start Your Project<br>Today.</h2>
     <div class="ctgrid">
       <div class="ctl reveal">
-        <h3>We'd Love to Hear From You</h3>
-        <div class="cdet"><div class="cdico">&#128231;</div><div><div class="cdlbl">Email</div><div class="cdval"><a href="mailto:ghostdigitalco.us@gmail.com">ghostdigitalco.us@gmail.com</a></div></div></div>
-        <div class="cdet"><div class="cdico">&#128205;</div><div><div class="cdlbl">Based In</div><div class="cdval">Knoxville, TN<br><span style="font-size:13px;color:var(--muted)">Serving clients nationwide</span></div></div></div>
-        <div class="cdet"><div class="cdico">&#9201;</div><div><div class="cdlbl">Response Time</div><div class="cdval">Within 24 hours</div></div></div>
+        <h3>We’d Love to Hear From You</h3>
+        <div class="cdet">
+          <div class="cdico">&#128231;</div>
+          <div>
+            <div class="cdlbl">Direct Email</div>
+            <div class="cdval"><a href="mailto:ghostdigitalco.us@gmail.com">ghostdigitalco.us@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="cdet">
+          <div class="cdico">&#128205;</div>
+          <div>
+            <div class="cdlbl">Based In</div>
+            <div class="cdval">Knoxville, TN<br><span style="font-size:13px;color:var(--muted)">Serving clients nationwide</span></div>
+          </div>
+        </div>
         <div class="free-box">
           <h4>Free Consultation</h4>
-          <p>Tell us about your business and we'll tell you exactly what will work and what it will cost. No pressure. No obligation. We disappear if it's not a fit.</p>
+          <p>We’ll look at what you’re doing now and tell you exactly how to get more customers. No fluff.</p>
         </div>
       </div>
+
       <div class="reveal">
-        <form onsubmit="sf(event)">
+        <form action="https://formspree.io/f/mreajqyy" method="POST">
+          <input type="hidden" name="_subject" value="New Ghost Digital Co Lead">
+          <input type="hidden" name="_next" value="https://zmouso.github.io/ghostdigitalco-site/thanks.html">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="frow">
-            <div class="fg"><label>First Name</label><input type="text" placeholder="John" required></div>
-            <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith" required></div>
+            <div class="fg"><label>Name</label><input type="text" name="name" placeholder="John Doe" required></div>
+            <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="HVAC, Roofing, etc."></div>
           </div>
-          <div class="fg"><label>Business Name</label><input type="text" placeholder="Your Company" required></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="you@company.com" required></div>
-          <div class="fg">
-            <label>What Do You Need?</label>
-            <select required>
-              <option value="">Select one...</option>
-              <option>New Website Build</option>
-              <option>Redesign Existing Site</option>
-              <option>Monthly Care Plan</option>
-              <option>Just Exploring</option>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@business.com" required></div>
+          <div class="fg"><label>Current Website</label>
+            <select name="infrastructure">
+              <option>No website</option>
+              <option>Wix/Squarespace (Needs fix)</option>
+              <option>Old site (Needs rebuild)</option>
             </select>
           </div>
-          <div class="fg"><label>Tell Us About Your Business</label><textarea placeholder="What does your business do? Who are your customers?"></textarea></div>
-          <button type="submit" class="fsub">Send My Request &rarr;</button>
+          <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your goals..." required></textarea></div>
+          <button type="submit" class="fsub">Send My Request</button>
         </form>
       </div>
     </div>
@@ -500,52 +674,52 @@ footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:6
 <footer>
   <div class="ftop">
     <div>
-      <div class="fbn">GHOST <span>&middot;</span> DIGITAL CO</div>
-      <div class="ftag">Powerful. Invisible. Effective.</div>
-      <p class="fdesc">Professional websites for businesses that mean business. Fast, clean, built to convert. Based in Knoxville, TN &mdash; serving clients nationwide.</p>
+      <div class="fbn">GHOST <span>Digital Co</span></div>
+      <div class="ftag">Web Design & Marketing for Trades</div>
+      <p class="fdesc">Knoxville's local partner for business growth. We build websites that bring in more calls without the DIY headache.</p>
     </div>
     <div class="fcol">
-      <h4>Services</h4>
+      <h4>Navigation</h4>
       <ul>
-        <li><a href="#work">New Website Builds</a></li>
-        <li><a href="#work">Brand Showcases</a></li>
-        <li><a href="#pricing">Monthly Care Plans</a></li>
-        <li><a href="#contact">Free Consultation</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#paying-for">What You Get</a></li>
+        <li><a href="#recent">Recent Builds</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
     <div class="fcol">
       <h4>Company</h4>
       <ul>
-        <li><a href="#process">Our Process</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
   <div class="fbot">
-    <p>&copy; 2025 Ghost Digital Co. All rights reserved. Knoxville, TN.</p>
-    <p>Built with <span>precision</span>.</p>
+    <p>&copy; 2026 Ghost Digital Co. | Based in Knoxville, TN.</p>
+    <p>Built for <span>Performance.</span></p>
   </div>
 </footer>
 
 <script>
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach((e,i)=>{
-    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target)}
+const reveals = document.querySelectorAll('.reveal, .reveal-left');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
   });
-},{threshold:0.07});
-document.querySelectorAll('.reveal,.reveal-left').forEach(el=>obs.observe(el));
-window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').style.boxShadow=window.scrollY>60?'0 4px 40px rgba(0,0,0,.8)':'none';
-},{passive:true});
-function sf(e){
-  e.preventDefault();
-  const b=e.target.querySelector('.fsub');
-  b.textContent="Received. We'll be in touch within 24 hours.";
-  b.style.background='#111827';
-  b.disabled=true;
-}
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// FAQ Toggles
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    item.classList.toggle('active');
+    q.querySelector('span').textContent = item.classList.contains('active') ? '-' : '+';
+  });
+});
 </script>
+
 </body>
 </html>
