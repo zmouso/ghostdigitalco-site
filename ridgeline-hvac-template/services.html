@@ -3,26 +3,22 @@
 <head>
     <title>Our Services | Ridge Line HVAC</title>
     <style>
-        body { font-family: sans-serif; margin: 0; text-align: center; }
-        .service-card { border: 1px solid #ddd; padding: 30px; margin: 20px; display: inline-block; width: 250px; border-top: 5px solid #E8610A; }
-        nav { background: #0B1622; padding: 20px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; }
+        body { font-family: sans-serif; margin: 0; background: #fff; text-align: center; }
+        .header { background: #0B1622; color: white; padding: 60px 20px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px; }
+        .card { border: 1px solid #eee; padding: 30px; border-top: 4px solid #E8610A; }
+        .card h3 { color: #0B1622; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-    </nav>
-    <h1>HVAC Services</h1>
-    <div class="service-card">
-        <h3>AC Repair</h3>
-        <p>Keeping you cool when the Tennessee heat hits hard.</p>
+    <div class="header">
+        <a href="index.html" style="color:#E8610A; text-decoration:none;">← Home</a>
+        <h1>Professional HVAC Services</h1>
     </div>
-    <div class="service-card">
-        <h3>Heating</h3>
-        <p>Furnace and heat pump maintenance for the winter months.</p>
+    <div class="service-grid">
+        <div class="card"><h3>AC Installation</h3><p>Stay cool with top-tier energy-efficient units.</p></div>
+        <div class="card"><h3>Furnace Repair</h3><p>Reliable heating for those cold Tennessee nights.</p></div>
+        <div class="card"><h3>Emergency Care</h3><p>Available 24/7 for all your cooling emergencies.</p></div>
     </div>
 </body>
 </html>
