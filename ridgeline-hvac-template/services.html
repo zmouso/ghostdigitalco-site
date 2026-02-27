@@ -3,104 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional HVAC Services | Ridge Line HVAC</title>
+    <title>HVAC Services | Ridge Line HVAC</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --gray: #666; }
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
         body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); line-height: 1.6; }
         
-        /* Navigation */
         nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .logo { font-family: 'Barlow Condensed'; font-size: 24px; font-weight: 900; color: white; text-decoration: none; }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 700; text-transform: uppercase; font-size: 13px; }
-        .nav-links a:hover { color: var(--orange); }
 
-        /* Header */
-        .page-header { background: linear-gradient(rgba(11, 22, 34, 0.9), rgba(11, 22, 34, 0.9)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 80px 20px; text-align: center; }
+        .page-header { background: var(--navy); color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid var(--orange); }
         .page-header h1 { font-family: 'Barlow Condensed'; font-size: 50px; text-transform: uppercase; margin: 0; }
         
-        /* Service Content */
-        .service-section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+        .service-section { padding: 60px 5%; max-width: 1100px; margin: 0 auto; }
         .service-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; flex-wrap: wrap; }
         .service-row:nth-child(even) { flex-direction: row-reverse; }
         
-        /* Fixed Image Container */
-        .service-image { flex: 1; min-width: 300px; height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border-bottom: 8px solid var(--orange); }
-        .service-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        
+        /* This box replaces the image if it fails to load */
+        .service-visual { 
+            flex: 1; min-width: 300px; height: 350px; 
+            background: linear-gradient(45deg, #0B1622, #1a2a3a); 
+            border-radius: 12px; display: flex; align-items: center; 
+            justify-content: center; position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-bottom: 8px solid var(--orange);
+            overflow: hidden;
+        }
+
+        /* High-End Industrial Pattern Overlay */
+        .service-visual::before {
+            content: ""; position: absolute; width: 200%; height: 200%;
+            background-image: radial-gradient(var(--orange) 1px, transparent 1px);
+            background-size: 20px 20px; opacity: 0.1;
+        }
+
+        .visual-label { 
+            color: white; font-family: 'Barlow Condensed'; 
+            font-size: 40px; font-weight: 900; text-transform: uppercase; 
+            letter-spacing: 2px; position: relative; z-index: 1;
+        }
+
         .service-text { flex: 1; min-width: 300px; }
-        .service-text h2 { font-family: 'Barlow Condensed'; font-size: 42px; text-transform: uppercase; color: var(--navy); margin: 0 0 10px 0; line-height: 1; }
-        .service-text .sub-brand { color: var(--orange); font-size: 32px; font-family: 'Barlow Condensed'; font-weight: 900; text-transform: uppercase; display: block; margin-bottom: 20px; }
-        .service-text p { font-size: 18px; color: var(--gray); margin-bottom: 25px; }
+        .service-text h2 { font-family: 'Barlow Condensed'; font-size: 42px; text-transform: uppercase; margin: 0; line-height: 1; }
+        .service-text .tag { color: var(--orange); font-size: 24px; font-family: 'Barlow Condensed'; font-weight: 900; display: block; margin-bottom: 15px; }
         
-        /* Checklist */
-        .service-list { padding: 0; list-style: none; margin-bottom: 35px; }
-        .service-list li { margin-bottom: 15px; font-weight: 700; display: flex; align-items: center; color: var(--navy); font-size: 17px; }
-        .service-list li::before { content: '✓'; color: var(--orange); margin-right: 15px; font-size: 22px; font-weight: 900; }
-
-        .btn { padding: 18px 35px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(232, 97, 10, 0.3); }
-        .btn:hover { background: #ff741a; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(232, 97, 10, 0.4); }
-
-        footer { background: var(--navy); color: #8DA4B8; text-align: center; padding: 40px; font-size: 14px; margin-top: 40px; }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html" style="color:var(--orange)">Get Quote</a>
-        </div>
-    </nav>
-
-    <header class="page-header">
-        <h1>Our <span style="color:var(--orange)">Specialties</span></h1>
-    </header>
-
-    <div class="service-section">
-        <div class="service-row">
-            <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800" alt="HVAC Technician working on unit">
-            </div>
-            <div class="service-text">
-                <h2>AIR CONDITIONING</h2>
-                <span class="sub-brand">REPAIR & SERVICE</span>
-                <p>Don't sweat the Tennessee summer. Our technicians provide fast, 24/7 diagnostics and repair for all central air and mini-split brands.</p>
-                <ul class="service-list">
-                    <li>Refrigerant Leak Detection & Refill</li>
-                    <li>Compressor and Fan Motor Repair</li>
-                    <li>Precision 21-Point Tune-Ups</li>
-                    <li>Smart Thermostat Installation</li>
-                </ul>
-                <a href="contact.html" class="btn">Schedule AC Repair</a>
-            </div>
-        </div>
-
-        <div class="service-row">
-            <div class="service-image">
-                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=800" alt="Furnace Maintenance">
-            </div>
-            <div class="service-text">
-                <h2>HEATING &</h2>
-                <span class="sub-brand">FURNACE SOLUTIONS</span>
-                <p>Keep your family warm with expert furnace maintenance and high-efficiency heat pump systems designed for the local climate.</p>
-                <ul class="service-list">
-                    <li>Gas Furnace Safety Inspections</li>
-                    <li>Heat Pump Defrost & Coil Repair</li>
-                    <li>Emergency Heating Restoration</li>
-                    <li>Pilot & Ignition System Fixes</li>
-                </ul>
-                <a href="contact.html" class="btn">Book Heating Service</a>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Ridge Line HVAC | Knoxville, TN | Licensed & Insured
-    </footer>
-
-</body>
-</html>
+        .service-list { padding: 0; list-style: none; margin: 25px 0; }
+        .
