@@ -3,50 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVAC Services | Ridge Line HVAC</title>
+    <title>Professional HVAC Services | Ridge Line HVAC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; margin: 0; color: #0B1622; }
-        .header { background: #0B1622; color: white; padding: 80px 5%; text-align: center; }
-        .service-row { display: flex; align-items: center; padding: 80px 10%; gap: 50px; }
-        .service-row:nth-child(even) { flex-direction: row-reverse; background: #F4F7F9; }
-        .text-box { flex: 1; }
-        .img-placeholder { flex: 1; height: 350px; background: #ddd; border-radius: 10px; border: 2px dashed #bbb; display: flex; align-items: center; justify-content: center; color: #888; }
-        h2 { font-size: 36px; color: #E8610A; }
-        .btn { background: #E8610A; color: white; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; border-radius: 5px; }
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --gray: #666; }
+        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); line-height: 1.6; }
+        
+        /* Nav */
+        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Barlow Condensed'; font-size: 24px; font-weight: 900; color: white; text-decoration: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 700; text-transform: uppercase; font-size: 13px; }
+        .nav-links a:hover { color: var(--orange); }
+
+        /* Page Header */
+        .page-header { background: linear-gradient(rgba(11, 22, 34, 0.9), rgba(11, 22, 34, 0.9)), url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 80px 20px; text-align: center; }
+        .page-header h1 { font-family: 'Barlow Condensed'; font-size: 50px; text-transform: uppercase; margin: 0; }
+        
+        /* Service Rows */
+        .service-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .service-row { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; flex-wrap: wrap; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        
+        .service-image { flex: 1; min-width: 350px; height: 400px; border-radius: 8px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-bottom: 6px solid var(--orange); }
+        .service-image img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .service-text { flex: 1; min-width: 350px; }
+        .service-text h2 { font-family: 'Barlow Condensed'; font-size: 36px; text-transform: uppercase; color: var(--navy); margin-top: 0; }
+        .service-text p { font-size: 18px; color: var(--gray); margin-bottom: 25px; }
+        
+        .service-list { padding: 0; list-style: none; margin-bottom: 30px; }
+        .service-list li { margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; }
+        .service-list li::before { content: '✓'; color: var(--orange); margin-right: 15px; font-size: 20px; }
+
+        .btn { padding: 15px 30px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; }
+        .btn:hover { background: #ff741a; transform: translateY(-3px); }
+
+        footer { background: var(--navy); color: #8DA4B8; text-align: center; padding: 40px; font-size: 14px; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html" style="color: #E8610A; text-decoration:none; font-weight:bold;">← BACK TO HOME</a>
-        <h1 style="font-size: 50px;">Commercial & Residential Services</h1>
+
+    <nav>
+        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="quote.html" style="color:var(--orange)">Get Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Our <span style="color:var(--orange)">Services</span></h1>
+        <p>Premium Heating, Cooling, and Air Quality Solutions for Knoxville Homeowners.</p>
+    </header>
+
+    <div class="service-section">
+        <div class="service-row">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=800" alt="AC Repair Service">
+            </div>
+            <div class="service-text">
+                <h2>Air Conditioning <br><span style="color:var(--orange)">Repair & Service</span></h2>
+                <p>Don't sweat the Tennessee summer. Our technicians provide fast, 24/7 diagnostics and repair for all central air and mini-split brands.</p>
+                <ul class="service-list">
+                    <li>Refrigerant Leak Detection & Refill</li>
+                    <li>Compressor and Fan Motor Repair</li>
+                    <li>Precision 21-Point Tune-Ups</li>
+                    <li>Smart Thermostat Installation</li>
+                </ul>
+                <a href="quote.html" class="btn">Schedule AC Repair</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800" alt="Heating and Furnace Repair">
+            </div>
+            <div class="service-text">
+                <h2>Heating & <br><span style="color:var(--orange)">Furnace Solutions</span></h2>
+                <p>Keep your family warm through the winter months. We specialize in both gas furnace maintenance and high-efficiency heat pump systems.</p>
+                <ul class="service-list">
+                    <li>Gas Furnace Safety Inspections</li>
+                    <li>Heat Pump Defrost & Coil Repair</li>
+                    <li>Emergency Heating Restoration</li>
+                    <li>Pilot & Ignition System Fixes</li>
+                </ul>
+                <a href="quote.html" class="btn">Book Heating Service</a>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=800" alt="Air Quality and Duct Cleaning">
+            </div>
+            <div class="service-text">
+                <h2>Indoor <br><span style="color:var(--orange)">Air Quality</span></h2>
+                <p>Clean air is essential for a healthy home. We offer advanced filtration and purification systems that remove 99% of allergens and bacteria.</p>
+                <ul class="service-list">
+                    <li>UV-C Light Air Purification</li>
+                    <li>Whole-Home HEPA Filtration</li>
+                    <li>Humidity Control Systems</li>
+                    <li>Duct Inspection & Sealing</li>
+                </ul>
+                <a href="quote.html" class="btn">Breathe Better Now</a>
+            </div>
+        </div>
     </div>
 
-    <section class="service-row">
-        <div class="text-box">
-            <h2>AC Repair & Tune-Ups</h2>
-            <p>Our Precision Tune-Up includes a 21-point inspection to ensure your system is running at peak efficiency before the summer heat hits. We don't just fix symptoms; we solve the root cause of your cooling issues.</p>
-            <ul>
-                <li>Condenser Coil Cleaning</li>
-                <li>Electrical Component Testing</li>
-                <li>Drain Line Clearing</li>
-            </ul>
-            <a href="quote.html" class="btn">Schedule Service</a>
-        </div>
-        <div class="img-placeholder">[ AC Service Image ]</div>
-    </section>
+    <footer>
+        &copy; 2026 Ridge Line HVAC | Knoxville, TN | Licensed & Insured
+    </footer>
 
-    <section class="service-row">
-        <div class="text-box">
-            <h2>New System Installation</h2>
-            <p>Upgrading to a high-efficiency system can save you up to 30% on your monthly energy bills. We are authorized dealers for top-tier brands and offer financing options to fit any budget.</p>
-            <ul>
-                <li>Free In-Home Estimates</li>
-                <li>Load Calculation Accuracy</li>
-                <li>10-Year Part Warranties</li>
-            </ul>
-            <a href="quote.html" class="btn">Request An Estimate</a>
-        </div>
-        <div class="img-placeholder">[ Installation Image ]</div>
-    </section>
 </body>
 </html>
