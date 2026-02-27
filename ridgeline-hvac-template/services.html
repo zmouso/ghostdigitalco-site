@@ -1,24 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Our Services | Ridge Line HVAC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Services | Ridge Line HVAC</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #fff; text-align: center; }
-        .header { background: #0B1622; color: white; padding: 60px 20px; }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px; }
-        .card { border: 1px solid #eee; padding: 30px; border-top: 4px solid #E8610A; }
-        .card h3 { color: #0B1622; }
+        body { font-family: sans-serif; margin: 0; color: #0B1622; }
+        .header { background: #0B1622; color: white; padding: 80px 5%; text-align: center; }
+        .service-row { display: flex; align-items: center; padding: 80px 10%; gap: 50px; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; background: #F4F7F9; }
+        .text-box { flex: 1; }
+        .img-placeholder { flex: 1; height: 350px; background: #ddd; border-radius: 10px; border: 2px dashed #bbb; display: flex; align-items: center; justify-content: center; color: #888; }
+        h2 { font-size: 36px; color: #E8610A; }
+        .btn { background: #E8610A; color: white; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; border-radius: 5px; }
     </style>
 </head>
 <body>
     <div class="header">
-        <a href="index.html" style="color:#E8610A; text-decoration:none;">← Home</a>
-        <h1>Professional HVAC Services</h1>
+        <a href="index.html" style="color: #E8610A; text-decoration:none; font-weight:bold;">← BACK TO HOME</a>
+        <h1 style="font-size: 50px;">Commercial & Residential Services</h1>
     </div>
-    <div class="service-grid">
-        <div class="card"><h3>AC Installation</h3><p>Stay cool with top-tier energy-efficient units.</p></div>
-        <div class="card"><h3>Furnace Repair</h3><p>Reliable heating for those cold Tennessee nights.</p></div>
-        <div class="card"><h3>Emergency Care</h3><p>Available 24/7 for all your cooling emergencies.</p></div>
-    </div>
+
+    <section class="service-row">
+        <div class="text-box">
+            <h2>AC Repair & Tune-Ups</h2>
+            <p>Our Precision Tune-Up includes a 21-point inspection to ensure your system is running at peak efficiency before the summer heat hits. We don't just fix symptoms; we solve the root cause of your cooling issues.</p>
+            <ul>
+                <li>Condenser Coil Cleaning</li>
+                <li>Electrical Component Testing</li>
+                <li>Drain Line Clearing</li>
+            </ul>
+            <a href="quote.html" class="btn">Schedule Service</a>
+        </div>
+        <div class="img-placeholder">[ AC Service Image ]</div>
+    </section>
+
+    <section class="service-row">
+        <div class="text-box">
+            <h2>New System Installation</h2>
+            <p>Upgrading to a high-efficiency system can save you up to 30% on your monthly energy bills. We are authorized dealers for top-tier brands and offer financing options to fit any budget.</p>
+            <ul>
+                <li>Free In-Home Estimates</li>
+                <li>Load Calculation Accuracy</li>
+                <li>10-Year Part Warranties</li>
+            </ul>
+            <a href="quote.html" class="btn">Request An Estimate</a>
+        </div>
+        <div class="img-placeholder">[ Installation Image ]</div>
+    </section>
 </body>
 </html>
