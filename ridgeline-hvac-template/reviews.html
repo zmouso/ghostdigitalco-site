@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reviews | Ridge Line HVAC</title>
+    <title>Customer Reviews | Ridge Line HVAC</title>
     <style>
-        body { font-family: sans-serif; background: #f9f9f9; text-align: center; }
-        .review { background: white; max-width: 600px; margin: 20px auto; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .stars { color: #FFD700; font-size: 20px; }
+        body { font-family: sans-serif; background: #f9f9f9; padding: 50px 5%; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .review-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .stars { color: #FFD700; margin-bottom: 10px; font-size: 20px; }
+        .author { font-weight: bold; margin-top: 15px; display: block; color: #0B1622; }
+        .location { font-size: 12px; color: #888; }
+        .verified { color: #28a745; font-size: 12px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1 style="margin-top:50px;">What Our <span style="color:#E8610A">Clients Say</span></h1>
-    <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>"Ridge Line saved us! Our AC went out in July and they were here in 2 hours. Professional and fair."</p>
-        <strong>- Sarah J., Knoxville</strong>
+    <div style="text-align:center; margin-bottom: 50px;">
+        <h1 style="font-size: 40px; color: #0B1622;">What Knoxville Homeowners Say</h1>
+        <p>Real reviews from real neighbors.</p>
     </div>
-    <div class="review">
-        <div class="stars">★★★★★</div>
-        <p>"Best HVAC company in the area. Honest pricing and they actually cleaned up after themselves."</p>
-        <strong>- Mike D., Farragut</strong>
+
+    <div class="review-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Best service in town. They came out on a Sunday when our AC died. The technician, Chris, was polite and had us back up and running in under an hour. Highly recommend Ridge Line!"</p>
+            <span class="author">Jennifer P.</span>
+            <span class="location">West Knoxville | <span class="verified">Verified Customer</span></span>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"We had a full furnace replacement done last winter. The quote was transparent and significantly better than the big-box competitors. The system works perfectly."</p>
+            <span class="author">Marcus T.</span>
+            <span class="location">Farragut | <span class="verified">Verified Customer</span></span>
+        </div>
     </div>
-    <a href="index.html" style="display:block; margin-top:30px; color:#666;">Return to Home</a>
+    <div style="text-align:center; margin-top: 40px;">
+        <a href="index.html" style="color:#E8610A; text-decoration:none; font-weight:bold;">← Return to Home</a>
+    </div>
 </body>
 </html>
