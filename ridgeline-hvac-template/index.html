@@ -3,51 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridge Line HVAC | Knoxville's Premier Comfort Experts</title>
+    <title>Ridge Line HVAC | Knoxville</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --gray: #666; }
-        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); line-height: 1.6; }
-        
-        /* Nav */
-        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; color: white; text-decoration: none; letter-spacing: 1px; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--orange); }
-
-        /* Hero */
-        .hero { background: linear-gradient(rgba(11, 22, 34, 0.85), rgba(11, 22, 34, 0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 140px 20px; text-align: center; }
-        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(45px, 9vw, 85px); text-transform: uppercase; line-height: 0.85; margin: 0; }
-        .hero p { font-size: 22px; max-width: 800px; margin: 25px auto 45px; color: #BDD2E1; }
-        
-        .btn { padding: 20px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 4px; display: inline-block; }
-        .btn-orange { background: var(--orange); color: white; border: 2px solid var(--orange); }
-        .btn-outline { border: 2px solid white; color: white; margin-left: 15px; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        /* Trust Bar */
-        .trust-bar { background: var(--light); padding: 30px 5%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; border-bottom: 1px solid #e0e0e0; }
-        .trust-item h4 { margin: 0; font-family: 'Barlow Condensed'; font-size: 20px; text-transform: uppercase; color: var(--navy); }
-        .trust-item p { margin: 5px 0 0; font-size: 14px; color: var(--gray); }
-
-        /* Services Beef */
-        .services-preview { padding: 100px 5%; text-align: center; }
-        .section-tag { color: var(--orange); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 14px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { padding: 40px; border: 1px solid #eee; transition: 0.3s; text-align: left; position: relative; overflow: hidden; }
-        .card:hover { border-color: var(--orange); transform: translateY(-10px); }
-        .card h3 { font-family: 'Barlow Condensed'; font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
-        .card ul { padding: 0; list-style: none; color: var(--gray); font-size: 15px; }
-        .card ul li { margin-bottom: 8px; }
-        .card ul li::before { content: '✓'; color: var(--orange); margin-right: 10px; font-weight: bold; }
+        :root { --navy: #0B1622; --orange: #E8610A; }
+        body { font-family: 'Barlow', sans-serif; margin: 0; color: var(--navy); }
+        nav { background: var(--navy); padding: 20px; display: flex; justify-content: space-between; }
+        .hero { background: #0B1622; color: white; padding: 100px 20px; text-align: center; }
+        .btn { background: var(--orange); color: white; padding: 20px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
-
     <nav>
-        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
-        <div class="nav-links">
-            <a href="services.html">Services</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="about.html">About</a>
-            <a href="quote.html" style="color:var(--orange)">Request Quote</a>
+        <div style="color:white; font-weight:900;">RIDGE LINE HVAC</div>
+        <div class="links">
+            <a href="quote.html" style="color:var(--orange); text-decoration:none;">GET QUOTE</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>EXPERT SERVICE. <span style="color:var(--orange)">HONEST PRICING.</span></h1>
+        <p>Knoxville's most trusted HVAC team.</p>
+        <a href="quote.html" class="btn">REQUEST A FREE ESTIMATE</a>
+    </div>
+</body>
+</html>
