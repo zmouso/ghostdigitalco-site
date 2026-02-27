@@ -1,55 +1,345 @@
-  <div class="prgrid">
-    <div class="prc reveal">
-      <div class="pbadge">Small Business</div>
-      <div class="prname">Launch</div>
-      <div class="pram"><span class="prsup">$</span>800</div>
-      <p class="prnote">One-time payment</p>
-      <div class="prwhy">For businesses that need a professional website fast without the headache.</div>
-      <div class="prdiv"></div>
-      <ul class="prft">
-        <li>Copywriting + page messaging</li>
-        <li>Click-to-call + clear CTAs</li>
-        <li>Basic local setup</li>
-        <li>Speed/performance pass</li>
-        <li>Analytics + tracking</li>
-      </ul>
-      <a href="#contact" class="prbtn">Get Started</a>
-      <span class="guar-line">If you hate the draft, you don't pay. Period.</span>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ghost Digital Co builds professional websites for local service businesses. Based in Knoxville, TN.">
+<title>Ghost Digital Co — Professional Websites for Professional Trades | Knoxville, TN</title>
+<style>
+:root{
+  --black:#050810;
+  --dark:#0A0F1A;
+  --steel:#111827;
+  --blue:#2563EB;
+  --blue-bright:#3B82F6;
+  --blue-glow:#60A5FA;
+  --silver:#94A3B8;
+  --muted:#475569;
+  --light:#F1F5F9;
+  --gray:#1E293B;
+  --white:#FFFFFF;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--white);color:var(--gray);overflow-x:hidden}
 
-    <div class="prc feat reveal">
-      <div class="pbadge f">Most Popular</div>
-      <div class="prname">Pro</div>
-      <div class="pram"><span class="prsup">$</span>1,500</div>
-      <p class="prnote" style="color:rgba(255,255,255,.6)">One-time payment</p>
-      <div class="prwhy">A complete site that covers all your services and positions you as the local leader.</div>
-      <div class="prdiv f"></div>
-      <ul class="prft">
-        <li>Advanced copy + messaging</li>
-        <li>GMB checklist</li>
-        <li>Improved local SEO strategy</li>
-        <li>Extreme performance pass</li>
-        <li>Conversion tracking</li>
-      </ul>
-      <a href="#contact" class="prbtn f">Get Started</a>
-      <span class="guar-line" style="color:rgba(255,255,255,0.7)">If you hate the draft, you don't pay. Period.</span>
-    </div>
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;background:rgba(5,8,16,.97);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid rgba(37,99,235,.3)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:10px}
+.nm{font-size:22px;font-weight:900;letter-spacing:6px;color:var(--white);text-transform:uppercase}
+.ns{width:6px;height:6px;background:var(--blue-bright);border-radius:50%;box-shadow:0 0 8px var(--blue-bright);animation:pulse 2s infinite}
+.nd{font-size:10px;font-weight:400;letter-spacing:5px;color:var(--muted);text-transform:uppercase}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px var(--blue-bright)}50%{opacity:.6;box-shadow:0 0 16px var(--blue-bright)}}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--blue-glow)}
+.ncta{background:var(--blue)!important;color:var(--white)!important;padding:10px 26px;transition:all .2s!important;box-shadow:0 0 20px rgba(37,99,235,.4)}
+.ncta:hover{background:var(--blue-bright)!important;box-shadow:0 0 30px rgba(59,130,246,.6)!important}
 
-    <div class="prc reveal">
-      <div class="pbadge">Large Scale</div>
-      <div class="prname">Authority</div>
-      <div class="pram"><span class="prsup">$</span>3,000</div>
-      <p class="prnote">One-time payment</p>
-      <div class="prwhy">For established companies that need a bigger web presence with more complexity.</div>
-      <div class="prdiv"></div>
-      <ul class="prft">
-        <li>Expanded page architecture</li>
-        <li>Full market positioning</li>
-        <li>Complex lead integrations</li>
-        <li>Rush execution options</li>
-        <li>White-glove support</li>
-      </ul>
-      <a href="#contact" class="prbtn">Get Started</a>
+#home{min-height:100vh;background:var(--black);display:flex;align-items:center;padding-top:70px;position:relative;overflow:hidden}
+.hgb{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.06) 1px,transparent 1px);background-size:60px 60px}
+.hgb2{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.03) 1px,transparent 1px);background-size:12px 12px}
+.hgl{position:absolute;right:-10%;top:50%;transform:translateY(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(37,99,235,.18) 0%,transparent 60%);pointer-events:none;animation:glow 6s ease-in-out infinite}
+.hgl2{position:absolute;left:-5%;bottom:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 65%);pointer-events:none}
+@keyframes glow{0%,100%{opacity:.8;transform:translateY(-50%) scale(1)}50%{opacity:1;transform:translateY(-52%) scale(1.05)}}
+.hi{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:100px 48px;width:100%}
+.hew{display:inline-flex;align-items:center;gap:14px;margin-bottom:36px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.25);padding:8px 18px}
+.hel{width:20px;height:2px;background:var(--blue-bright)}
+.hew span{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--blue-glow)}
+#home h1{font-size:clamp(56px,9vw,118px);font-weight:900;line-height:.88;color:var(--white);letter-spacing:-2px;text-transform:uppercase;margin-bottom:40px}
+#home h1 em{font-style:normal;display:block;background:linear-gradient(135deg,var(--blue-bright) 0%,var(--blue-glow) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsub{font-size:18px;font-weight:300;color:var(--silver);max-width:500px;line-height:1.8;margin-bottom:52px;padding-left:20px;border-left:2px solid var(--blue-bright)}
+.hbtns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:80px}
+.btn-blue{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:var(--white);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:18px 44px;text-decoration:none;transition:all .25s;box-shadow:0 4px 24px rgba(37,99,235,.5)}
+.btn-blue:hover{background:var(--blue-bright);transform:translateY(-3px);box-shadow:0 8px 32px rgba(59,130,246,.6)}
+.btn-out{display:inline-flex;align-items:center;background:transparent;color:var(--white);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:18px 44px;border:1px solid rgba(148,163,184,.25);text-decoration:none;transition:all .25s}
+.btn-out:hover{border-color:var(--blue-bright);color:var(--blue-glow);transform:translateY(-3px)}
+.hproof{display:inline-flex;flex-wrap:wrap;border:1px solid rgba(37,99,235,.2)}
+.pi{padding:24px 40px;border-right:1px solid rgba(37,99,235,.2)}
+.pi:last-child{border-right:none}
+.pn{font-size:36px;font-weight:900;color:var(--white);line-height:1;margin-bottom:4px}
+.pn-blue{color:var(--blue-bright)}
+.pl{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+
+.sec{padding:120px 48px}
+.con{max-width:1200px;margin:0 auto}
+.ey{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--blue-bright);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:24px;height:2px;background:var(--blue-bright);flex-shrink:0}
+.st{font-size:clamp(36px,4.5vw,60px);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-1px;color:var(--gray);margin-bottom:24px}
+.st.lt{color:var(--white)}
+.sb{font-size:17px;font-weight:300;color:#64748B;line-height:1.8;max-width:540px}
+
+/* PROCESS */
+#process{background:var(--light)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:64px}
+.pc{background:var(--white);padding:48px 32px;position:relative;transition:all .3s;overflow:hidden}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-glow));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.pc:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(37,99,235,.12)}
+.pc:hover::before{transform:scaleX(1)}
+.pnum{font-size:64px;font-weight:900;color:rgba(37,99,235,.1);line-height:1;margin-bottom:20px}
+.pc h3{font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:12px}
+.pc p{font-size:14px;color:#64748B;line-height:1.7}
+
+/* SERVICES */
+#work{background:var(--dark)}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.wc{background:rgba(255,255,255,.03);padding:44px 36px;border:1px solid rgba(37,99,235,.12);transition:all .3s;position:relative;overflow:hidden}
+.wc:hover{background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.3);transform:translateY(-6px)}
+.wi{width:56px;height:56px;background:rgba(37,99,235,.1);border:1px solid rgba(37,99,235,.2);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px}
+.wt{font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--white);margin-bottom:12px}
+.wb{font-size:14px;color:var(--silver);line-height:1.7;margin-bottom:20px}
+.wlist{list-style:none;display:flex;flex-direction:column;gap:8px}
+.wlist li{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.wlist li::before{content:'';width:5px;height:5px;background:var(--blue-bright);border-radius:50%;flex-shrink:0}
+
+/* EXAMPLE SECTION */
+.example-box{
+  margin-top:80px;background:var(--light);padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  align-items:center;border-left:6px solid var(--blue);
+}
+.ex-content h3{font-size:32px;font-weight:900;text-transform:uppercase;color:var(--gray);margin-bottom:20px}
+.ex-content p{font-size:16px;line-height:1.7;color:var(--muted);margin-bottom:30px}
+.mockup-ui{background:var(--dark);border-radius:12px;box-shadow:0 40px 80px rgba(0,0,0,0.3);overflow:hidden;border:4px solid var(--steel)}
+.mockup-head{background:var(--steel);height:28px;display:flex;align-items:center;gap:6px;padding:0 15px}
+.mockup-head span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.1)}
+.mockup-img{
+  aspect-ratio:16/10;
+  background-image:linear-gradient(rgba(11,22,34,0.8), rgba(11,22,34,0.8)),
+    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80');
+  background-size:cover;background-position:center;
+  display:flex;align-items:center;justify-content:center;color:white;text-align:center;
+}
+.pbadge{display:inline-block;padding:6px 12px;background:var(--blue);color:white;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:15px}
+
+/* PRICING */
+#pricing{background:var(--black)}
+.prgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.prc{background:rgba(255,255,255,.03);padding:52px 40px;border:1px solid rgba(255,255,255,.06);transition:all .3s}
+.prc.feat{background:var(--blue);border-color:var(--blue);box-shadow:0 0 60px rgba(37,99,235,.3)}
+.prname{font-size:26px;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:12px}
+.pram{font-size:68px;font-weight:900;line-height:1;color:var(--white);margin-bottom:6px}
+.prsup{font-size:28px;vertical-align:top;margin-top:10px;display:inline-block}
+.prft{list-style:none;margin-top:40px;margin-bottom:44px}
+.prft li{font-size:14px;color:rgba(255,255,255,.75);padding:10px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(255,255,255,.04)}
+.prbtn{display:block;width:100%;text-align:center;font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:18px;text-decoration:none;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.2);transition:all .25s}
+.prbtn.f{background:var(--black);border-color:var(--black)}
+
+/* CONTACT */
+#contact{background:var(--steel)}
+.ctgrid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;margin-top:64px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.fg input,.fg select,.fg textarea{width:100%;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(148,163,184,.1);color:var(--white);font-family:inherit;outline:none}
+.fsub{width:100%;background:var(--blue);border:none;cursor:pointer;font-family:inherit;font-size:14px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--white);padding:20px;transition:all .25s}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid rgba(37,99,235,.2);padding:60px 48px 28px}
+.fbot{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;align-items:center}
+.fbot p{font-size:12px;color:rgba(255,255,255,0.5)}
+
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hi{padding:60px 24px}
+  .pgrid,.prgrid,.wgrid,.example-box,.ctgrid{grid-template-columns:1fr}
+  .example-box{padding:30px}
+  .sec{padding:80px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:10px">
+      <path d="M20 4L34 12V30L20 38L6 30V12L20 4Z" stroke="var(--blue-bright)" stroke-width="2" fill="none"/>
+      <rect x="15" y="16" width="10" height="2" fill="var(--blue-bright)"/>
+    </svg>
+    <span class="nm">GHOST</span><span class="ns"></span><span class="nd">Digital Co</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#process">Process</a></li>
+    <li><a href="#work">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="ncta">Get Started</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <div class="hgb"></div><div class="hgb2"></div><div class="hgl"></div><div class="hgl2"></div>
+  <div class="hi">
+    <div class="hew"><div class="hel"></div><span>Local Web Design &mdash; Knoxville, TN</span></div>
+    <h1>We Build<br>The Website.<br><em>You Book<br>The Jobs.</em></h1>
+    <p class="hsub">Ghost Digital Co builds professional websites for local service businesses. We handle the technical heavy lifting so you can stay on the job site.</p>
+    <div class="hbtns">
+      <a href="#contact" class="btn-blue">Get Started Now &rarr;</a>
+      <a href="#work" class="btn-out">See Our Work</a>
+    </div>
+    <div class="hproof">
+      <div class="pi"><div class="pn pn-blue">7</div><div class="pl">Day Delivery</div></div>
+      <div class="pi"><div class="pn">$800</div><div class="pl">Starting Price</div></div>
+      <div class="pi"><div class="pn pn-blue">100%</div><div class="pl">Done-For-You</div></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="sec" id="process">
+  <div class="con">
+    <p class="ey reveal">How It Works</p>
+    <h2 class="st reveal">A Simple Path To<br>A Better Website.</h2>
+    <div class="pgrid">
+      <div class="pc reveal"><div class="pnum">01</div><h3>Discovery</h3><p>We jump on a 30-minute call to learn about your business goals.</p></div>
+      <div class="pc reveal"><div class="pnum">02</div><h3>We Build</h3><p>We handle design, copywriting, and form setup while you work.</p></div>
+      <div class="pc reveal"><div class="pnum">03</div><h3>You Review</h3><p>We show you the draft and polish every detail to your liking.</p></div>
+      <div class="pc reveal"><div class="pnum">04</div><h3>You Launch</h3><p>Your site goes live in 7 days, ready to capture local leads.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="con">
+    <p class="ey reveal">Our Services</p>
+    <h2 class="st lt reveal">What We Build.</h2>
+    <div class="wgrid">
+      <div class="wc reveal">
+        <div class="wi">&#127981;</div>
+        <div class="wt">Brand Showcase</div>
+        <p class="wb">We show people why you're the best choice for the job in your area.</p>
+        <ul class="wlist"><li>Professional layouts</li><li>Job site galleries</li><li>Mobile performance</li></ul>
+      </div>
+      <div class="wc reveal">
+        <div class="wi">&#128203;</div>
+        <div class="wt">Booking Tools</div>
+        <p class="wb">Simple quote forms and phone buttons that get you hired immediately.</p>
+        <ul class="wlist"><li>Quote request forms</li><li>Click-to-call buttons</li><li>Email lead alerts</li></ul>
+      </div>
+      <div class="wc reveal">
+        <div class="wi">&#127959;</div>
+        <div class="wt">Full Web Design</div>
+        <p class="wb">A complete website with your photos, services, and local SEO setup.</p>
+        <ul class="wlist"><li>7-day delivery</li><li>Google search setup</li><li>Zero tech stress</li></ul>
+      </div>
+    </div>
+
+    <div class="example-box reveal">
+      <div class="ex-content">
+        <div class="pbadge">Featured Project</div>
+        <h3>Ridge Line HVAC</h3>
+        <p>This is a live example of our work for the trade industry. We built a high-conversion platform for a local Knoxville HVAC company, focusing on speed, 24/7 service visibility, and mobile-first lead capture.</p>
+        <ul class="wlist" style="margin-bottom: 25px;">
+          <li style="color: var(--gray)">Custom Industrial Design</li>
+          <li style="color: var(--gray)">Emergency Service Integration</li>
+          <li style="color: var(--gray)">Customer Review Showcase</li>
+        </ul>
+
+        <!-- FIXED: use folder link so Pages loads /ridgeline-hvac-template/index.html automatically -->
+        <a href="./ridgeline-hvac-template/" target="_blank" class="btn-blue">View Live Example &rarr;</a>
+      </div>
+      <div class="ex-visual">
+        <div class="mockup-ui">
+          <div class="mockup-head"><span></span><span></span><span></span></div>
+          <div class="mockup-img">
+            <div>
+              <h4 style="font-size: 20px; text-transform: uppercase; letter-spacing: 2px;">Ridge Line HVAC</h4>
+              <p style="font-size: 10px; color: var(--blue-bright); letter-spacing: 4px; margin-top: 5px;">KNOXVILLE, TN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec" id="pricing">
+  <div class="con">
+    <p class="ey reveal">Pricing</p>
+    <h2 class="st lt reveal">Professional Work.<br>Simple Pricing.</h2>
+    <div class="prgrid">
+      <div class="prc reveal">
+        <div class="prname">Launch</div>
+        <div class="pram"><span class="prsup">$</span>800</div>
+        <ul class="prft">
+          <li>Copywriting + Messaging</li>
+          <li>Click-to-call integration</li>
+          <li>Basic local SEO setup</li>
+          <li>7-Day Delivery</li>
+        </ul>
+        <a href="#contact" class="prbtn">Get Started</a>
+      </div>
+      <div class="prc feat reveal">
+        <div class="prname">Pro</div>
+        <div class="pram"><span class="prsup">$</span>1,500</div>
+        <ul class="prft">
+          <li>Advanced Local SEO</li>
+          <li>GMB Profile Optimization</li>
+          <li>Conversion Tracking</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="#contact" class="prbtn f">Get Started</a>
+      </div>
+      <div class="prc reveal">
+        <div class="prname">Authority</div>
+        <div class="pram"><span class="prsup">$</span>3,000</div>
+        <ul class="prft">
+          <li>Full Market Build</li>
+          <li>Complex Integrations</li>
+          <li>Unlimited Page Scaling</li>
+          <li>White-Glove Service</li>
+        </ul>
+        <a href="#contact" class="prbtn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="con">
+    <p class="ey reveal">Let's Talk</p>
+    <h2 class="st lt reveal">Start Your Project<br>Today.</h2>
+    <div class="ctgrid">
+      <div class="reveal">
+        <h3 style="color: white; margin-bottom: 20px;">Direct Contact</h3>
+        <p style="color: var(--silver);">Email: ghostdigitalco.us@gmail.com</p>
+        <p style="color: var(--silver); margin-top: 10px;">Location: Knoxville, TN</p>
+      </div>
+
+      <div class="reveal">
+        <form action="https://formspree.io/f/mreajqyy" method="POST">
+          <input type="hidden" name="_subject" value="New Ghost Digital Co Lead">
+          <input type="hidden" name="_next" value="https://zmouso.github.io/ghostdigitalco-site/thanks.html">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <div class="fg"><label>Name</label><input type="text" name="name" required></div>
+          <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="HVAC, Roofing, etc."></div>
+          <div class="fg"><label>Email</label><input type="email" name="email" required></div>
+          <div class="fg"><label>Message</label><textarea name="message" required></textarea></div>
+          <button type="submit" class="fsub">Send My Request</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fbot">
+    <p>&copy; 2026 Ghost Digital Co. | Knoxville, TN.</p>
+    <p>Built for <span>Performance.</span></p>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
