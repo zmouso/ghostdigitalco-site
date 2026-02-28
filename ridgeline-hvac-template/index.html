@@ -14,40 +14,52 @@
             --black: #050a0f;
             --glass: rgba(255, 255, 255, 0.03);
             --blur: blur(12px);
+            --ease: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
         body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); overflow-x: hidden; }
 
-        /* THE "ELON" HEADER: DYNAMIC & GLASSY */
+        /* DYNAMIC MOBILE NAV */
         .top-nav {
             position: fixed; top: 0; width: 100%; height: 90px;
             display: flex; align-items: center; justify-content: space-between;
-            padding: 0 6%; z-index: 1000; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 6%; z-index: 1000; transition: all 0.5s var(--ease);
         }
         .top-nav.scrolled {
-            height: 70px; background: rgba(11, 22, 34, 0.85); backdrop-filter: var(--blur);
+            height: 70px; background: rgba(11, 22, 34, 0.9); backdrop-filter: var(--blur);
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .logo { 
-            font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; 
+            font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; 
             color: white; text-decoration: none; text-transform: uppercase; letter-spacing: -1px;
         }
         .logo span { color: var(--orange); }
 
-        .nav-links { display: flex; list-style: none; gap: 40px; align-items: center; }
+        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
         .nav-links a { 
-            color: white; text-decoration: none; font-weight: 700; font-size: 12px; 
-            text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; opacity: 0.8;
+            color: white; text-decoration: none; font-weight: 700; font-size: 11px; 
+            text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
         }
-        .nav-links a:hover { opacity: 1; color: var(--orange); }
-        .cta-nav { 
-            background: var(--orange); padding: 12px 24px; color: white !important; 
-            opacity: 1 !important; font-weight: 900 !important; border-radius: 2px;
+        .cta-nav { background: var(--orange); padding: 10px 20px; border-radius: 2px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for demo - hide complex mobile menu */
+            .top-nav { height: 70px; }
+            .hero h1 { font-size: 60px !important; letter-spacing: -2px !important; }
         }
 
-        /* HERO: PARALLAX DEPTH */
+        /* WATERMARK */
+        .agency-badge {
+            position: fixed; bottom: 20px; left: 20px; z-index: 2000;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+            padding: 12px 20px; border-left: 4px solid var(--orange);
+            color: white; font-size: 9px; font-weight: 900; letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* SECTION 1: HERO */
         .hero {
             height: 100vh; background: var(--black);
             display: flex; align-items: center; justify-content: center;
@@ -55,42 +67,40 @@
         }
         .hero-bg {
             position: absolute; inset: 0;
-            background: linear-gradient(rgba(5,10,15,0.7), rgba(5,10,15,0.9)), 
+            background: linear-gradient(rgba(5,10,15,0.6), rgba(5,10,15,0.9)), 
                         url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover; background-position: center; transform: scale(1.1);
+            background-size: cover; background-position: center;
         }
-        .hero-content { position: relative; z-index: 10; text-align: center; color: white; padding: 0 20px; }
+        .hero-content { position: relative; z-index: 10; text-align: center; color: white; padding: 0 5%; }
         .hero h1 { 
-            font-family: 'Barlow Condensed'; font-size: clamp(60px, 12vw, 140px); 
-            line-height: 0.8; text-transform: uppercase; margin-bottom: 30px; 
-            letter-spacing: -4px;
+            font-family: 'Barlow Condensed'; font-size: clamp(60px, 12vw, 130px); 
+            line-height: 0.85; text-transform: uppercase; margin-bottom: 20px; 
         }
-        .hero h1 span { color: var(--orange); }
 
-        /* REVEAL ANIMATION CLASSES */
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        /* SECTION 2: TECHNICAL GRID */
+        .tech-section { padding: 120px 6%; background: var(--white); }
+        .grid-3 { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; margin-top: 60px; 
+        }
+        .tech-card { padding: 40px; border: 1px solid #eee; transition: 0.5s var(--ease); }
+        .tech-card:hover { border-color: var(--orange); transform: translateY(-10px); }
+        .tech-card h3 { font-family: 'Barlow Condensed'; font-size: 30px; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* SECTION 3: THE PROCESS (THE " Elon" DARK MODE) */
+        .process-section { padding: 120px 6%; background: var(--navy); color: white; }
+        .process-step { display: flex; gap: 50px; margin-bottom: 80px; align-items: center; }
+        .process-num { font-family: 'Barlow Condensed'; font-size: 100px; color: var(--orange); opacity: 0.3; font-weight: 900; }
+        @media (max-width: 768px) { .process-step { flex-direction: column; gap: 20px; text-align: center; } }
+
+        /* ANIMATION */
+        .reveal { opacity: 0; transform: translateY(40px); transition: 1s var(--ease); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* AGENCY WATERMARK */
-        .agency-badge {
-            position: fixed; bottom: 30px; left: 30px; z-index: 2000;
-            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
-            padding: 15px 25px; border-left: 4px solid var(--orange);
-            color: white; font-size: 10px; font-weight: 900; letter-spacing: 2px;
-            text-transform: uppercase; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        /* STATS SECTION */
-        .stats-bar {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            background: var(--navy); padding: 80px 10%; color: white;
-        }
-        .stat-item h2 { font-family: 'Barlow Condensed'; font-size: 60px; color: var(--orange); }
     </style>
 </head>
 <body>
 
-    <div class="agency-badge">Architected by // Ghost Digital Co.</div>
+    <div class="agency-badge">Built by // Ghost Digital Co.</div>
 
     <nav class="top-nav" id="mainNav">
         <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
@@ -104,42 +114,64 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content reveal">
-            <p style="text-transform:uppercase; letter-spacing: 8px; margin-bottom: 20px; font-weight: 700;">Established 2008 // Knoxville, TN</p>
-            <h1>Climate<br><span>Controlled.</span></h1>
-            <a href="contact.html" class="cta-nav" style="padding: 20px 40px; display: inline-block; margin-top: 40px; font-size: 14px;">Schedule Precision Inspection</a>
+            <p style="text-transform:uppercase; letter-spacing: 5px; margin-bottom: 20px;">Knoxville's Technical Standard</p>
+            <h1>Absolute<br><span>Precision.</span></h1>
+            <a href="contact.html" class="cta-nav" style="padding: 20px 40px; display: inline-block; margin-top: 30px; font-size: 13px; text-decoration: none;">Launch Inspection</a>
         </div>
     </section>
 
-    <section class="stats-bar">
-        <div class="stat-item reveal">
-            <h2>5.0</h2>
-            <p>Customer Rating</p>
+    <section class="tech-section">
+        <div class="reveal">
+            <h2 style="font-family:'Barlow Condensed'; font-size: 50px; text-transform: uppercase;">Infrastructure <span>Intelligence</span></h2>
+            <p style="max-width: 600px; color: #666;">We don't just "fix AC." We optimize the thermal dynamics of your home for maximum longevity and minimum energy waste.</p>
         </div>
-        <div class="stat-item reveal">
-            <h2>15+</h2>
-            <p>Years Excellence</p>
+        <div class="grid-3">
+            <div class="tech-card reveal">
+                <h3>01. Diagnostic</h3>
+                <p>Full-system infrared scanning to find energy leaks other companies miss.</p>
+            </div>
+            <div class="tech-card reveal">
+                <h3>02. Calibration</h3>
+                <p>Digital tuning of airflow and coolant pressures for 99% peak efficiency.</p>
+            </div>
+            <div class="tech-card reveal">
+                <h3>03. Support</h3>
+                <p>24/7 technical dispatch with live tracking of your technician.</p>
+            </div>
         </div>
-        <div class="stat-item reveal">
-            <h2>24/7</h2>
-            <p>Priority Support</p>
+    </section>
+
+    <section class="process-section">
+        <div class="process-step reveal">
+            <div class="process-num">01</div>
+            <div>
+                <h3 style="font-family:'Barlow Condensed'; font-size: 40px; text-transform: uppercase;">The Analysis</h3>
+                <p>We perform a load calculation of your entire home to ensure your system isn't overworking.</p>
+            </div>
+        </div>
+        <div class="process-step reveal">
+            <div class="process-num">02</div>
+            <div>
+                <h3 style="font-family:'Barlow Condensed'; font-size: 40px; text-transform: uppercase;">The Execution</h3>
+                <p>Industrial-grade installation with clean-room protocols. No dust, no debris, no shortcuts.</p>
+            </div>
         </div>
     </section>
 
     <script>
-        // HEADER SCROLL ENGINE
+        // Header Effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('mainNav');
             if (window.scrollY > 50) nav.classList.add('scrolled');
             else nav.classList.remove('scrolled');
         });
 
-        // REVEAL ON SCROLL ENGINE (The "Elon" Movement)
+        // Scroll Reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
