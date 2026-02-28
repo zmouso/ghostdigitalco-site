@@ -3,36 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ridgeline HVAC | Knoxville TN (Demo Site)</title>
+<title>Ridgeline HVAC | Knoxville TN (Demo)</title>
 <meta name="description" content="Demo HVAC website built for portfolio display. Not a real company.">
 
 <style>
 :root{
-  --blue:#0A1F44;
-  --light-blue:#1E90FF;
+  --navy:#0B1F3A;
+  --blue:#1E90FF;
   --orange:#FF6B00;
-  --white:#ffffff;
-  --gray:#f4f6f9;
+  --light:#F3F6FA;
   --dark:#111827;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
-
-body{background:#fff;color:#111;line-height:1.6}
-
-.demo-banner{
-  background:#FF0000;
-  color:white;
-  text-align:center;
-  font-weight:700;
-  padding:6px;
-  font-size:13px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
 
-header{
-  background:var(--blue);
+body{
+  background:#fff;
+  color:#111;
+  line-height:1.6;
+}
+
+/* DEMO BANNER */
+.demo-banner{
+  background:#D10000;
   color:white;
-  padding:16px 20px;
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  padding:6px;
+}
+
+/* HEADER */
+header{
+  background:var(--navy);
+  color:white;
+  padding:18px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -40,155 +50,161 @@ header{
 
 .logo{
   font-size:22px;
-  font-weight:800;
+  font-weight:900;
   letter-spacing:1px;
 }
 
 .call-btn{
   background:var(--orange);
-  color:white;
   padding:12px 18px;
   border-radius:6px;
-  font-weight:700;
+  color:white;
   text-decoration:none;
+  font-weight:800;
 }
 
+/* HERO */
 .hero{
-  background-image:url('../assets/hero.jpg');
+  background-image:url('../assets/hero.jpg'); /* FIXED PATH */
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
   position:relative;
-  color:white;
-  padding:90px 20px;
+  padding:110px 20px;
   text-align:center;
+  color:white;
 }
 
 .hero::after{
   content:'';
   position:absolute;
   inset:0;
-  background:rgba(10,31,68,.75);
+  background:linear-gradient(to bottom, rgba(11,31,58,.85), rgba(11,31,58,.85));
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:800px;
+  max-width:850px;
   margin:auto;
 }
 
 .hero h1{
-  font-size:38px;
+  font-size:42px;
   font-weight:900;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .hero p{
-  font-size:18px;
-  margin-bottom:30px;
+  font-size:20px;
+  margin-bottom:35px;
 }
 
 .cta-row{
   display:flex;
-  gap:15px;
+  gap:18px;
   justify-content:center;
   flex-wrap:wrap;
 }
 
 .primary{
   background:var(--orange);
-  padding:16px 28px;
-  color:white;
-  text-decoration:none;
-  font-weight:800;
+  padding:18px 32px;
   border-radius:6px;
+  text-decoration:none;
+  font-weight:900;
+  color:white;
 }
 
 .secondary{
-  background:var(--light-blue);
-  padding:16px 28px;
-  color:white;
-  text-decoration:none;
-  font-weight:800;
+  background:var(--blue);
+  padding:18px 32px;
   border-radius:6px;
+  text-decoration:none;
+  font-weight:900;
+  color:white;
 }
 
+/* SERVICES */
 .section{
-  padding:70px 20px;
+  padding:80px 20px;
   max-width:1100px;
   margin:auto;
 }
 
 .section h2{
   text-align:center;
-  font-size:30px;
-  margin-bottom:50px;
+  font-size:34px;
+  margin-bottom:55px;
 }
 
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:30px;
 }
 
 .card{
-  background:var(--gray);
-  padding:30px;
+  background:var(--light);
+  padding:40px 30px;
   border-radius:8px;
   text-align:center;
   transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
 .card h3{
-  margin-bottom:10px;
-  color:var(--blue);
+  color:var(--navy);
+  margin-bottom:12px;
 }
 
+/* TRUST SECTION */
 .trust{
-  background:var(--blue);
+  background:var(--navy);
   color:white;
   text-align:center;
-  padding:60px 20px;
+  padding:70px 20px;
 }
 
 .trust h2{
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
+/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
   text-align:center;
-  padding:30px 20px;
+  padding:35px 20px;
   font-size:14px;
 }
 
-.mobile-call-bar{
+/* MOBILE CALL BAR */
+.mobile-call{
   position:fixed;
   bottom:0;
   left:0;
   right:0;
   background:var(--orange);
   text-align:center;
-  padding:14px;
+  padding:16px;
   display:none;
 }
 
-.mobile-call-bar a{
+.mobile-call a{
   color:white;
-  font-weight:800;
+  font-weight:900;
   text-decoration:none;
+  font-size:18px;
 }
 
 @media(max-width:768px){
-  .hero h1{font-size:28px}
-  .mobile-call-bar{display:block}
-  body{padding-bottom:60px}
+  .hero h1{font-size:30px}
+  .mobile-call{display:block}
+  body{padding-bottom:70px}
 }
 </style>
 </head>
@@ -196,7 +212,7 @@ footer{
 <body>
 
 <div class="demo-banner">
-⚠ DEMO WEBSITE – NOT A REAL HVAC COMPANY – BUILT FOR PORTFOLIO DISPLAY
+⚠ DEMO SITE — NOT A REAL HVAC COMPANY — BUILT FOR PORTFOLIO USE
 </div>
 
 <header>
@@ -206,8 +222,8 @@ footer{
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Fast. Reliable. Heating & Cooling.</h1>
-    <p>24/7 Emergency HVAC Repair & Installation in Knoxville, TN</p>
+    <h1>24/7 Emergency Heating & Cooling</h1>
+    <p>Fast Repairs • Honest Pricing • Licensed Knoxville Technicians</p>
 
     <div class="cta-row">
       <a href="tel:8655551234" class="primary">Call Now</a>
@@ -217,35 +233,35 @@ footer{
 </section>
 
 <section class="section">
-  <h2>Our HVAC Services</h2>
+  <h2>Complete HVAC Services</h2>
   <div class="services">
     <div class="card">
       <h3>AC Repair</h3>
-      <p>Emergency cooling repair with same-day response.</p>
+      <p>Same-day cooling repairs to restore comfort fast.</p>
     </div>
     <div class="card">
       <h3>Furnace Repair</h3>
-      <p>Heating system diagnostics and fast replacement.</p>
+      <p>Heating diagnostics and replacement when you need it.</p>
     </div>
     <div class="card">
-      <h3>Full Installations</h3>
-      <p>Energy-efficient system installs for homes & businesses.</p>
+      <h3>Full System Install</h3>
+      <p>Energy-efficient upgrades for homes & businesses.</p>
     </div>
   </div>
 </section>
 
 <section class="trust">
-  <h2>Why Homeowners Choose Us</h2>
-  <p>Licensed • Insured • Local Technicians • Upfront Pricing • 5-Star Reviews</p>
+  <h2>Why Homeowners Choose Ridgeline</h2>
+  <p>Licensed • Insured • 5-Star Reviews • Upfront Pricing • Local Experts</p>
 </section>
 
 <footer>
-  Ridgeline HVAC – Demo Website Only  
-  <br>
-  Built for portfolio demonstration purposes.
+Ridgeline HVAC — Demo Website Only  
+<br>
+Built for Ghost Digital Co portfolio display.
 </footer>
 
-<div class="mobile-call-bar">
+<div class="mobile-call">
   <a href="tel:8655551234">📞 Tap To Call Now</a>
 </div>
 
