@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Customer Reviews | Ridge Line HVAC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Ridge Line HVAC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; background: #f9f9f9; padding: 50px 5%; }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
-        .review-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .stars { color: #FFD700; margin-bottom: 10px; font-size: 20px; }
-        .author { font-weight: bold; margin-top: 15px; display: block; color: #0B1622; }
-        .location { font-size: 12px; color: #888; }
-        .verified { color: #28a745; font-size: 12px; font-weight: bold; }
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
+        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--light); }
+        
+        .demo-watermark { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; border-left: 3px solid var(--orange); }
+
+        .top-bar { background: #081018; color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
+        nav { background: var(--navy); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--orange); }
+        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; }
+
+        .page-head { background: var(--navy); color: white; padding: 60px 5%; text-align: center; }
+        .page-head h1 { font-family: 'Barlow Condensed'; font-size: 50px; text-transform: uppercase; margin: 0; }
+
+        .review-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .review-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-left: 5px solid var(--orange); }
+        .stars { color: #FFD700; font-size: 20px; margin-bottom: 15px; }
+        .review-text { font-style: italic; color: #444; margin-bottom: 20px; }
+        .client-name { font-weight: 700; text-transform: uppercase; font-size: 14px; color: var(--navy); }
     </style>
 </head>
 <body>
-    <div style="text-align:center; margin-bottom: 50px;">
-        <h1 style="font-size: 40px; color: #0B1622;">What Knoxville Homeowners Say</h1>
-        <p>Real reviews from real neighbors.</p>
+    <div class="demo-watermark">CONCEPT DEMO BY GHOST DIGITAL CO.</div>
+    <div class="top-bar">
+        <span>KNOXVILLE, TN & SURROUNDING AREAS</span>
+        <span style="color:var(--orange)">EMERGENCY DISPATCH: (865) 555-0123</span>
     </div>
+    <nav>
+        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
+        <div class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html" style="color:var(--orange)">Get Quote</a>
+        </div>
+    </nav>
+    
+    <header class="page-head"><h1>Client <span style="color:var(--orange)">Reviews</span></h1></header>
 
-    <div class="review-grid">
+    <div class="review-container">
         <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p>"Best service in town. They came out on a Sunday when our AC died. The technician, Chris, was polite and had us back up and running in under an hour. Highly recommend Ridge Line!"</p>
-            <span class="author">Jennifer P.</span>
-            <span class="location">West Knoxville | <span class="verified">Verified Customer</span></span>
+            <p class="review-text">"Our AC went out in the middle of a July heatwave. They were here within 2 hours and had it fixed before dinner. Honest and professional."</p>
+            <p class="client-name">— Mike S. | Knoxville</p>
         </div>
         <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p>"We had a full furnace replacement done last winter. The quote was transparent and significantly better than the big-box competitors. The system works perfectly."</p>
-            <span class="author">Marcus T.</span>
-            <span class="location">Farragut | <span class="verified">Verified Customer</span></span>
+            <p class="review-text">"The only HVAC team I trust. They didn't try to upsell me on a new unit; they just fixed the problem and gave me a fair price."</p>
+            <p class="client-name">— Sarah L. | Maryville</p>
         </div>
-    </div>
-    <div style="text-align:center; margin-top: 40px;">
-        <a href="index.html" style="color:#E8610A; text-decoration:none; font-weight:bold;">← Return to Home</a>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Precision work and great communication. Highly recommend their maintenance plan."</p>
+            <p class="client-name">— David R. | Oak Ridge</p>
+        </div>
     </div>
 </body>
 </html>
