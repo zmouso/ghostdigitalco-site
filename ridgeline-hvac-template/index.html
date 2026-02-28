@@ -3,67 +3,70 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Ridgeline HVAC — Knoxville's heating and cooling experts. Fast repairs, honest pricing, 24/7 emergency service."/>
-<title>Ridgeline HVAC | Knoxville, TN</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<title>Ridgeline HVAC | Professional Climate Control</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#0A0A0A;
-  --dark:#111111;
-  --charcoal:#1C1C1C;
-  --orange:#E05C00;
-  --orange-light:#FF6B1A;
-  --cream:#F5F0EA;
-  --warm:#EDE8E0;
-  --silver:#9A9A9A;
-  --white:#FFFFFF;
-  --text:#1C1C1C;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+    :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --black: #081018; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
 
-/* NAV */
-nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
-.nav-name{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);letter-spacing:.5px}
-.nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
-.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;letter-spacing:.5px;padding:10px 20px;text-decoration:none;transition:background .2s}
-.nav-call:hover{background:var(--orange-light)}
+    /* Fix: Persistent Demo Watermark */
+    .demo-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; border-left: 4px solid var(--orange); pointer-events: none; letter-spacing: 1px; }
 
-/* HERO */
-.hero{min-height:92svh;background:var(--black);position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(10,10,10,.3) 0%,rgba(10,10,10,.75) 60%,rgba(10,10,10,.97) 100%),url('../assets/hero.jpg');background-size:cover;background-position:center top}
-.hero-content{position:relative;z-index:2;padding:48px 24px 56px;width:100%}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}
-.hero-dot{width:7px;height:7px;background:var(--orange);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.hero-tag span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(44px,11vw,80px);line-height:1;color:var(--white);margin-bottom:20px;max-width:600px}
-.hero h1 em{font-style:italic;color:var(--orange-light)}
-.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;max-width:420px;margin-bottom:36px}
+    /* Header & Nav */
+    .top-bar { background: var(--black); color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+    nav { background: var(--navy); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); }
+    .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
+    .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
+    .nav-links a:hover { color: var(--orange); }
+    .cta-btn { background: var(--orange); color: white !important; padding: 10px 20px; border-radius: 4px; }
+
+    /* Hero */
+    .hero { background: linear-gradient(rgba(11,22,34,0.85), rgba(11,22,34,0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 120px 5%; text-align: center; }
+    .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(40px, 8vw, 90px); text-transform: uppercase; line-height: 0.9; margin-bottom: 20px; }
+    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 40px; color: #cbd5e0; }
+
+    /* Common Sections */
+    .section-pad { padding: 80px 5%; }
+    .btn { padding: 18px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+    .btn-orange { background: var(--orange); color: white; }
+    .btn-orange:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(232,97,10,0.3); }
+
+    /* Footer */
+    footer { background: var(--black); color: #718096; padding: 60px 5% 20px; text-align: center; }
+    .footer-disclaimer { border-top: 1px solid #2d3748; margin-top: 40px; padding-top: 20px; font-size: 12px; }
 </style>
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">
-    <span class="nav-name">Ridgeline</span>
-    <span class="nav-sub">HVAC · Knoxville</span>
-  </a>
-  <a href="tel:8651234567" class="nav-call">Call (865) 123-4567</a>
-</nav>
 
-<section class="hero">
-  <div class="hero-img"></div>
-  <div class="hero-content">
-    <div class="hero-tag">
-      <div class="hero-dot"></div>
-      <span>Available 24/7 For Emergencies</span>
+    <div class="demo-tag">CONCEPT DEMO BY GHOST DIGITAL CO.</div>
+
+    <div class="top-bar">
+        <span>KNOXVILLE, TN & SURROUNDING</span>
+        <span>EMERGENCY DISPATCH: <a href="tel:8651234567" style="color:var(--orange); text-decoration:none;">(865) 123-4567</a></span>
     </div>
-    <h1>Heating &amp; Cooling<br><em>Done Right.</em></h1>
-    <p class="hero-sub">Fast repairs, honest pricing, and technicians who show up when they say they will. Serving Knoxville since 2008.</p>
-  </div>
-</section>
+
+    <nav>
+        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
+        <div class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html" class="cta-btn">Get Quote</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>HEAVY DUTY SERVICE.<br><span style="color:var(--orange)">FAIR PRICING.</span></h1>
+        <p>Knoxville's premier HVAC concept for high-performance residential and commercial climate control.</p>
+        <a href="contact.html" class="btn btn-orange">Schedule Inspection</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ridgeline HVAC. All Rights Reserved.</p>
+        <div class="footer-disclaimer">
+            This is a <strong>Demo Site</strong> created for portfolio purposes by <a href="#" style="color:white; text-decoration:none;">Ghost Digital Co.</a>
+        </div>
+    </footer>
+
 </body>
 </html>
