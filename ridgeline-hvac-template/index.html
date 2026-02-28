@@ -3,176 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Ridgeline HVAC | Next-Gen Climate Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Ridgeline HVAC | Knoxville's Trusted AC & Heating</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --navy: #0B1622;
-            --orange: #E8610A;
-            --orange-bright: #ff7417;
-            --white: #FFFFFF;
-            --black: #050a0f;
-            --glass: rgba(255, 255, 255, 0.03);
-            --blur: blur(12px);
-            --ease: cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --black: #050a0f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); overflow-x: hidden; }
-
-        /* DYNAMIC MOBILE NAV */
-        .top-nav {
-            position: fixed; top: 0; width: 100%; height: 90px;
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 6%; z-index: 1000; transition: all 0.5s var(--ease);
-        }
-        .top-nav.scrolled {
-            height: 70px; background: rgba(11, 22, 34, 0.9); backdrop-filter: var(--blur);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .logo { 
-            font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; 
-            color: white; text-decoration: none; text-transform: uppercase; letter-spacing: -1px;
-        }
+        /* UNIFIED NAV - Copy to every page */
+        .top-strip { background: var(--black); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        nav { background: var(--navy); padding: 0 5%; height: 85px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); }
+        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
         .logo span { color: var(--orange); }
+        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--orange); }
+        .cta-nav { background: var(--orange); padding: 10px 20px; border-radius: 4px; }
 
-        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-        .nav-links a { 
-            color: white; text-decoration: none; font-weight: 700; font-size: 11px; 
-            text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
-        }
-        .cta-nav { background: var(--orange); padding: 10px 20px; border-radius: 2px; }
-
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplified for demo - hide complex mobile menu */
-            .top-nav { height: 70px; }
-            .hero h1 { font-size: 60px !important; letter-spacing: -2px !important; }
+            .nav-links { display: none; } /* Mobile menu simplified */
+            .hero h1 { font-size: 50px !important; }
+            .grid-3 { grid-template-columns: 1fr !important; }
         }
 
-        /* WATERMARK */
-        .agency-badge {
-            position: fixed; bottom: 20px; left: 20px; z-index: 2000;
-            background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
-            padding: 12px 20px; border-left: 4px solid var(--orange);
-            color: white; font-size: 9px; font-weight: 900; letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        /* SECTIONS */
+        .hero { background: linear-gradient(rgba(11,22,34,0.7), rgba(11,22,34,0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000') center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 5%; }
+        .hero h1 { font-family: 'Barlow Condensed'; font-size: 90px; line-height: 0.9; text-transform: uppercase; margin-bottom: 20px; }
+        .btn { padding: 18px 40px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; }
+        .btn:hover { background: var(--black); transform: translateY(-3px); }
 
-        /* SECTION 1: HERO */
-        .hero {
-            height: 100vh; background: var(--black);
-            display: flex; align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
-        }
-        .hero-bg {
-            position: absolute; inset: 0;
-            background: linear-gradient(rgba(5,10,15,0.6), rgba(5,10,15,0.9)), 
-                        url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000');
-            background-size: cover; background-position: center;
-        }
-        .hero-content { position: relative; z-index: 10; text-align: center; color: white; padding: 0 5%; }
-        .hero h1 { 
-            font-family: 'Barlow Condensed'; font-size: clamp(60px, 12vw, 130px); 
-            line-height: 0.85; text-transform: uppercase; margin-bottom: 20px; 
-        }
+        .section { padding: 80px 5%; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .card { background: var(--light); padding: 40px; border-radius: 8px; text-align: center; border-bottom: 4px solid transparent; transition: 0.3s; }
+        .card:hover { border-color: var(--orange); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* SECTION 2: TECHNICAL GRID */
-        .tech-section { padding: 120px 6%; background: var(--white); }
-        .grid-3 { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 40px; margin-top: 60px; 
-        }
-        .tech-card { padding: 40px; border: 1px solid #eee; transition: 0.5s var(--ease); }
-        .tech-card:hover { border-color: var(--orange); transform: translateY(-10px); }
-        .tech-card h3 { font-family: 'Barlow Condensed'; font-size: 30px; text-transform: uppercase; margin-bottom: 15px; }
-
-        /* SECTION 3: THE PROCESS (THE " Elon" DARK MODE) */
-        .process-section { padding: 120px 6%; background: var(--navy); color: white; }
-        .process-step { display: flex; gap: 50px; margin-bottom: 80px; align-items: center; }
-        .process-num { font-family: 'Barlow Condensed'; font-size: 100px; color: var(--orange); opacity: 0.3; font-weight: 900; }
-        @media (max-width: 768px) { .process-step { flex-direction: column; gap: 20px; text-align: center; } }
-
-        /* ANIMATION */
-        .reveal { opacity: 0; transform: translateY(40px); transition: 1s var(--ease); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .agency-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; font-size: 10px; font-weight: 900; text-transform: uppercase; border-left: 3px solid var(--orange); z-index: 9999; pointer-events: none; }
     </style>
 </head>
 <body>
-
-    <div class="agency-badge">Built by // Ghost Digital Co.</div>
-
-    <nav class="top-nav" id="mainNav">
+    <div class="agency-tag">Built by // Ghost Digital Co.</div>
+    <div class="top-strip">
+        <span>Serving Greater Knoxville & Surrounding Areas</span>
+        <span>Call (865) 123-4567</span>
+    </div>
+    <nav>
         <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
         <ul class="nav-links">
-            <li><a href="services.html">Engineering</a></li>
-            <li><a href="reviews.html">Intelligence</a></li>
-            <li><a href="contact.html" class="cta-nav">Request Analysis</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html" class="cta-nav">Get A Quote</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content reveal">
-            <p style="text-transform:uppercase; letter-spacing: 5px; margin-bottom: 20px;">Knoxville's Technical Standard</p>
-            <h1>Absolute<br><span>Precision.</span></h1>
-            <a href="contact.html" class="cta-nav" style="padding: 20px 40px; display: inline-block; margin-top: 30px; font-size: 13px; text-decoration: none;">Launch Inspection</a>
+    <header class="hero">
+        <div>
+            <h1>FAST REPAIRS.<br><span style="color:var(--orange)">HONEST PRICING.</span></h1>
+            <p style="font-size: 20px; margin-bottom: 30px;">Knoxville's most reliable HVAC team for AC, Heating, and Maintenance.</p>
+            <a href="contact.html" class="btn">Schedule My Free Quote</a>
         </div>
-    </section>
+    </header>
 
-    <section class="tech-section">
-        <div class="reveal">
-            <h2 style="font-family:'Barlow Condensed'; font-size: 50px; text-transform: uppercase;">Infrastructure <span>Intelligence</span></h2>
-            <p style="max-width: 600px; color: #666;">We don't just "fix AC." We optimize the thermal dynamics of your home for maximum longevity and minimum energy waste.</p>
-        </div>
+    <section class="section">
+        <h2 style="text-align:center; font-family:'Barlow Condensed'; font-size: 45px; text-transform:uppercase;">What We Do <span>Best</span></h2>
         <div class="grid-3">
-            <div class="tech-card reveal">
-                <h3>01. Diagnostic</h3>
-                <p>Full-system infrared scanning to find energy leaks other companies miss.</p>
+            <div class="card">
+                <h3>AC Repair</h3>
+                <p>Fast cooling repairs when you need them most. We fix all brands.</p>
             </div>
-            <div class="tech-card reveal">
-                <h3>02. Calibration</h3>
-                <p>Digital tuning of airflow and coolant pressures for 99% peak efficiency.</p>
+            <div class="card">
+                <h3>Heating</h3>
+                <p>Keeping Knoxville warm with furnace and heat pump restoration.</p>
             </div>
-            <div class="tech-card reveal">
-                <h3>03. Support</h3>
-                <p>24/7 technical dispatch with live tracking of your technician.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="process-section">
-        <div class="process-step reveal">
-            <div class="process-num">01</div>
-            <div>
-                <h3 style="font-family:'Barlow Condensed'; font-size: 40px; text-transform: uppercase;">The Analysis</h3>
-                <p>We perform a load calculation of your entire home to ensure your system isn't overworking.</p>
-            </div>
-        </div>
-        <div class="process-step reveal">
-            <div class="process-num">02</div>
-            <div>
-                <h3 style="font-family:'Barlow Condensed'; font-size: 40px; text-transform: uppercase;">The Execution</h3>
-                <p>Industrial-grade installation with clean-room protocols. No dust, no debris, no shortcuts.</p>
+            <div class="card">
+                <h3>Maintenance</h3>
+                <p>Prevent system breakdowns with our simple 21-point inspection.</p>
             </div>
         </div>
     </section>
-
-    <script>
-        // Header Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('mainNav');
-            if (window.scrollY > 50) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-        });
-
-        // Scroll Reveal
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
