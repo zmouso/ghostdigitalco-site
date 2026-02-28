@@ -1,240 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Ridge Line HVAC services — AC repair, heating, furnace, heat pumps, maintenance plans. Knoxville, TN."/>
-<title>Services | Ridge Line HVAC — Knoxville, TN</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Ridge Line HVAC</title>
 <style>
-:root{--navy:#0B1622;--navy2:#0F1E2E;--steel:#1A2E42;--orange:#E8610A;--orange2:#FF7A20;--silver:#8DA4B8;--light:#EBF1F7;--white:#FFFFFF;--gray:#4A6278}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;background:rgba(11,22,34,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid rgba(232,97,10,.2)}
-.logo{text-decoration:none;display:flex;align-items:center;gap:12px}
-.logo-icon{width:38px;height:38px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;color:var(--white);text-transform:uppercase}
-.logo-tag{font-size:10px;font-weight:400;letter-spacing:3px;color:var(--silver);text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--orange2)}
-.nav-cta{background:var(--orange)!important;color:var(--white)!important;padding:10px 24px;font-family:'Barlow Condensed',sans-serif;font-size:14px!important;font-weight:700!important;letter-spacing:2px!important}
-.nav-phone{color:var(--white)!important;font-family:'Barlow Condensed',sans-serif;font-size:16px!important;font-weight:700!important;letter-spacing:1px!important}
-.page-hero{padding:140px 48px 80px;background:var(--navy);position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(232,97,10,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,97,10,.05) 1px,transparent 1px);background-size:48px 48px}
-.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.breadcrumb{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
-.breadcrumb a{color:var(--orange);text-decoration:none}
-.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,8vw,100px);font-weight:900;text-transform:uppercase;line-height:.85;color:var(--white);letter-spacing:-1px;margin-bottom:20px}
-.page-title em{font-style:normal;color:var(--orange)}
-.page-sub{font-size:17px;font-weight:300;color:var(--silver);max-width:480px;line-height:1.7}
-.sec{padding:100px 48px}
-.con{max-width:1200px;margin:0 auto}
-.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:'';width:28px;height:2px;background:var(--orange);flex-shrink:0}
-.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,5vw,68px);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-1px;color:var(--navy);margin-bottom:20px}
-.srv-full{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px}
-.srv-block{background:var(--light);padding:52px 44px;position:relative;overflow:hidden;transition:all .3s}
-.srv-block::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--orange);transform:scaleY(0);transform-origin:top;transition:transform .4s}
-.srv-block:hover{background:var(--white);box-shadow:0 20px 50px rgba(11,22,34,.1)}
-.srv-block:hover::before{transform:scaleY(1)}
-.srv-block-icon{font-size:42px;margin-bottom:20px}
-.srv-block-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:var(--navy);margin-bottom:14px}
-.srv-block-body{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:24px}
-.srv-includes{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.srv-includes li{font-size:14px;color:var(--gray);display:flex;align-items:center;gap:10px}
-.srv-includes li::before{content:'✓';color:var(--orange);font-weight:900;flex-shrink:0}
-.srv-price{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);padding:10px 0;border-top:1px solid rgba(11,22,34,.08)}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none;transition:all .25s}
-.btn-primary:hover{background:var(--orange2);transform:translateY(-2px)}
-.maintain{background:var(--navy2);padding:100px 48px}
-.maintain-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.maintain-box{background:var(--steel);padding:48px;border-top:4px solid var(--orange)}
-.maintain-box h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:6px}
-.maintain-price{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:var(--orange);line-height:1;margin:16px 0 8px}
-.maintain-price span{font-size:20px;vertical-align:top;margin-top:8px;display:inline-block}
-.maintain-note{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:24px}
-.maintain-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
-.maintain-list li{font-size:14px;color:var(--silver);display:flex;align-items:center;gap:10px}
-.maintain-list li::before{content:'✓';color:var(--orange);font-weight:900}
-.btn-white{display:inline-flex;align-items:center;background:var(--white);color:var(--orange);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none}
-.ebar{background:var(--orange);padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:24px}
-.ebar p{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--white)}
-.ebar a{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--white);text-decoration:none;background:rgba(0,0,0,.2);padding:6px 20px}
-footer{background:var(--navy);padding:60px 48px 28px;border-top:1px solid rgba(232,97,10,.2)}
-.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;max-width:1200px;margin:0 auto 48px}
-.ft-name{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--white);margin-bottom:6px}
-.ft-name span{color:var(--orange)}
-.ft-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-bottom:16px}
-.ft-desc{font-size:14px;color:rgba(255,255,255,.45);line-height:1.7}
-.ft-col h4{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px}
-.ft-col ul{list-style:none}
-.ft-col ul li{margin-bottom:10px}
-.ft-col ul li a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
-.ft-col ul li a:hover{color:var(--orange2)}
-.ft-bot{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.ft-bot p{font-size:12px;color:rgba(255,255,255,.3)}
-.ft-bot span{color:var(--orange)}
-.powered{background:var(--steel);padding:10px 48px;text-align:center}
-.powered p{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3)}
-.powered a{color:var(--orange);text-decoration:none}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){
-  nav{padding:0 20px}.nav-links{display:none}
-  .page-hero{padding:120px 24px 60px}
-  .sec{padding:72px 24px}.maintain{padding:72px 24px}
-  .srv-full{grid-template-columns:1fr}
-  .maintain-inner{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr 1fr}
-  .ebar{flex-direction:column;gap:10px;padding:14px 24px;text-align:center}
-}
-@media(max-width:480px){.ft-grid{grid-template-columns:1fr}}
+body {margin:0;font-family:Arial,sans-serif;background:#0f172a;color:white;}
+header {background:#1e293b;padding:20px 40px;display:flex;justify-content:space-between;}
+header a {color:white;text-decoration:none;margin-left:20px;font-size:14px;}
+.section {padding:100px 40px;text-align:center;}
+.service {margin-bottom:40px;}
+footer {background:#1e293b;padding:30px;text-align:center;font-size:13px;}
 </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">
-    <div class="logo-icon">🌡️</div>
-    <div class="logo-text">
-      <span class="logo-name">Ridge Line</span>
-      <span class="logo-tag">HVAC · Knoxville, TN</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="tel:8651234567" class="nav-phone">📞 (865) 123-4567</a></li>
-    <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
-  </ul>
-</nav>
+<header>
+  <div><strong>RIDGE LINE HVAC</strong></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
-    <h1 class="page-title">Everything<br>Your Home<br><em>Needs.</em></h1>
-    <p class="page-sub">From emergency AC repair to full system replacements, Ridge Line handles every HVAC need in Knoxville and the surrounding area.</p>
+<section class="section">
+  <h1>Our Services</h1>
+
+  <div class="service">
+    <h3>AC Installation & Repair</h3>
+    <p>Full system installs, emergency repair, seasonal tune-ups.</p>
   </div>
-</div>
 
-<div class="ebar">
-  <p>🔥 Emergency? We answer 24/7 —</p>
-  <a href="tel:8651234567">(865) 123-4567</a>
-</div>
-
-<section class="sec">
-  <div class="con">
-    <p class="eyebrow reveal">Our Services</p>
-    <h2 class="section-title reveal">What We Fix,<br>Install & Maintain.</h2>
-    <div class="srv-full">
-      <div class="srv-block reveal">
-        <div class="srv-block-icon">❄️</div>
-        <div class="srv-block-title">AC Repair & Service</div>
-        <p class="srv-block-body">When your AC goes out in Knoxville's summer heat, you can't wait three days. We aim to be on-site within 2 hours, diagnose the problem, and give you an honest price before we touch anything.</p>
-        <ul class="srv-includes">
-          <li>Full system diagnostic</li>
-          <li>Refrigerant recharge</li>
-          <li>Capacitor, contactor & relay repair</li>
-          <li>Thermostat issues</li>
-          <li>Ductwork leaks</li>
-        </ul>
-        <p class="srv-price">Service Call: $89 → Credited toward repair</p>
-        <br/>
-        <a href="contact.html" class="btn-primary">Book a Service Call →</a>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-icon">🏠</div>
-        <div class="srv-block-title">AC Replacement & Install</div>
-        <p class="srv-block-body">Need a new system? We'll walk you through exactly what size and brand fits your home and budget — no upsell, no pressure. Then we install it cleanly and get out of your way.</p>
-        <ul class="srv-includes">
-          <li>Free in-home assessment</li>
-          <li>Brand options across all budgets</li>
-          <li>Same-week installation available</li>
-          <li>Haul-away of old equipment</li>
-          <li>Full system test & walkthrough</li>
-        </ul>
-        <p class="srv-price">Free Estimates — No Obligation</p>
-        <br/>
-        <a href="contact.html" class="btn-primary">Get a Free Estimate →</a>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-icon">🔥</div>
-        <div class="srv-block-title">Heating & Furnace</div>
-        <p class="srv-block-body">Gas furnaces, heat pumps, electric heat strips — we service, repair, and replace all of it. Don't wait until the coldest night of the year to figure out your furnace is struggling.</p>
-        <ul class="srv-includes">
-          <li>Gas furnace repair & tune-up</li>
-          <li>Heat pump service & replacement</li>
-          <li>Pilot light & igniter issues</li>
-          <li>Blower motor repair</li>
-          <li>Carbon monoxide leak checks</li>
-        </ul>
-        <p class="srv-price">Service Call: $89 → Credited toward repair</p>
-        <br/>
-        <a href="contact.html" class="btn-primary">Book Heating Service →</a>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-icon">🌬️</div>
-        <div class="srv-block-title">Indoor Air Quality</div>
-        <p class="srv-block-body">If your home is dusty, humid, or your allergies are always acting up, your HVAC system might be the problem. We install filters, purifiers, and dehumidifiers that actually make a difference.</p>
-        <ul class="srv-includes">
-          <li>Air purifier installation</li>
-          <li>Whole-home dehumidifiers</li>
-          <li>UV light systems</li>
-          <li>Duct cleaning referrals</li>
-          <li>Filter upgrade consultations</li>
-        </ul>
-        <p class="srv-price">Free consultation with any service</p>
-        <br/>
-        <a href="contact.html" class="btn-primary">Ask About Air Quality →</a>
-      </div>
-    </div>
+  <div class="service">
+    <h3>Heating Systems</h3>
+    <p>Furnace repair, heat pump service, winter maintenance.</p>
   </div>
+
+  <div class="service">
+    <h3>Commercial HVAC</h3>
+    <p>Maintenance contracts and large system installs.</p>
+  </div>
+
 </section>
 
-<div class="maintain">
-  <div class="maintain-inner">
-    <div>
-      <p class="eyebrow reveal">Maintenance Plan</p>
-      <h2 class="section-title reveal" style="color:var(--white)">Stop Paying<br>For Breakdowns.</h2>
-      <p class="reveal" style="font-size:17px;color:var(--silver);line-height:1.75;margin-top:16px;max-width:440px">Most HVAC problems don't happen overnight. They build up slowly — dirty coils, low refrigerant, worn belts. Our maintenance plan catches issues before they become $1,500 emergencies.</p>
-      <a href="contact.html" class="btn-primary reveal" style="margin-top:36px;display:inline-flex">Sign Up for a Plan →</a>
-    </div>
-    <div class="maintain-box reveal">
-      <h3>Comfort Club Plan</h3>
-      <div class="maintain-price"><span>$</span>199</div>
-      <p class="maintain-note">Per year — both seasons covered</p>
-      <ul class="maintain-list">
-        <li>Spring AC tune-up</li>
-        <li>Fall heating tune-up</li>
-        <li>Priority scheduling — no waiting</li>
-        <li>15% off all repairs</li>
-        <li>Free service call (normally $89)</li>
-        <li>Filter check every visit</li>
-      </ul>
-      <a href="contact.html" class="btn-white">Join the Comfort Club →</a>
-    </div>
-  </div>
-</div>
-
 <footer>
-  <div class="ft-grid">
-    <div><div class="ft-name">Ridge Line <span>HVAC</span></div><div class="ft-tag">Knoxville, TN · Licensed & Insured</div><p class="ft-desc">Serving Knoxville, Farragut, Powell, Oak Ridge, and surrounding areas. Available 24/7 for emergencies.</p></div>
-    <div class="ft-col"><h4>Services</h4><ul><li><a href="services.html">AC Repair</a></li><li><a href="services.html">Heating</a></li><li><a href="services.html">Maintenance</a></li><li><a href="services.html">New Installs</a></li></ul></div>
-    <div class="ft-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="ft-col"><h4>Contact</h4><ul><li><a href="tel:8651234567">(865) 123-4567</a></li><li><a href="mailto:info@ridgelinehvac.com">info@ridgelinehvac.com</a></li><li><a href="#">Knoxville, TN</a></li></ul></div>
-  </div>
-  <div class="ft-bot"><p>© 2026 Ridge Line HVAC. All rights reserved.</p><p>Built by <span>Ghost Digital Co</span></p></div>
+  © 2026 Ridge Line HVAC
 </footer>
-<div class="powered"><p>Website by <a href="https://zmouso.github.io/ghostdigitalco-site">Ghost Digital Co</a> — Knoxville Web Design for Local Trades</p></div>
 
-<script>
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
 </body>
 </html>
