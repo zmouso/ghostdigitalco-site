@@ -3,101 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridge Line HVAC | Knoxville's Trusted Comfort Experts</title>
+    <title>Ridge Line | HVAC Design Concept</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --gray: #8DA4B8; }
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
         body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); line-height: 1.6; }
         
-        /* Navigation */
-        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .logo { font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; color: white; text-decoration: none; letter-spacing: 1px; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--orange); }
+        /* Disclaimer Bar */
+        .demo-bar { background: #ffcc00; color: #000; text-align: center; padding: 5px; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Hero Section - The "Hook" */
-        .hero { background: linear-gradient(rgba(11, 22, 34, 0.85), rgba(11, 22, 34, 0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; }
-        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(45px, 9vw, 85px); text-transform: uppercase; line-height: 0.85; margin: 0; letter-spacing: -2px; }
-        .hero p { font-size: 22px; max-width: 750px; margin: 25px auto 40px; color: var(--gray); }
+        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Barlow Condensed'; font-size: 24px; font-weight: 900; color: white; text-decoration: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 700; text-transform: uppercase; font-size: 13px; }
+
+        .hero { background: var(--navy); color: white; padding: 100px 20px; text-align: center; border-bottom: 8px solid var(--orange); }
+        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(40px, 8vw, 70px); text-transform: uppercase; margin: 0; }
+        .hero p { font-size: 20px; color: #8DA4B8; margin: 20px 0 40px; }
+
+        .btn { padding: 18px 35px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; }
+        .btn:hover { background: #ff741a; transform: translateY(-3px); }
+
+        .section { padding: 80px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
+        h2 { font-family: 'Barlow Condensed'; font-size: 40px; text-transform: uppercase; }
         
-        .btn { padding: 20px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 4px; display: inline-block; }
-        .btn-orange { background: var(--orange); color: white; border: 2px solid var(--orange); }
-        .btn-outline { border: 2px solid white; color: white; margin-left: 15px; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        /* Trust Bar */
-        .trust-bar { background: var(--light); padding: 30px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; border-bottom: 1px solid #e0e0e0; }
-        .trust-item h4 { margin: 0; font-family: 'Barlow Condensed'; font-size: 20px; text-transform: uppercase; color: var(--navy); }
-        .trust-item p { margin: 5px 0 0; font-size: 14px; color: #666; }
-
-        /* Services Grid - Showcasing "What You Can Do" */
-        .services { padding: 100px 5%; text-align: center; }
-        .section-tag { color: var(--orange); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; font-size: 14px; margin-bottom: 10px; display: block; }
-        .services h2 { font-family: 'Barlow Condensed'; font-size: 50px; text-transform: uppercase; margin-bottom: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { padding: 45px; border: 1px solid #eee; text-align: left; transition: 0.3s; border-top: 5px solid transparent; }
-        .card:hover { border-top-color: var(--orange); border-bottom: 1px solid #ddd; transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .card h3 { font-family: 'Barlow Condensed'; font-size: 28px; text-transform: uppercase; margin-bottom: 15px; }
-        .card p { color: #555; font-size: 16px; margin-bottom: 20px; }
-        .card-link { color: var(--orange); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 13px; }
-
-        footer { background: var(--navy); color: var(--gray); padding: 60px 5%; text-align: center; font-size: 14px; }
+        footer { background: var(--navy); color: #8DA4B8; text-align: center; padding: 40px; font-size: 12px; }
     </style>
 </head>
 <body>
+
+    <div class="demo-bar">DESIGN CONCEPT • NOT A REAL LOCAL BUSINESS</div>
 
     <nav>
         <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
         <div class="nav-links">
             <a href="services.html">Services</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" style="color:var(--orange)">Get Quote</a>
+            <a href="contact.html" style="color:var(--orange)">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <span class="section-tag">Knoxville's Emergency Response Team</span>
-        <h1>Expert Service. <br> <span style="color:var(--orange)">Honest Pricing.</span></h1>
-        <p>From 24/7 emergency repairs to high-efficiency system installations, we keep East Tennessee comfortable year-round.</p>
-        <div class="cta-group">
-            <a href="contact.html" class="btn btn-orange">Request Free Estimate</a>
-            <a href="tel:8651234567" class="btn btn-outline">Call (865) 123-4567</a>
-        </div>
+        <h1>Sleek Comfort. <br> <span style="color:var(--orange)">Reliable Design.</span></h1>
+        <p>A professional HVAC template built for performance and speed.</p>
+        <a href="contact.html" class="btn">View Contact Layout</a>
     </header>
 
-    <section class="trust-bar">
-        <div class="trust-item"><h4>5-Star Rated</h4><p>Google & HomeAdvisor</p></div>
-        <div class="trust-item"><h4>NATE Certified</h4><p>Master Technicians</p></div>
-        <div class="trust-item"><h4>Licensed & Insured</h4><p>TN State License #12345</p></div>
-        <div class="trust-item"><h4>24/7 Service</h4><p>Always On Call</p></div>
-    </section>
-
-    <section class="services">
-        <span class="section-tag">Our Expertise</span>
-        <h2>Full-Service Solutions</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>AC Repair & Service</h3>
-                <p>Fast diagnostics and repairs for all major cooling brands. We specialize in refrigerant leaks and compressor fixes.</p>
-                <a href="services.html" class="card-link">Learn More →</a>
-            </div>
-            <div class="card">
-                <h3>Heating & Furnace</h3>
-                <p>Keeping your home warm with expert furnace maintenance, heat pump repairs, and safety inspections.</p>
-                <a href="services.html" class="card-link">Learn More →</a>
-            </div>
-            <div class="card">
-                <h3>New Installations</h3>
-                <p>Upgrade to a high-efficiency SEER2 system and save up to 30% on your monthly utility bills.</p>
-                <a href="services.html" class="card-link">Learn More →</a>
-            </div>
-        </div>
-    </section>
+    <div class="section">
+        <h2>Modern Trade Aesthetics</h2>
+        <p>This site serves as a high-fidelity design prototype for service-based businesses. It focuses on high conversion rates, mobile responsiveness, and clean typography.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Ridge Line HVAC. Knoxville, TN. <br> 
-        <a href="../index.html" style="color:white; text-decoration:none; opacity:0.5;">Back to Ghost Digital Co. Demo Portfolio</a></p>
+        &copy; 2026 Ghost Digital Co. Portfolio Piece.
     </footer>
 
 </body>
