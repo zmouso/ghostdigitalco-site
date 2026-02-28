@@ -1,65 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Engineering | Ridgeline HVAC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* PASTE THE FULL CSS BLOCK FROM INDEX.HTML HERE TO ENSURE ZERO GLITCHING */
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --black: #050a0f; --glass: rgba(255,255,255,0.03); --blur: blur(12px); --ease: cubic-bezier(0.16, 1, 0.3, 1); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); overflow-x: hidden; }
-        .top-nav { position: fixed; top: 0; width: 100%; height: 90px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; z-index: 1000; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .logo { font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
-        .logo span { color: var(--orange); }
-        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
-        .cta-nav { background: var(--orange); padding: 10px 20px; border-radius: 2px; }
-        .agency-badge { position: fixed; bottom: 20px; left: 20px; z-index: 2000; background: rgba(0,0,0,0.85); padding: 12px 20px; border-left: 4px solid var(--orange); color: white; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
-        
-        /* SERVICE SPECIFIC */
-        .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2px; background: #eee; border: 1px solid #eee; }
-        .spec-card { background: white; padding: 80px 10%; transition: 0.5s var(--ease); }
-        .spec-card:hover { background: var(--navy); color: white; }
-        .spec-card h3 { font-family: 'Barlow Condensed'; font-size: 40px; text-transform: uppercase; margin-bottom: 20px; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s var(--ease); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-    </style>
-</head>
 <body>
-    <div class="agency-badge">Architected by // Ghost Digital Co.</div>
-    <nav class="top-nav">
+    <nav>
         <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
         <ul class="nav-links">
-            <li><a href="services.html">Engineering</a></li>
-            <li><a href="reviews.html">Intelligence</a></li>
-            <li><a href="contact.html" class="cta-nav">Request Analysis</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="cta-nav">Free Quote</a></li>
         </ul>
     </nav>
-
-    <section style="padding: 180px 6% 100px; background: var(--navy); color: white;">
-        <h1 style="font-family:'Barlow Condensed'; font-size: clamp(50px, 8vw, 100px); text-transform: uppercase; line-height: 0.8;">Technical<br><span style="color:var(--orange)">Capabilities.</span></h1>
+    <section class="section" style="background:var(--navy); color:white; text-align:center;">
+        <h1 style="font-family:'Barlow Condensed'; font-size: 60px;">OUR SERVICES</h1>
     </section>
-
-    <div class="spec-grid">
-        <div class="spec-card reveal">
-            <h3>Thermal Deployment</h3>
-            <p>Advanced furnace and heat pump installations calibrated for high-altitude efficiency and rapid heat transfer.</p>
+    <section class="section">
+        <div class="grid">
+            <div class="card"><h3>AC Repair</h3><p>From low freon to broken compressors, we handle it all.</p></div>
+            <div class="card"><h3>Furnace Service</h3><p>Keep your family warm with expert heating restoration.</p></div>
+            <div class="card"><h3>Yearly Tune-Ups</h3><p>Lower your energy bills with our 21-point inspection.</p></div>
         </div>
-        <div class="spec-card reveal">
-            <h3>Cryo-Control</h3>
-            <p>Multi-stage cooling systems with localized zone management and ultra-low humidity exhaust technology.</p>
-        </div>
-        <div class="spec-card reveal">
-            <h3>Air Purification</h3>
-            <p>HEPA-grade filtration integration and UV-C light sterilization for clean-room air quality in residential spaces.</p>
-        </div>
-    </div>
-
-    <script>
-        const obs = new IntersectionObserver((es) => { es.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); })});
-        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    </script>
+    </section>
 </body>
-</html>
