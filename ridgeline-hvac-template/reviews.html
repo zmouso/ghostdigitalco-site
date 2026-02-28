@@ -1,265 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Customer Reviews | Ridgeline Heating & Air</title>
-
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Ridgeline HVAC reviews — see what Knoxville homeowners say about our heating and cooling service."/>
+<title>Reviews | Ridgeline HVAC — Knoxville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
-:root{
---bg:#0a0f1a;
---panel:#121826;
---border:#1f2937;
---text:#f1f5f9;
---muted:#94a3b8;
---cool:#38bdf8;
---heat:#f97316;
---gold:#facc15;
-}
+:root{--navy:#0B1622;--navy2:#0F1E2E;--steel:#1A2E42;--orange:#E8610A;--orange2:#FF7A20;--silver:#8DA4B8;--light:#EBF1F7;--white:#FFFFFF;--gray:#4A6278}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;background:rgba(11,22,34,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid rgba(232,97,10,.2)}
+.logo{text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:20px}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;color:var(--white);text-transform:uppercase}
+.logo-tag{font-size:10px;font-weight:400;letter-spacing:3px;color:var(--silver);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--orange2)}
+.nav-cta{background:var(--orange)!important;color:var(--white)!important;padding:10px 24px;font-family:'Barlow Condensed',sans-serif;font-size:14px!important;font-weight:700!important;letter-spacing:2px!important}
+.nav-phone{color:var(--white)!important;font-family:'Barlow Condensed',sans-serif;font-size:16px!important;font-weight:700!important;letter-spacing:1px!important}
 
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}
+.rating-bar{background:var(--orange);padding:32px 48px}
+.rating-inner{max-width:1200px;margin:0 auto;display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.rating-big{font-family:'Barlow Condensed',sans-serif;font-size:80px;font-weight:900;color:var(--white);line-height:1}
+.rating-stars{font-size:24px;letter-spacing:4px}
 
-/* NAV */
-nav{
-position:sticky;
-top:0;
-background:rgba(10,15,26,.9);
-backdrop-filter:blur(12px);
-padding:22px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid var(--border);
-z-index:1000;
-}
-
-nav a{
-color:var(--muted);
-margin-left:26px;
-font-size:13px;
-letter-spacing:2px;
-text-transform:uppercase;
-transition:.2s;
-}
-nav a:hover{color:white}
-
-.brand{
-font-weight:900;
-letter-spacing:4px;
-}
-
-/* HERO */
-.hero{
-padding:120px 40px;
-text-align:center;
-background:
-linear-gradient(135deg,rgba(56,189,248,.08),transparent 50%),
-linear-gradient(225deg,rgba(249,115,22,.08),transparent 50%);
-}
-
-.hero h1{
-font-size:clamp(40px,5vw,60px);
-margin-bottom:20px;
-}
-
-.hero p{
-color:var(--muted);
-max-width:700px;
-margin:0 auto;
-line-height:1.6;
-}
-
-/* SECTION */
-.section{
-padding:100px 40px;
-max-width:1200px;
-margin:auto;
-}
-
-.review-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.review-card{
-background:var(--panel);
-padding:40px;
-border-radius:20px;
-border:1px solid var(--border);
-transition:.3s ease;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-}
-
-.review-card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 70px rgba(0,0,0,.6);
-}
-
-.stars{
-color:var(--gold);
-margin-bottom:16px;
-font-size:18px;
-letter-spacing:2px;
-}
-
-.review-text{
-color:var(--muted);
-line-height:1.7;
-margin-bottom:24px;
-}
-
-.review-meta{
-font-size:13px;
-letter-spacing:1px;
-text-transform:uppercase;
-color:var(--cool);
-}
-
-/* SUMMARY */
-.summary{
-text-align:center;
-margin-bottom:60px;
-}
-
-.summary h2{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.summary span{
-color:var(--heat);
-}
-
-/* CTA */
-.cta{
-text-align:center;
-padding:100px 40px;
-background:linear-gradient(90deg,rgba(56,189,248,.15),rgba(249,115,22,.15));
-margin-top:80px;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 40px;
-border-radius:50px;
-background:linear-gradient(90deg,var(--cool),var(--heat));
-color:#06111e;
-font-weight:700;
-transition:.3s;
-}
-.btn:hover{
-transform:translateY(-5px);
-box-shadow:0 20px 50px rgba(0,0,0,.5);
-}
-
-/* FOOTER */
-footer{
-padding:60px 40px;
-text-align:center;
-color:var(--muted);
-border-top:1px solid var(--border);
-font-size:13px;
-}
-
-.demo{
-position:fixed;
-bottom:0;
-width:100%;
-background:#111827;
-padding:10px;
-text-align:center;
-font-size:12px;
-border-top:1px solid var(--border);
-}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:20px;max-width:1200px;margin:60px auto;padding:0 48px}
+.rev-card{background:var(--light);padding:32px;border-left:4px solid var(--orange)}
+.stars{color:var(--orange2);margin-bottom:12px}
+.rev-text{font-style:italic;line-height:1.6}
 </style>
 </head>
-
 <body>
-
 <nav>
-<div class="brand">RIDGELINE HEATING & AIR</div>
-<div>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="quote.html">Quote</a>
-<a href="contact.html">Contact</a>
-</div>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🌡️</div>
+    <div class="logo-text">
+      <span class="logo-name">Ridgeline</span>
+      <span class="logo-tag">HVAC · Knoxville, TN</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="tel:8651234567" class="nav-phone">(865) 123-4567</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+  </ul>
 </nav>
 
-<section class="hero">
-<h1>Trusted by Homeowners & Businesses</h1>
-<p>
-Consistent performance, reliable service, and measurable comfort improvements.
-Built like a leading regional HVAC provider.
-</p>
-</section>
-
-<section class="section">
-
-<div class="summary">
-<h2>Average Rating: <span>5.0 Stars</span></h2>
-<p style="color:var(--muted);">Based on demonstration reviews for portfolio purposes.</p>
+<div class="rating-bar">
+  <div class="rating-inner">
+    <div class="rating-big">5.0</div>
+    <div class="rating-stars">★★★★★</div>
+  </div>
 </div>
 
-<div class="review-grid">
-
-<div class="review-card">
-<div>
-<div class="stars">★★★★★</div>
-<div class="review-text">
-Responsive team, clean installation, and professional communication from start to finish.
-System performance improved immediately.
+<div class="rev-grid">
+  <div class="rev-card">
+    <div class="stars">★★★★★</div>
+    <div class="rev-tag">AC Repair</div>
+    <p class="rev-text">"AC went out on a Saturday in July. Called Ridgeline and they were here within hours. Honest and professional."</p>
+  </div>
 </div>
-</div>
-<div class="review-meta">Residential Client</div>
-</div>
-
-<div class="review-card">
-<div>
-<div class="stars">★★★★★</div>
-<div class="review-text">
-Commercial rooftop replacement completed ahead of schedule.
-Minimal disruption to operations.
-</div>
-</div>
-<div class="review-meta">Commercial Property Manager</div>
-</div>
-
-<div class="review-card">
-<div>
-<div class="stars">★★★★★</div>
-<div class="review-text">
-Thorough diagnostics and clear explanation of system options.
-High-efficiency upgrade reduced energy costs.
-</div>
-</div>
-<div class="review-meta">Homeowner</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-<h2>Experience the Difference</h2>
-<p>Schedule a consultation and see why performance matters.</p>
-<a href="quote.html" class="btn">Request Consultation</a>
-</section>
-
-<footer>
-© 2026 Ridgeline Heating & Air — Fictional Portfolio Demonstration
-</footer>
-
-<div class="demo">
-This is a fictional HVAC company created for portfolio demonstration purposes only.
-</div>
-
 </body>
 </html>
