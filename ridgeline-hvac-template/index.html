@@ -3,58 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridge Line | HVAC Design Concept</title>
+    <title>Ridge Line HVAC | Residential & Commercial Comfort</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
-        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); line-height: 1.6; }
+        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); color: var(--navy); }
         
-        /* Disclaimer Bar */
-        .demo-bar { background: #ffcc00; color: #000; text-align: center; padding: 5px; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        /* Subtle Demo Badge */
+        .demo-tag { background: #000; color: #fff; font-size: 10px; padding: 3px 10px; position: fixed; bottom: 10px; right: 10px; z-index: 9999; border-radius: 20px; opacity: 0.6; }
 
-        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Barlow Condensed'; font-size: 24px; font-weight: 900; color: white; text-decoration: none; }
+        nav { background: var(--navy); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--orange); }
+        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
         .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 700; text-transform: uppercase; font-size: 13px; }
 
-        .hero { background: var(--navy); color: white; padding: 100px 20px; text-align: center; border-bottom: 8px solid var(--orange); }
-        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(40px, 8vw, 70px); text-transform: uppercase; margin: 0; }
-        .hero p { font-size: 20px; color: #8DA4B8; margin: 20px 0 40px; }
+        .hero { 
+            background: linear-gradient(rgba(11, 22, 34, 0.8), rgba(11, 22, 34, 0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover; background-position: center;
+            color: white; padding: 120px 20px; text-align: center; 
+        }
+        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(45px, 9vw, 80px); text-transform: uppercase; line-height: 0.9; margin: 0; }
+        .hero p { font-size: 22px; max-width: 700px; margin: 25px auto 40px; color: #BDD2E1; }
 
-        .btn { padding: 18px 35px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: #ff741a; transform: translateY(-3px); }
+        .cta-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 20px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-orange { background: var(--orange); color: white; }
+        .btn-outline { background: transparent; color: white; border: 2px solid white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        .section { padding: 80px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
-        h2 { font-family: 'Barlow Condensed'; font-size: 40px; text-transform: uppercase; }
-        
-        footer { background: var(--navy); color: #8DA4B8; text-align: center; padding: 40px; font-size: 12px; }
+        .trust-bar { background: var(--light); padding: 30px 5%; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; border-bottom: 1px solid #ddd; }
+        .trust-item h4 { margin: 0; font-family: 'Barlow Condensed'; font-size: 20px; text-transform: uppercase; }
+        .trust-item p { margin: 5px 0 0; font-size: 13px; color: #666; font-weight: 700; }
     </style>
 </head>
 <body>
 
-    <div class="demo-bar">DESIGN CONCEPT • NOT A REAL LOCAL BUSINESS</div>
+    <div class="demo-tag">PORTFOLIO DEMO • GHOST DIGITAL</div>
 
     <nav>
         <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
         <div class="nav-links">
             <a href="services.html">Services</a>
-            <a href="contact.html" style="color:var(--orange)">Contact</a>
+            <a href="contact.html">Reviews</a>
+            <a href="contact.html" style="color:var(--orange)">Get Quote</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Sleek Comfort. <br> <span style="color:var(--orange)">Reliable Design.</span></h1>
-        <p>A professional HVAC template built for performance and speed.</p>
-        <a href="contact.html" class="btn">View Contact Layout</a>
+        <h1>Extreme Heat. <br> <span style="color:var(--orange)">Total Cold.</span></h1>
+        <p>Expert HVAC repair and high-efficiency installations for residential and commercial properties.</p>
+        <div class="cta-group">
+            <a href="contact.html" class="btn btn-orange">Request Dispatch</a>
+            <a href="services.html" class="btn btn-outline">Our Services</a>
+        </div>
     </header>
 
-    <div class="section">
-        <h2>Modern Trade Aesthetics</h2>
-        <p>This site serves as a high-fidelity design prototype for service-based businesses. It focuses on high conversion rates, mobile responsiveness, and clean typography.</p>
-    </div>
-
-    <footer>
-        &copy; 2026 Ghost Digital Co. Portfolio Piece.
-    </footer>
+    <section class="trust-bar">
+        <div class="trust-item"><h4>24/7 Response</h4><p>Emergency Repair</p></div>
+        <div class="trust-item"><h4>NATE Certified</h4><p>Expert Technicians</p></div>
+        <div class="trust-item"><h4>Licensed/Insured</h4><p>Verified Contractor</p></div>
+    </section>
 
 </body>
 </html>
