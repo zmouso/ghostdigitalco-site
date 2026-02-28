@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ridge Line HVAC</title>
+    <title>Contact | Ridge Line HVAC</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
-        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--white); }
+        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--light); }
         
-        .demo-watermark { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; pointer-events: none; border-left: 3px solid var(--orange); }
+        .demo-watermark { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; border-left: 3px solid var(--orange); }
 
         .top-bar { background: #081018; color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
         nav { background: var(--navy); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--orange); }
         .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
         .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; }
 
-        .page-head { background: var(--navy); color: white; padding: 60px 5%; text-align: center; }
-        .page-head h1 { font-family: 'Barlow Condensed'; font-size: 50px; text-transform: uppercase; margin: 0; }
-
-        .service-list { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
-        .s-row { display: flex; gap: 40px; align-items: center; margin-bottom: 60px; flex-wrap: wrap; }
-        .s-img { flex: 1; height: 300px; background: #1a2a3a; border-radius: 8px; border-bottom: 6px solid var(--orange); display: flex; align-items: center; justify-content: center; color: var(--orange); font-family: 'Barlow Condensed'; font-size: 40px; font-weight: 900; }
-        .s-text { flex: 1; }
+        .form-card { max-width: 600px; margin: 60px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 8px solid var(--orange); text-align: center; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #eee; border-radius: 4px; font-family: inherit; box-sizing: border-box; }
+        .btn-submit { width: 100%; padding: 20px; background: var(--orange); color: white; border: none; font-weight: 900; text-transform: uppercase; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -33,22 +29,18 @@
     </div>
     <nav>
         <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
-        <div class="nav-links">
-            <a href="services.html">Services</a>
-            <a href="contact.html">Reviews</a>
-            <a href="contact.html" style="color:var(--orange)">Get Quote</a>
-        </div>
+        <div class="nav-links"><a href="services.html">Services</a><a href="contact.html">Reviews</a><a href="contact.html" style="color:var(--orange)">Get Quote</a></div>
     </nav>
-    <header class="page-head"><h1>Our <span style="color:var(--orange)">Expertise</span></h1></header>
-    <div class="service-list">
-        <div class="s-row">
-            <div class="s-img">AC REPAIR</div>
-            <div class="s-text">
-                <h2 style="font-family:'Barlow Condensed'; font-size:32px; text-transform:uppercase;">Cooling & AC Repair</h2>
-                <p>High-efficiency cooling solutions and 24/7 emergency repair for East Tennessee summers.</p>
-                <a href="contact.html" style="color:var(--orange); font-weight:700; text-decoration:none;">BOOK SERVICE →</a>
-            </div>
-        </div>
+    <div class="form-card">
+        <h2 style="font-family:'Barlow Condensed'; font-size:32px; text-transform:uppercase;">Request Service</h2>
+        <p style="color:#666; margin-bottom:30px;">This is a demonstration form for lead generation.</p>
+        <form>
+            <input type="text" placeholder="Full Name">
+            <input type="tel" placeholder="Phone Number">
+            <select><option>Emergency Repair</option><option>Maintenance</option></select>
+            <textarea rows="4" placeholder="How can we help?"></textarea>
+            <button type="button" class="btn-submit">Submit Dispatch Request →</button>
+        </form>
     </div>
 </body>
 </html>
