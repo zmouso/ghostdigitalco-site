@@ -3,77 +3,38 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Ridgeline HVAC services — AC repair, heating, furnace, heat pumps, maintenance plans. Knoxville, TN."/>
+<meta name="description" content="Ridgeline HVAC services — AC repair, heating, furnace, maintenance, emergency service. Knoxville, TN."/>
 <title>Services | Ridgeline HVAC — Knoxville, TN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#0B1622;--navy2:#0F1E2E;--steel:#1A2E42;--orange:#E8610A;--orange2:#FF7A20;--silver:#8DA4B8;--light:#EBF1F7;--white:#FFFFFF;--gray:#4A6278}
+:root{--black:#0A0A0A;--dark:#111111;--charcoal:#1C1C1C;--orange:#E05C00;--orange-light:#FF6B1A;--cream:#F5F0EA;--warm:#EDE8E0;--silver:#9A9A9A;--white:#FFFFFF;--text:#1C1C1C}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;background:rgba(11,22,34,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid rgba(232,97,10,.2)}
-.logo{text-decoration:none;display:flex;align-items:center;gap:12px}
-.logo-icon{width:38px;height:38px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;color:var(--white);text-transform:uppercase}
-.logo-tag{font-size:10px;font-weight:400;letter-spacing:3px;color:var(--silver);text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--orange2)}
-.nav-cta{background:var(--orange)!important;color:var(--white)!important;padding:10px 24px;font-family:'Barlow Condensed',sans-serif;font-size:14px!important;font-weight:700!important;letter-spacing:2px!important}
-.nav-phone{color:var(--white)!important;font-family:'Barlow Condensed',sans-serif;font-size:16px!important;font-weight:700!important;letter-spacing:1px!important}
-
-.page-hero{padding:140px 48px 80px;background:var(--navy);position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(232,97,10,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(232,97,10,.05) 1px,transparent 1px);background-size:48px 48px}
-.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
-.breadcrumb{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
-.breadcrumb a{color:var(--orange);text-decoration:none}
-.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,8vw,100px);font-weight:900;text-transform:uppercase;line-height:.85;color:var(--white);letter-spacing:-1px;margin-bottom:20px}
-.page-title em{font-style:normal;color:var(--orange)}
-.page-sub{font-size:17px;font-weight:300;color:var(--silver);max-width:480px;line-height:1.7}
-
-.srv-block{background:var(--light);padding:52px 44px;position:relative;overflow:hidden;transition:all .3s}
-.srv-block-icon{font-size:40px;margin-bottom:24px}
-.srv-block-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;text-transform:uppercase;margin-bottom:16px}
-.srv-block-body{font-size:15px;color:var(--gray);line-height:1.6;margin-bottom:24px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.nav-name{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);letter-spacing:.5px}
+.nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
+.page-hero{background:var(--black);padding:64px 24px 56px;border-bottom:1px solid rgba(255,255,255,.06)}
+.breadcrumb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.breadcrumb a{color:var(--orange-light);text-decoration:none}
+.page-title{font-family:'DM Serif Display',serif;font-size:clamp(40px,9vw,72px);line-height:.95;color:var(--white);margin-bottom:16px}
+.page-title em{font-style:italic;color:var(--orange-light)}
 </style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">
-    <div class="logo-icon">🌡️</div>
-    <div class="logo-text">
-      <span class="logo-name">Ridgeline</span>
-      <span class="logo-tag">HVAC · Knoxville, TN</span>
-    </div>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-name">Ridgeline</span>
+    <span class="nav-sub">HVAC · Knoxville</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="tel:8651234567" class="nav-phone">(865) 123-4567</a></li>
-    <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
-  </ul>
 </nav>
 
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
-    <h1 class="page-title">Heavy Duty <em>Service</em></h1>
-    <p class="page-sub">From emergency midnight repairs to high-efficiency new installations, we handle it all with precision.</p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="con srv-full">
-    <div class="srv-block reveal">
-      <div class="srv-block-icon">❄️</div>
-      <div class="srv-block-title">AC Repair & Service</div>
-      <p class="srv-block-body">When your AC goes out in Knoxville's summer heat, you can't wait three days. We aim to be on-site within hours.</p>
-    </div>
-  </div>
+  <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
+  <h1 class="page-title">Heavy Duty <em>Comfort</em>.</h1>
+  <p class="page-sub">From emergency midnight repairs to high-efficiency new installations, we handle it all with precision.</p>
 </section>
 </body>
 </html>
