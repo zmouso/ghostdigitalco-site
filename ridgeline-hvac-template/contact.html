@@ -1,46 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Ridge Line HVAC</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; }
-        body { font-family: 'Barlow', sans-serif; margin: 0; background: var(--light); }
-        
-        .demo-watermark { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; border-left: 3px solid var(--orange); }
-
-        .top-bar { background: #081018; color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
-        nav { background: var(--navy); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--orange); }
-        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; }
-
-        .form-card { max-width: 600px; margin: 60px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 8px solid var(--orange); text-align: center; }
-        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #eee; border-radius: 4px; font-family: inherit; box-sizing: border-box; }
-        .btn-submit { width: 100%; padding: 20px; background: var(--orange); color: white; border: none; font-weight: 900; text-transform: uppercase; cursor: pointer; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Ridge Line HVAC</title>
+<style>
+body {margin:0;font-family:Arial,sans-serif;background:#0f172a;color:white;}
+header {background:#1e293b;padding:20px 40px;display:flex;justify-content:space-between;}
+header a {color:white;text-decoration:none;margin-left:20px;font-size:14px;}
+.section {padding:100px 40px;text-align:center;}
+input, textarea {width:100%;padding:12px;margin-bottom:15px;background:#1e293b;border:1px solid #334155;color:white;}
+button {padding:14px 30px;background:#2563eb;color:white;border:none;cursor:pointer;}
+footer {background:#1e293b;padding:30px;text-align:center;font-size:13px;}
+.form-container {max-width:500px;margin:0 auto;}
+</style>
 </head>
 <body>
-    <div class="demo-watermark">CONCEPT DEMO BY GHOST DIGITAL CO.</div>
-    <div class="top-bar">
-        <span>KNOXVILLE, TN & SURROUNDING AREAS</span>
-        <span style="color:var(--orange)">EMERGENCY DISPATCH: (865) 555-0123</span>
-    </div>
-    <nav>
-        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
-        <div class="nav-links"><a href="services.html">Services</a><a href="contact.html">Reviews</a><a href="contact.html" style="color:var(--orange)">Get Quote</a></div>
-    </nav>
-    <div class="form-card">
-        <h2 style="font-family:'Barlow Condensed'; font-size:32px; text-transform:uppercase;">Request Service</h2>
-        <p style="color:#666; margin-bottom:30px;">This is a demonstration form for lead generation.</p>
-        <form>
-            <input type="text" placeholder="Full Name">
-            <input type="tel" placeholder="Phone Number">
-            <select><option>Emergency Repair</option><option>Maintenance</option></select>
-            <textarea rows="4" placeholder="How can we help?"></textarea>
-            <button type="button" class="btn-submit">Submit Dispatch Request →</button>
-        </form>
-    </div>
+
+<header>
+  <div><strong>RIDGE LINE HVAC</strong></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="reviews.html">Reviews</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>Request Service</h1>
+
+  <div class="form-container">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="5" placeholder="Describe your issue" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Ridge Line HVAC
+</footer>
+
 </body>
 </html>
