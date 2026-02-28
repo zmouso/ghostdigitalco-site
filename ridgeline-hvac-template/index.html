@@ -3,166 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ridgeline HVAC — Demo</title>
+<title>Ridgeline Heating & Air | HVAC Services</title>
 
 <style>
 :root{
-  --bg:#0b1220;
-  --panel:#111827;
-  --glass:rgba(17,24,39,.75);
-  --border:rgba(255,255,255,.08);
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-
-  --cool:#22d3ee;
-  --cool2:#60a5fa;
-  --heat:#f97316;
-  --heat2:#fb7185;
+--bg:#0a0f1a;
+--panel:#121826;
+--border:#1f2937;
+--text:#f1f5f9;
+--muted:#94a3b8;
+--cool:#38bdf8;
+--heat:#f97316;
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto;
-  background:
-    radial-gradient(600px 400px at 80% 10%,rgba(34,211,238,.15),transparent 60%),
-    radial-gradient(500px 300px at 20% 90%,rgba(249,115,22,.15),transparent 60%),
-    var(--bg);
-  color:var(--text);
-  overflow-x:hidden;
-}
+body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
 
-/* NAV */
 nav{
-  position:sticky;
-  top:0;
-  backdrop-filter:blur(12px);
-  background:var(--glass);
-  border-bottom:1px solid var(--border);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 60px;
-  z-index:1000;
+position:sticky;
+top:0;
+background:rgba(10,15,26,.85);
+backdrop-filter:blur(12px);
+padding:22px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid var(--border);
+z-index:1000;
 }
 
 nav a{
-  color:var(--muted);
-  text-decoration:none;
-  margin-left:24px;
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  transition:.2s ease;
+color:var(--muted);
+margin-left:26px;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.2s;
 }
-
 nav a:hover{color:white}
 
 .brand{
-  font-weight:900;
-  letter-spacing:4px;
+font-weight:900;
+letter-spacing:4px;
 }
 
-.demo-tag{
-  font-size:10px;
-  color:var(--heat);
-  margin-left:8px;
-}
-
-/* HERO */
 .hero{
-  padding:160px 40px 120px;
-  text-align:center;
-  max-width:1000px;
-  margin:auto;
+padding:160px 40px;
+text-align:center;
+background:
+linear-gradient(135deg,rgba(56,189,248,.08),transparent 50%),
+linear-gradient(225deg,rgba(249,115,22,.08),transparent 50%);
 }
 
 .hero h1{
-  font-size:clamp(48px,7vw,72px);
-  line-height:1.05;
-  margin-bottom:24px;
+font-size:clamp(48px,6vw,70px);
+line-height:1.1;
+margin-bottom:24px;
 }
 
 .gradient{
-  background:linear-gradient(90deg,var(--cool),var(--heat));
-  -webkit-background-clip:text;
-  color:transparent;
+background:linear-gradient(90deg,var(--cool),var(--heat));
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .hero p{
-  color:var(--muted);
-  font-size:18px;
-  max-width:650px;
-  margin:0 auto 40px;
-  line-height:1.6;
+color:var(--muted);
+max-width:700px;
+margin:0 auto 40px;
+font-size:18px;
+line-height:1.6;
 }
 
-/* BUTTON */
 .btn{
-  display:inline-block;
-  padding:16px 40px;
-  border-radius:60px;
-  background:linear-gradient(90deg,var(--cool),var(--cool2));
-  color:#06111e;
-  font-weight:700;
-  text-decoration:none;
-  transition:.3s ease;
+display:inline-block;
+padding:16px 38px;
+border-radius:50px;
+background:linear-gradient(90deg,var(--cool),var(--heat));
+color:#06111e;
+font-weight:700;
+transition:.3s;
 }
+.btn:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
 
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 15px 35px rgba(34,211,238,.25);
-}
-
-/* FEATURES */
 .section{
-  padding:120px 40px;
-  text-align:center;
+padding:120px 40px;
+max-width:1200px;
+margin:auto;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  max-width:1100px;
-  margin:60px auto 0;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
 }
 
 .card{
-  background:var(--panel);
-  padding:40px;
-  border-radius:18px;
-  border:1px solid var(--border);
-  transition:.3s ease;
+background:var(--panel);
+padding:40px;
+border-radius:18px;
+border:1px solid var(--border);
+transition:.3s;
 }
-
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 60px rgba(0,0,0,.4);
+transform:translateY(-8px);
+box-shadow:0 25px 70px rgba(0,0,0,.6);
 }
 
-.card h3{margin-bottom:14px}
+.cta-strip{
+background:linear-gradient(90deg,rgba(56,189,248,.15),rgba(249,115,22,.15));
+padding:80px 40px;
+text-align:center;
+margin-top:80px;
+}
 
-/* FOOTER */
 footer{
-  padding:60px 40px;
-  text-align:center;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:13px;
+padding:60px 40px;
+text-align:center;
+color:var(--muted);
+border-top:1px solid var(--border);
+font-size:13px;
 }
 
-/* DEMO BANNER */
-.demo-banner{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  background:linear-gradient(90deg,rgba(249,115,22,.25),rgba(34,211,238,.25));
-  padding:10px;
-  text-align:center;
-  font-size:12px;
-  border-top:1px solid var(--border);
+.demo{
+position:fixed;
+bottom:0;
+width:100%;
+background:#111827;
+padding:10px;
+text-align:center;
+font-size:12px;
+border-top:1px solid var(--border);
 }
 </style>
 </head>
@@ -170,54 +143,59 @@ footer{
 <body>
 
 <nav>
-  <div class="brand">
-    RIDGELINE HVAC <span class="demo-tag">DEMO</span>
-  </div>
-  <div>
-    <a href="services.html">Services</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="about.html">About</a>
-    <a href="quote.html">Quote</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<div class="brand">RIDGELINE HEATING & AIR</div>
+<div>
+<a href="services.html">Services</a>
+<a href="reviews.html">Reviews</a>
+<a href="about.html">About</a>
+<a href="quote.html">Quote</a>
+<a href="contact.html">Contact</a>
+</div>
 </nav>
 
 <section class="hero">
-  <h1>
-    Heating & Cooling
-    <span class="gradient">Reimagined.</span>
-  </h1>
-  <p>
-    A modern HVAC website demo built for speed, clarity, and conversions.
-    Clean layout. Smart hierarchy. Built like a real trade business.
-  </p>
-  <a href="quote.html" class="btn">Request Demo Quote</a>
+<h1>
+Precision Comfort.<br>
+<span class="gradient">Engineered Performance.</span>
+</h1>
+<p>
+Premium HVAC solutions designed for residential and commercial performance.
+Built to look and operate like a top-tier regional provider.
+</p>
+<a href="quote.html" class="btn">Schedule Service</a>
 </section>
 
 <section class="section">
-  <h2>Designed For Real HVAC Growth</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Mobile First</h3>
-      <p>Built for customers searching on their phones.</p>
-    </div>
-    <div class="card">
-      <h3>Conversion Driven</h3>
-      <p>Clear calls to action that push toward booking.</p>
-    </div>
-    <div class="card">
-      <h3>Modern Branding</h3>
-      <p>Cool + Heat color identity reinforces HVAC instantly.</p>
-    </div>
-  </div>
+<h2>Full-Service HVAC Solutions</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Air Conditioning</h3>
+<p>Installation, diagnostics, maintenance, and energy-efficient system upgrades.</p>
+</div>
+<div class="card">
+<h3>Heating Systems</h3>
+<p>High-performance furnace and heat pump service built for long-term reliability.</p>
+</div>
+<div class="card">
+<h3>Commercial HVAC</h3>
+<p>Rooftop units, system retrofits, and long-term maintenance contracts.</p>
+</div>
+</div>
+</section>
+
+<section class="cta-strip">
+<h2>24/7 Emergency Service Available</h2>
+<p>Rapid response. Licensed technicians. Performance you can trust.</p>
+<a href="contact.html" class="btn">Request Emergency Service</a>
 </section>
 
 <footer>
-  © 2026 Ridgeline HVAC — Fictional Demo Site
+© 2026 Ridgeline Heating & Air — Fictional Portfolio Demonstration
 </footer>
 
-<div class="demo-banner">
-  This is a fictional demo website used for portfolio purposes only.
+<div class="demo">
+This is a fictional HVAC company created for portfolio demonstration purposes only.
 </div>
 
 </body>
