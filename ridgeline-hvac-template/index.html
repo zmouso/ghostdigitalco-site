@@ -1,72 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Ridgeline HVAC | Professional Climate Control</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --black: #081018; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Ridgeline HVAC | Professional Climate Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --silver: #cbd5e0; --black: #050a0f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; overflow-x: hidden; }
 
-    /* Fix: Persistent Demo Watermark */
-    .demo-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 4px; font-size: 11px; z-index: 9999; border-left: 4px solid var(--orange); pointer-events: none; letter-spacing: 1px; }
+        /* THE $3K MASTER HEADER */
+        .top-strip { background: var(--black); color: white; padding: 12px 5%; display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        nav { background: var(--navy); padding: 0 5%; height: 90px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .logo { font-family: 'Barlow Condensed'; font-size: 32px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; letter-spacing: -1px; }
+        .logo span { color: var(--orange); }
+        .nav-links { display: flex; align-items: center; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-weight: 700; text-transform: uppercase; font-size: 13px; transition: 0.3s; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--orange); }
+        .cta-nav { background: var(--orange); padding: 12px 25px; border-radius: 2px; }
 
-    /* Header & Nav */
-    .top-bar { background: var(--black); color: white; padding: 8px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
-    nav { background: var(--navy); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); }
-    .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
-    .nav-links a { color: white; text-decoration: none; margin-left: 25px; font-weight: 700; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
-    .nav-links a:hover { color: var(--orange); }
-    .cta-btn { background: var(--orange); color: white !important; padding: 10px 20px; border-radius: 4px; }
+        /* HERO SECTION */
+        .hero { background: linear-gradient(rgba(11,22,34,0.85), rgba(11,22,34,0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 5%; }
+        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(50px, 10vw, 100px); line-height: 0.85; text-transform: uppercase; margin-bottom: 25px; }
+        .hero p { font-size: 22px; max-width: 700px; margin: 0 auto 40px; color: var(--silver); }
+        .btn { padding: 22px 50px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; display: inline-block; transition: 0.4s; border: none; cursor: pointer; }
+        .btn:hover { background: var(--black); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
 
-    /* Hero */
-    .hero { background: linear-gradient(rgba(11,22,34,0.85), rgba(11,22,34,0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 120px 5%; text-align: center; }
-    .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(40px, 8vw, 90px); text-transform: uppercase; line-height: 0.9; margin-bottom: 20px; }
-    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 40px; color: #cbd5e0; }
-
-    /* Common Sections */
-    .section-pad { padding: 80px 5%; }
-    .btn { padding: 18px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
-    .btn-orange { background: var(--orange); color: white; }
-    .btn-orange:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(232,97,10,0.3); }
-
-    /* Footer */
-    footer { background: var(--black); color: #718096; padding: 60px 5% 20px; text-align: center; }
-    .footer-disclaimer { border-top: 1px solid #2d3748; margin-top: 40px; padding-top: 20px; font-size: 12px; }
-</style>
+        /* WATERMARK */
+        .agency-tag { position: fixed; bottom: 30px; left: 30px; background: rgba(5, 10, 15, 0.9); color: white; padding: 12px 20px; border-radius: 2px; font-size: 10px; z-index: 9999; border-left: 3px solid var(--orange); letter-spacing: 2px; font-weight: 900; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    </style>
 </head>
 <body>
-
-    <div class="demo-tag">CONCEPT DEMO BY GHOST DIGITAL CO.</div>
-
-    <div class="top-bar">
-        <span>KNOXVILLE, TN & SURROUNDING</span>
-        <span>EMERGENCY DISPATCH: <a href="tel:8651234567" style="color:var(--orange); text-decoration:none;">(865) 123-4567</a></span>
+    <div class="agency-tag">BUILT BY // GHOST DIGITAL CO.</div>
+    <div class="top-strip">
+        <span>Knoxville's #1 Choice</span>
+        <span>Emergency Service: <a href="tel:8651234567" style="color:var(--orange); text-decoration:none;">(865) 123-4567</a></span>
     </div>
-
     <nav>
-        <a href="index.html" class="logo">RIDGE LINE <span style="color:var(--orange)">HVAC</span></a>
-        <div class="nav-links">
-            <a href="services.html">Services</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="contact.html" class="cta-btn">Get Quote</a>
-        </div>
+        <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
+        <ul class="nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="cta-nav">Get Quote</a></li>
+        </ul>
     </nav>
-
-    <section class="hero">
-        <h1>HEAVY DUTY SERVICE.<br><span style="color:var(--orange)">FAIR PRICING.</span></h1>
-        <p>Knoxville's premier HVAC concept for high-performance residential and commercial climate control.</p>
-        <a href="contact.html" class="btn btn-orange">Schedule Inspection</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Ridgeline HVAC. All Rights Reserved.</p>
-        <div class="footer-disclaimer">
-            This is a <strong>Demo Site</strong> created for portfolio purposes by <a href="#" style="color:white; text-decoration:none;">Ghost Digital Co.</a>
+    <header class="hero">
+        <div>
+            <h1>Engineered for<br><span style="color:var(--orange)">Absolute Comfort</span></h1>
+            <p>Premium HVAC installation and rapid-response repair for the modern Knoxville home.</p>
+            <a href="contact.html" class="btn">Start Your Project</a>
         </div>
-    </footer>
-
+    </header>
 </body>
 </html>
