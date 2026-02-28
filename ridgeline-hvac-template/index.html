@@ -3,85 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Ridgeline HVAC | Knoxville's Trusted AC & Heating</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ridgeline HVAC | Knoxville's Premier Comfort Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --black: #050a0f; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
-
-        /* UNIFIED NAV - Copy to every page */
-        .top-strip { background: var(--black); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        nav { background: var(--navy); padding: 0 5%; height: 85px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); }
-        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
-        .logo span { color: var(--orange); }
-        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--orange); }
-        .cta-nav { background: var(--orange); padding: 10px 20px; border-radius: 4px; }
-
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            .nav-links { display: none; } /* Mobile menu simplified */
-            .hero h1 { font-size: 50px !important; }
-            .grid-3 { grid-template-columns: 1fr !important; }
+        :root {
+            --navy: #0B1622;
+            --orange: #E8610A;
+            --white: #FFFFFF;
+            --light: #F4F7F9;
+            --black: #050a0f;
+            --ease: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); overflow-x: hidden; }
+
+        /* FIXED NAV SYSTEM */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 80px; 
+            background: rgba(11, 22, 34, 0.95); backdrop-filter: blur(10px);
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 6%; z-index: 1000; border-bottom: 3px solid var(--orange);
+        }
+        .logo { font-family: 'Barlow Condensed'; font-size: 26px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--orange); }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
+
         /* SECTIONS */
-        .hero { background: linear-gradient(rgba(11,22,34,0.7), rgba(11,22,34,0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000') center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 5%; }
-        .hero h1 { font-family: 'Barlow Condensed'; font-size: 90px; line-height: 0.9; text-transform: uppercase; margin-bottom: 20px; }
-        .btn { padding: 18px 40px; background: var(--orange); color: white; text-decoration: none; font-weight: 900; text-transform: uppercase; border-radius: 4px; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: var(--black); transform: translateY(-3px); }
+        section { padding: 100px 6%; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+        .hero { 
+            height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&q=80&w=2000') center/cover;
+            color: white; text-align: center;
+        }
+        .hero h1 { font-family: 'Barlow Condensed'; font-size: clamp(60px, 10vw, 120px); line-height: 0.85; margin-bottom: 20px; }
 
-        .section { padding: 80px 5%; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
-        .card { background: var(--light); padding: 40px; border-radius: 8px; text-align: center; border-bottom: 4px solid transparent; transition: 0.3s; }
-        .card:hover { border-color: var(--orange); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card { background: var(--light); padding: 50px; border-radius: 4px; transition: 0.4s var(--ease); border-bottom: 4px solid transparent; }
+        .card:hover { transform: translateY(-10px); border-color: var(--orange); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
 
-        .agency-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; font-size: 10px; font-weight: 900; text-transform: uppercase; border-left: 3px solid var(--orange); z-index: 9999; pointer-events: none; }
+        /* CONTACT FORM */
+        .contact-box { background: var(--navy); color: white; padding: 60px; border-radius: 8px; max-width: 800px; margin: 0 auto; }
+        input, textarea, select { width: 100%; padding: 15px; margin-bottom: 20px; border: none; border-radius: 4px; }
+        .btn { background: var(--orange); color: white; padding: 20px 40px; border: none; font-weight: 900; text-transform: uppercase; cursor: pointer; width: 100%; transition: 0.3s; }
+        .btn:hover { background: #ff7417; }
+
+        /* FOOTER */
+        footer { background: var(--black); color: white; padding: 60px 6%; text-align: center; font-size: 12px; }
+        .agency-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; font-size: 10px; font-weight: 900; border-left: 3px solid var(--orange); z-index: 9999; }
+
+        /* REVEAL ON SCROLL */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s var(--ease); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
+
     <div class="agency-tag">Built by // Ghost Digital Co.</div>
-    <div class="top-strip">
-        <span>Serving Greater Knoxville & Surrounding Areas</span>
-        <span>Call (865) 123-4567</span>
-    </div>
+
     <nav>
-        <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
+        <a href="#home" class="logo">RIDGELINE<span>HVAC</span></a>
         <ul class="nav-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html" class="cta-nav">Get A Quote</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact" style="background:var(--orange); padding: 10px 20px; border-radius: 4px;">Free Quote</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
-        <div>
-            <h1>FAST REPAIRS.<br><span style="color:var(--orange)">HONEST PRICING.</span></h1>
-            <p style="font-size: 20px; margin-bottom: 30px;">Knoxville's most reliable HVAC team for AC, Heating, and Maintenance.</p>
-            <a href="contact.html" class="btn">Schedule My Free Quote</a>
+    <section id="home" class="hero">
+        <div class="reveal">
+            <p style="letter-spacing: 8px; text-transform: uppercase; margin-bottom: 20px; font-weight: 700;">Established 2008 // Knoxville, TN</p>
+            <h1>PRO SERVICE.<br><span style="color:var(--orange)">FAIR PRICES.</span></h1>
+            <p style="font-size: 20px; max-width: 700px; margin: 0 auto 40px;">No tech-jargon. Just fast, honest HVAC repairs for Knoxville families.</p>
+            <a href="#contact" class="btn" style="width: auto; display: inline-block;">Schedule My Inspection</a>
         </div>
-    </header>
+    </section>
 
-    <section class="section">
-        <h2 style="text-align:center; font-family:'Barlow Condensed'; font-size: 45px; text-transform:uppercase;">What We Do <span>Best</span></h2>
-        <div class="grid-3">
-            <div class="card">
-                <h3>AC Repair</h3>
-                <p>Fast cooling repairs when you need them most. We fix all brands.</p>
+    <section id="services">
+        <h2 style="font-family:'Barlow Condensed'; font-size: 50px; text-transform: uppercase; text-align: center;">How We <span>Help</span></h2>
+        <div class="grid">
+            <div class="card reveal">
+                <h3 style="font-family:'Barlow Condensed'; font-size: 30px; margin-bottom: 15px;">AC REPAIR</h3>
+                <p>Fast diagnostics and repair for all major air conditioning brands. We get you cool, fast.</p>
             </div>
-            <div class="card">
-                <h3>Heating</h3>
-                <p>Keeping Knoxville warm with furnace and heat pump restoration.</p>
+            <div class="card reveal">
+                <h3 style="font-family:'Barlow Condensed'; font-size: 30px; margin-bottom: 15px;">HEATING</h3>
+                <p>Furnace and heat pump service to keep your family warm through the Tennessee winter.</p>
             </div>
-            <div class="card">
-                <h3>Maintenance</h3>
-                <p>Prevent system breakdowns with our simple 21-point inspection.</p>
+            <div class="card reveal">
+                <h3 style="font-family:'Barlow Condensed'; font-size: 30px; margin-bottom: 15px;">MAINTENANCE</h3>
+                <p>Seasonal tune-ups that lower your energy bills and prevent expensive middle-of-the-night breakdowns.</p>
             </div>
         </div>
     </section>
+
+    <section id="about" style="background: var(--light);">
+        <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family:'Barlow Condensed'; font-size: 50px; text-transform: uppercase;">Family Owned. <span>Local Pride.</span></h2>
+            <p style="font-size: 20px; margin-top: 20px;">We’re not a giant corporation. We’re your neighbors. Since 2008, we’ve built our reputation on doing the job right the first time and never overcharging for parts you don't need.</p>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 style="font-family:'Barlow Condensed'; font-size: 50px; text-transform: uppercase; text-align: center; margin-bottom: 40px;">What Knoxville <span>Is Saying</span></h2>
+        <div class="grid">
+            <div class="card reveal" style="background: white; border: 1px solid #eee;">
+                <p style="font-style: italic; font-size: 18px;">"Ridgeline saved us! Our AC went out on a Sunday and they were here within two hours. Honest people."</p>
+                <p style="margin-top: 20px; font-weight: 700;">— Mike R., Powell</p>
+            </div>
+            <div class="card reveal" style="background: white; border: 1px solid #eee;">
+                <p style="font-style: italic; font-size: 18px;">"The most professional HVAC team I've ever used. Clean, polite, and they explained everything clearly."</p>
+                <p style="margin-top: 20px; font-weight: 700;">— Sarah T., Farragut</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: var(--white);">
+        <div class="contact-box reveal">
+            <h2 style="font-family:'Barlow Condensed'; font-size: 40px; text-transform: uppercase; margin-bottom: 30px; text-align: center;">Request Your <span>Free Quote</span></h2>
+            <form>
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="tel" placeholder="Best Phone Number" required>
+                <select>
+                    <option>AC Repair</option>
+                    <option>Heating Service</option>
+                    <option>Maintenance Tune-up</option>
+                </select>
+                <textarea rows="4" placeholder="Briefly describe what's happening..."></textarea>
+                <button type="submit" class="btn">Initialize Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ridgeline HVAC. All Rights Reserved. | Licensed & Insured in TN</p>
+        <p style="margin-top: 10px; color: var(--orange);">Website Engineered by Ghost Digital Co.</p>
+    </footer>
+
+    <script>
+        // REVEAL ANIMATION ENGINE
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
