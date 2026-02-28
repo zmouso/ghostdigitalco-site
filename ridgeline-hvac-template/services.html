@@ -1,51 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Services — Ridgeline HVAC Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HVAC Services | Ridgeline Heating & Air</title>
+
 <style>
-body{margin:0;font-family:system-ui;background:#0b1220;color:#e5e7eb}
-nav{background:#0e172a;padding:20px 40px;border-bottom:1px solid #1f2937}
-nav a{color:#94a3b8;text-decoration:none;margin-right:20px;font-size:13px;text-transform:uppercase}
-nav a:hover{color:#22d3ee}
-.section{padding:100px 40px;text-align:center}
-.service{background:#111827;margin:20px auto;padding:30px;border-radius:16px;max-width:800px;border:1px solid #1f2937}
-footer{padding:40px;text-align:center;color:#64748b;border-top:1px solid #1f2937}
+:root{
+--bg:#0a0f1a;
+--panel:#121826;
+--panel2:#151c2c;
+--border:#1f2937;
+--text:#f1f5f9;
+--muted:#94a3b8;
+--cool:#38bdf8;
+--heat:#f97316;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+
+nav{
+position:sticky;
+top:0;
+background:rgba(10,15,26,.9);
+backdrop-filter:blur(12px);
+padding:22px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+
+nav a{
+color:var(--muted);
+margin-left:26px;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.2s;
+}
+nav a:hover{color:white}
+
+.brand{
+font-weight:900;
+letter-spacing:4px;
+}
+
+.hero{
+padding:120px 40px;
+text-align:center;
+background:
+linear-gradient(135deg,rgba(56,189,248,.08),transparent 50%),
+linear-gradient(225deg,rgba(249,115,22,.08),transparent 50%);
+}
+
+.hero h1{
+font-size:clamp(40px,5vw,60px);
+margin-bottom:20px;
+}
+
+.hero p{
+color:var(--muted);
+max-width:700px;
+margin:0 auto;
+line-height:1.6;
+}
+
+.section{
+padding:100px 40px;
+max-width:1200px;
+margin:auto;
+}
+
+.service-block{
+background:var(--panel);
+padding:50px;
+border-radius:20px;
+border:1px solid var(--border);
+margin-bottom:40px;
+transition:.3s ease;
+}
+
+.service-block:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 70px rgba(0,0,0,.6);
+}
+
+.service-block h2{
+margin-bottom:18px;
+}
+
+.service-block ul{
+margin-top:20px;
+padding-left:20px;
+color:var(--muted);
+line-height:1.8;
+}
+
+.cta{
+text-align:center;
+padding:100px 40px;
+background:linear-gradient(90deg,rgba(56,189,248,.15),rgba(249,115,22,.15));
+margin-top:60px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 40px;
+border-radius:50px;
+background:linear-gradient(90deg,var(--cool),var(--heat));
+color:#06111e;
+font-weight:700;
+transition:.3s;
+}
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
+footer{
+padding:60px 40px;
+text-align:center;
+color:var(--muted);
+border-top:1px solid var(--border);
+font-size:13px;
+}
+
+.demo{
+position:fixed;
+bottom:0;
+width:100%;
+background:#111827;
+padding:10px;
+text-align:center;
+font-size:12px;
+border-top:1px solid var(--border);
+}
 </style>
 </head>
+
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="about.html">About</a>
-  <a href="quote.html">Quote</a>
-  <a href="contact.html">Contact</a>
+<div class="brand">RIDGELINE HEATING & AIR</div>
+<div>
+<a href="index.html">Home</a>
+<a href="reviews.html">Reviews</a>
+<a href="about.html">About</a>
+<a href="quote.html">Quote</a>
+<a href="contact.html">Contact</a>
+</div>
 </nav>
 
+<section class="hero">
+<h1>Comprehensive HVAC Services</h1>
+<p>
+Engineered comfort solutions for residential and commercial systems.
+Designed with reliability, efficiency, and long-term performance in mind.
+</p>
+</section>
+
 <section class="section">
-  <h1>Our HVAC Services</h1>
 
-  <div class="service">
-    <h3>AC Installation & Repair</h3>
-    <p>System installs, diagnostics, refrigerant recharge, and seasonal maintenance.</p>
-  </div>
+<div class="service-block">
+<h2>Air Conditioning Services</h2>
+<p>Complete cooling system performance and lifecycle management.</p>
+<ul>
+<li>AC Installation & Replacement</li>
+<li>System Diagnostics & Repairs</li>
+<li>Refrigerant Service</li>
+<li>Preventative Maintenance Plans</li>
+</ul>
+</div>
 
-  <div class="service">
-    <h3>Heating Systems</h3>
-    <p>Furnace replacement, heat pump service, winter readiness inspections.</p>
-  </div>
+<div class="service-block">
+<h2>Heating Systems</h2>
+<p>High-efficiency heating systems engineered for durability and comfort.</p>
+<ul>
+<li>Furnace Installation</li>
+<li>Heat Pump Service</li>
+<li>Thermostat Upgrades</li>
+<li>Seasonal System Optimization</li>
+</ul>
+</div>
 
-  <div class="service">
-    <h3>Commercial HVAC</h3>
-    <p>Rooftop units, maintenance contracts, and system upgrades.</p>
-  </div>
+<div class="service-block">
+<h2>Commercial HVAC</h2>
+<p>Scalable solutions for business operations and facility performance.</p>
+<ul>
+<li>Rooftop Unit Service</li>
+<li>Commercial System Retrofits</li>
+<li>Maintenance Contracts</li>
+<li>Performance Audits</li>
+</ul>
+</div>
 
 </section>
 
+<section class="cta">
+<h2>Need Immediate Service?</h2>
+<p>Certified technicians available for urgent system diagnostics.</p>
+<a href="contact.html" class="btn">Request Service</a>
+</section>
+
 <footer>
-  Ridgeline HVAC — Demo Site Only
+© 2026 Ridgeline Heating & Air — Fictional Portfolio Demonstration
 </footer>
+
+<div class="demo">
+This is a fictional HVAC company created for portfolio demonstration purposes only.
+</div>
 
 </body>
 </html>
