@@ -1,65 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Contact Ridgeline HVAC — get a free quote for heating and cooling service in Knoxville, TN. Call or fill out the form."/>
-<title>Contact & Free Quote | Ridgeline HVAC — Knoxville, TN</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-:root{--navy:#0B1622;--navy2:#0F1E2E;--steel:#1A2E42;--orange:#E8610A;--orange2:#FF7A20;--silver:#8DA4B8;--light:#EBF1F7;--white:#FFFFFF;--gray:#4A6278}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;background:rgba(11,22,34,.97);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid rgba(232,97,10,.2)}
-.logo{text-decoration:none;display:flex;align-items:center;gap:12px}
-.logo-icon{width:38px;height:38px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo-text{display:flex;flex-direction:column;line-height:1}
-.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;letter-spacing:2px;color:var(--white);text-transform:uppercase}
-.logo-tag{font-size:10px;font-weight:400;letter-spacing:3px;color:var(--silver);text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--orange2)}
-.nav-cta{background:var(--orange)!important;color:var(--white)!important;padding:10px 24px;font-family:'Barlow Condensed',sans-serif;font-size:14px!important;font-weight:700!important;letter-spacing:2px!important}
-.nav-phone{color:var(--white)!important;font-family:'Barlow Condensed',sans-serif;font-size:16px!important;font-weight:700!important;letter-spacing:1px!important}
-
-.form-sec{background:var(--light);padding:100px 48px}
-.form-inner{max-width:800px;margin:0 auto;background:var(--white);padding:40px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
-input, textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid var(--silver)}
-.btn-submit { background: var(--orange); color: white; padding: 14px 28px; border: none; font-weight: 700; cursor: pointer}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Ridgeline HVAC (Demo)</title>
+  <meta name="description" content="Contact demo page with tap-to-call and quick form." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-<nav>
-  <a href="index.html" class="logo">
-    <div class="logo-icon">🌡️</div>
-    <div class="logo-text">
-      <span class="logo-name">Ridgeline</span>
-      <span class="logo-tag">HVAC · Knoxville, TN</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="tel:8651234567" class="nav-phone">(865) 123-4567</a></li>
-    <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
-  </ul>
-</nav>
 
-<section class="form-sec">
-  <div class="form-inner">
-    <h2>Get a Free Quote</h2>
-    <form id="contact-form">
-      <input type="text" name="first_name" placeholder="First Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="How can we help?"></textarea>
-      <button type="submit" class="btn-submit">Submit Request</button>
-    </form>
-    <div class="form-guarantee"><strong>No cost, no commitment.</strong> We'll give you a straight quote.</div>
+  <div class="demo-banner">
+    <strong>DEMO SITE</strong> <span>— portfolio example. Form routes to Ghost Digital Co Formspree.</span>
   </div>
-</section>
+
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo-mark"></div>
+          <div class="brand-name">
+            <div class="top">RIDGELINE HVAC</div>
+            <div class="sub">Demo HVAC Website</div>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="services.html">Services</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="btn btn-ghost" href="tel:8651234567">(865) 123-4567</a>
+          <a class="btn btn-heat" href="quote.html">Get a Quote</a>
+          <button class="hamburger" data-hamburger aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-panel" data-mobile-panel>
+      <div class="container">
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mctas">
+          <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+          <a class="btn btn-heat" href="quote.html">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="wrap">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> → <span>Contact</span>
+        </div>
+        <h1>Contact (Demo) — <span class="ice">Tap to Call</span> or Message</h1>
+        <p class="lead" style="margin-top:10px">
+          Homeowners should be able to call in one tap. The form is backup.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container" style="display:grid; grid-template-columns: .9fr 1.1fr; gap:14px;">
+      <div class="hero-card" data-reveal>
+        <div class="top">
+          <h3>Fastest Option</h3>
+          <p class="sub">Call now and get scheduled (demo).</p>
+        </div>
+        <div class="body">
+          <div class="mini-row">
+            <div class="lbl">Phone</div>
+            <div class="val"><a href="tel:8651234567" style="text-decoration:none; font-weight:1000;">(865) 123-4567</a></div>
+          </div>
+          <div class="mini-row">
+            <div class="lbl">Service Area</div>
+            <div class="val">Knoxville + Nearby</div>
+          </div>
+          <div class="mini-row">
+            <div class="lbl">Hours</div>
+            <div class="val">24/7 (Demo)</div>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" style="flex:1" href="tel:8651234567">Call Now</a>
+            <a class="btn btn-heat" style="flex:1" href="quote.html">Get Quote</a>
+          </div>
+          <p class="help" style="margin-top:10px">
+            Demo disclaimer: phone number is placeholder.
+          </p>
+        </div>
+      </div>
+
+      <form class="form" data-reveal action="https://formspree.io/f/mreajqyy" method="POST">
+        <div class="form-top">
+          <h3>Send a Message (Demo)</h3>
+          <p>Short form. Easy submit. Routes to your Formspree.</p>
+        </div>
+        <div class="form-body">
+          <input type="hidden" name="_subject" value="Ridgeline HVAC Demo Lead">
+          <input type="hidden" name="_next" value="https://zmouso.github.io/ghostdigitalco-site/ridgeline-hvac-template/thanks.html">
+          <input class="hidden-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+
+          <div class="row">
+            <div class="field">
+              <label>Name</label>
+              <input name="name" type="text" placeholder="John Doe" required>
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input name="phone" type="tel" placeholder="(865) 555-1234">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label>Email</label>
+              <input name="email" type="email" placeholder="john@email.com" required>
+            </div>
+            <div class="field">
+              <label>Need</label>
+              <select name="need">
+                <option>AC Repair</option>
+                <option>Heating Repair</option>
+                <option>New System Quote</option>
+                <option>Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea name="message" placeholder="What’s going on?" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-heat" type="submit">Send Request</button>
+            <a class="btn btn-ghost" href="tel:8651234567">Or Call Now</a>
+          </div>
+
+          <p class="help">Spam prevention: hidden field included. Redirect uses Formspree _next.  [oai_citation:1‡Tosbourn – Belfast based Ruby developers](https://tosbourn.com/using-formspree-for-contact-form/?utm_source=chatgpt.com)</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="tiny">© 2026 Ridgeline HVAC (Demo). Not a real business. Built by Ghost Digital Co.</div>
+    </div>
+  </footer>
+
+  <div class="sticky-bar">
+    <div class="sticky-inner">
+      <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+      <a class="btn btn-heat" href="quote.html">Get Quote</a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+  <style>
+    @media (max-width: 980px){
+      .container[style]{grid-template-columns:1fr !important;}
+    }
+  </style>
 </body>
 </html>
