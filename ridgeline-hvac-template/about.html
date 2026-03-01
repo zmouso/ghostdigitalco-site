@@ -1,48 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>About Us | Ridgeline HVAC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Ridgeline HVAC (Demo)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- ✅ IMPORTANT: assets folder -->
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <span class="nav-name">Ridgeline HVAC</span>
-            <span class="nav-sub">Knoxville, TN</span>
-        </a>
-        <div class="nav-menu">
-            <button class="nav-toggle">MENU ☰</button>
-            <div class="nav-dropdown">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
+  <div class="demo-bar">
+    <div class="demo-bar__inner">
+      <strong>DEMO SITE</strong>
+      <span>Portfolio example by Ghost Digital Co — not a real HVAC company.</span>
+      <a class="demo-bar__link" href="https://zmouso.github.io/ghostdigitalco-site/">Back to Ghost Digital Co</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Ridgeline HVAC Home">
+        <span class="brand__name">RIDGELINE</span>
+        <span class="brand__tag">Heating • Air • Plumbing</span>
+      </a>
+
+      <div class="nav__right">
+        <a class="nav__call" href="tel:8651234567" aria-label="Call Ridgeline HVAC">(865) 123-4567</a>
+
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav__links" role="navigation" aria-label="Primary">
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="reviews.html">Reviews</a>
+        <a class="nav__link active" href="about.html">About</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <a class="btn btn--solid btn--small" href="quote.html">Free Quote</a>
+      </div>
     </nav>
 
-    <main class="con">
-        <section class="split-section reveal">
-            <div class="text-content">
-                <span class="label">Our Story</span>
-                <h1>Local Service.<br>Local People.</h1>
-                <p>Ridgeline HVAC was built on the belief that Knoxville homeowners deserve honest, transparent heating and air service without the corporate sales pitch.</p>
-                <br>
-                <a href="contact.html" class="btn">Get a Quote →</a>
-            </div>
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1517524285303-d6fc50dfbb21?q=80&w=1000&auto=format&fit=crop" alt="Ridgeline Service Van">
-            </div>
-        </section>
-    </main>
-
-    <div class="cta-footer">
-        <h2>Ready to get comfortable?</h2>
-        <a href="tel:8651234567" class="btn" style="background: white; color: var(--orange);">Call (865) 123-4567</a>
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <a href="services.html" class="mobile-menu__link">Services</a>
+      <a href="reviews.html" class="mobile-menu__link">Reviews</a>
+      <a href="about.html" class="mobile-menu__link">About</a>
+      <a href="contact.html" class="mobile-menu__link">Contact</a>
+      <a href="quote.html" class="btn btn--solid mobile-menu__cta">Start Free Quote</a>
+      <a href="tel:8651234567" class="btn btn--ghost mobile-menu__cta">Tap to Call</a>
     </div>
+  </header>
 
-    <script src="main.js"></script>
+  <main class="page">
+    <section class="hero hero--compact reveal">
+      <div class="hero__bg hero__bg--about" role="img" aria-label="Service tech and van"></div>
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="kicker">About</div>
+        <h1 class="h1">Local service.<br><span class="accent">Local people.</span></h1>
+        <p class="lead">
+          Ridgeline is built on one belief: homeowners deserve honest HVAC service without the corporate sales pitch.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="tel:8651234567">Tap to Call</a>
+          <a class="btn btn--ghost" href="quote.html">Start Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container two-col">
+        <div>
+          <h2 class="h2">Our story</h2>
+          <p class="muted">
+            This is a <strong>demo brand</strong> designed to show how a top-tier HVAC website should convert on mobile.
+            Clear CTAs, tight copy, and trust signals where they matter.
+          </p>
+
+          <div class="checklist">
+            <div class="check">Same-day response messaging (demo)</div>
+            <div class="check">Simple “tap-to-call” layout</div>
+            <div class="check">Quote flow built for speed</div>
+            <div class="check">Review proof + service clarity</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__title">What you should feel</div>
+          <div class="panel__item"><span>✅</span> “They’ll answer the phone.”</div>
+          <div class="panel__item"><span>✅</span> “They seem legit.”</div>
+          <div class="panel__item"><span>✅</span> “I can get a quote fast.”</div>
+          <div class="panel__item"><span>✅</span> “No confusion. No friction.”</div>
+
+          <div class="panel__cta">
+            <a class="btn btn--solid btn--small" href="quote.html">Get a Free Quote</a>
+            <a class="btn btn--ghost btn--small" href="reviews.html">Read Reviews</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta reveal">
+      <div class="container cta-box">
+        <div>
+          <h2 class="h2">Ready to get comfortable?</h2>
+          <p class="muted">Tap to call, or request a quote in under a minute.</p>
+        </div>
+        <div class="cta-box__actions">
+          <a class="btn btn--solid" href="tel:8651234567">Tap to Call</a>
+          <a class="btn btn--ghost" href="quote.html">Start Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__brand">RIDGELINE <span class="accent">HVAC</span></div>
+          <p class="footer__muted">Demo website example built by Ghost Digital Co. Not a real company.</p>
+        </div>
+
+        <div class="footer__links">
+          <a href="services.html">Services</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="quote.html">Free Quote</a>
+        </div>
+
+        <div class="footer__call">
+          <a class="btn btn--solid btn--small" href="tel:8651234567">(865) 123-4567</a>
+          <div class="footer__fine">© 2026 Ridgeline (Demo)</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ✅ IMPORTANT: assets folder -->
+  <script src="assets/main.js" defer></script>
 </body>
 </html>
