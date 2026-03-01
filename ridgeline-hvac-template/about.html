@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="About Ridgeline HVAC — family-owned, Knoxville-based heating and cooling since 2008."/>
-<title>About | Ridgeline HVAC — Knoxville, TN</title>
+<title>About Us | Ridgeline HVAC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-:root{--black:#0A0A0A;--dark:#111111;--charcoal:#1C1C1C;--orange:#E05C00;--orange-light:#FF6B1A;--cream:#F5F0EA;--silver:#9A9A9A;--white:#FFFFFF;--text:#1C1C1C}
+/* EXACT SAME CSS AS INDEX */
+:root{ --black:#0A0A0A; --dark:#111111; --charcoal:#1C1C1C; --orange:#E05C00; --orange-light:#FF6B1A; --cream:#F5F0EA; --silver:#9A9A9A; --white:#FFFFFF; --text:#1C1C1C; }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;padding-bottom:72px}
 .demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
 nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -20,42 +20,29 @@ nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;hei
 .nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
 .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
 .nav-call:hover{background:var(--orange-light)}
-.page-hero{background:var(--black);padding:64px 24px 56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.breadcrumb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.breadcrumb a{color:var(--orange-light);text-decoration:none}
-.page-title{font-family:'DM Serif Display',serif;font-size:clamp(40px,9vw,72px);line-height:.95;color:var(--white);margin-bottom:16px}
-.page-title em{font-style:italic;color:var(--orange-light)}
-.page-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:400px;line-height:1.65}
-.sec{padding:64px 24px}
+.nav-menu{position:relative}
+.nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;letter-spacing:.5px;transition:border-color .2s}
+.nav-toggle:hover{border-color:var(--orange);color:var(--orange)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--charcoal);min-width:180px;border-top:2px solid var(--orange);z-index:300}
+.nav-dropdown a{display:block;padding:14px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:all .2s}
+.nav-dropdown a:last-child{border-bottom:none}
+.nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
+.nav-menu.open .nav-dropdown{display:block}
+
+/* PAGE SPECIFIC */
 .con{max-width:1200px;margin:0 auto}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
-.section-title-sm{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,42px);line-height:1;color:var(--text);margin-bottom:32px}
-.story-text p{font-size:15px;color:#555;line-height:1.85;margin-bottom:18px}
-.story-text strong{color:var(--text);font-weight:600}
-.pullquote{background:var(--black);padding:40px 28px;margin:40px 0;border-left:3px solid var(--orange)}
-.pullquote blockquote{font-family:'DM Serif Display',serif;font-size:clamp(20px,4vw,28px);font-style:italic;color:var(--white);line-height:1.3;margin-bottom:16px}
-.pullquote cite{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
-.stat-box{background:var(--black);padding:28px 20px;text-align:center}
-.stat-n{font-family:'DM Serif Display',serif;font-size:40px;color:var(--white);line-height:1}
-.stat-n sup{font-size:18px;color:var(--orange)}
-.stat-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px}
-.values-sec{background:var(--black);padding:64px 24px}
-.values-grid{display:flex;flex-direction:column;gap:2px;margin-top:40px}
-.val-item{background:var(--charcoal);padding:28px 24px;display:flex;gap:20px;align-items:flex-start}
-.val-ico{font-size:24px;flex-shrink:0;margin-top:2px}
-.val-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:6px}
-.val-body{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}
-.areas-sec{background:var(--cream);padding:64px 24px}
-.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:28px}
-.area-tag{background:var(--white);padding:16px 20px;font-size:14px;font-weight:500;color:var(--text);border-left:2px solid var(--orange)}
-.cta-block{background:var(--orange);padding:64px 24px;text-align:center}
-.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,7vw,52px);color:var(--white);line-height:1;margin-bottom:12px}
-.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:360px;margin-left:auto;margin-right:auto}
-.btn-white{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:16px 32px;text-decoration:none;transition:all .2s}
-.btn-white:hover{background:var(--cream)}
-.cta-phone{display:block;margin-top:14px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 80px 24px; }
+.about-text h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 6vw, 60px); color: var(--text); line-height: 1; margin-bottom: 24px; }
+.about-text p { font-size: 16px; color: var(--silver); line-height: 1.8; margin-bottom: 20px; }
+.about-image { background: var(--black); min-height: 300px; } /* Empty placeholder box to match style */
+
+/* CTA & FOOTER */
+.cta-block{background:var(--orange);padding:72px 24px;text-align:center}
+.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto}
+.btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:18px 40px;text-decoration:none;transition:all .2s}
+.btn-white:hover{background:var(--black);color:var(--white)}
+.cta-phone{display:block;margin-top:16px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
 footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
 .footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
@@ -75,15 +62,10 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
 .sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
 @media(min-width:768px){
-  body{padding-bottom:0}
-  .sticky-cta{display:none}
-  .page-hero{padding:80px 64px 72px}
-  .sec{padding:100px 64px}
-  .values-sec{padding:100px 64px}
-  .areas-sec{padding:100px 64px}
-  .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-  .areas-grid{grid-template-columns:repeat(4,1fr)}
+  body{padding-bottom:0} .sticky-cta{display:none}
+  .about-grid { grid-template-columns: 1fr 1fr; padding: 120px 64px; align-items: center; gap: 80px; }
   .cta-block{padding:100px 64px}
   footer{padding:64px 64px 40px}
   footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
@@ -101,71 +83,36 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
     <span class="nav-name">Ridgeline HVAC</span>
     <span class="nav-sub">Knoxville, TN</span>
   </a>
-  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="nav-menu">
+      <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">Menu ☰</button>
+      <div class="nav-dropdown">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+    <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  </div>
 </nav>
 
-<div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
-  <h1 class="page-title">Built on<br><em>Honest Work.</em></h1>
-  <p class="page-sub">Ridgeline started with one truck and a simple belief: do the job right, charge a fair price, and treat people well.</p>
-</div>
-
-<section class="sec">
-  <div class="con">
-    <p class="section-label reveal">Our Story</p>
-    <h2 class="section-title-sm reveal">Started With<br>One Truck.</h2>
-    <div class="story-text">
-      <p class="reveal">Ridgeline HVAC was founded in Knoxville in 2008. The business started small — one van, one technician, and a commitment to doing things differently than the big companies in town.</p>
-      <p class="reveal">The goal was simple: <strong>show up on time, diagnose the problem honestly, and charge what the job is worth — not what the customer can be pushed into.</strong> That approach built a reputation through word of mouth faster than any advertising could.</p>
-      <p class="reveal">Today Ridgeline runs six service trucks across Knox County and surrounding areas. The size has grown but the principles haven't. Every technician on the team is held to the same standard that built the business.</p>
+<section class="about-grid con reveal">
+    <div class="about-text">
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:1px;background:var(--orange)"></div> Our Story
+        </div>
+        <h1>Locally Owned.<br>Family Driven.</h1>
+        <p>Ridgeline HVAC wasn't started by a giant out-of-state corporate investment firm. We started right here in East Tennessee with one truck, a set of tools, and a simple premise: <strong>Treat every customer's home like it belongs to our own mother.</strong></p>
+        <p>Since 2008, we've grown from a one-man operation to one of Knoxville's premier heating and air conditioning teams. But our core rule hasn't changed. We don't employ commission-based salesmen. We don't use scare tactics. We provide honest diagnostics and fair, upfront pricing.</p>
+        <p>Whether you're in Farragut, Powell, or right in downtown Knoxville, we are proud to be the team you call when you need comfortable air, fast.</p>
     </div>
-    <div class="pullquote reveal">
-      <blockquote>"Honest work speaks louder than any ad you can run."</blockquote>
-      <cite>— Ridgeline HVAC, Founded 2008</cite>
-    </div>
-    <div class="stats-row reveal">
-      <div class="stat-box"><div class="stat-n">15<sup>+</sup></div><div class="stat-l">Years Serving Knoxville</div></div>
-      <div class="stat-box"><div class="stat-n">6</div><div class="stat-l">Service Trucks</div></div>
-      <div class="stat-box"><div class="stat-n">24<sup>/7</sup></div><div class="stat-l">Emergency Line</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="values-sec">
-  <div class="con">
-    <p class="section-label reveal" style="color:var(--orange)">How We Operate</p>
-    <h2 class="section-title-sm reveal" style="color:var(--white)">What We<br>Stand For.</h2>
-    <div class="values-grid">
-      <div class="val-item reveal"><div class="val-ico">🤝</div><div><div class="val-title">Honesty First</div><p class="val-body">We tell you what you need — not what makes us the most money. If a $200 repair fixes your problem, that's what we recommend.</p></div></div>
-      <div class="val-item reveal"><div class="val-ico">⚡</div><div><div class="val-title">Fast Response</div><p class="val-body">A broken AC in July is an emergency. We treat it like one — aiming to be at your door within 2 hours.</p></div></div>
-      <div class="val-item reveal"><div class="val-ico">💬</div><div><div class="val-title">Clear Communication</div><p class="val-body">No jargon. We explain what's wrong, how we'll fix it, and what it costs — before we start anything.</p></div></div>
-      <div class="val-item reveal"><div class="val-ico">🛡️</div><div><div class="val-title">We Stand Behind It</div><p class="val-body">Every repair and install is backed by our satisfaction guarantee. If something's not right, we come back and make it right.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="areas-sec">
-  <div class="con">
-    <p class="section-label reveal">Service Area</p>
-    <h2 class="section-title-sm reveal">We Come<br>To You.</h2>
-    <p class="reveal" style="font-size:15px;color:#666;max-width:440px;line-height:1.7">We serve Knoxville and surrounding communities. Not sure if we cover your area? Give us a call.</p>
-    <div class="areas-grid">
-      <div class="area-tag reveal">Knoxville</div>
-      <div class="area-tag reveal">Farragut</div>
-      <div class="area-tag reveal">Powell</div>
-      <div class="area-tag reveal">Oak Ridge</div>
-      <div class="area-tag reveal">Maryville</div>
-      <div class="area-tag reveal">Lenoir City</div>
-      <div class="area-tag reveal">Kingston</div>
-      <div class="area-tag reveal">Seymour</div>
-    </div>
-  </div>
+    <div class="about-image"></div>
 </section>
 
 <div class="cta-block">
-  <h2>Work with a Team<br>You Can Trust.</h2>
-  <p>Get a free quote or call us directly. No pressure, no runaround.</p>
-  <a href="contact.html" class="btn-white">Get a Free Quote →</a>
+  <h2>Ready to Get<br>Comfortable?</h2>
+  <p>Get a free quote today. No pressure, no obligation — just a straight answer.</p>
+  <a href="contact.html" class="btn-white">Request a Free Quote →</a>
   <a href="tel:8651234567" class="cta-phone">(865) 123-4567</a>
 </div>
 
@@ -199,6 +146,11 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
 }, {threshold: 0.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.addEventListener('click', e => {
+  const menu = document.querySelector('.nav-menu');
+  if(menu && !menu.contains(e.target)) menu.classList.remove('open');
+});
 </script>
 </body>
 </html>
