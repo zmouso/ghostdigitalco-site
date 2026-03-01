@@ -2,136 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reviews | Ridgeline HVAC (Demo)</title>
-  <meta name="description" content="Demo reviews page with trust-first layout for conversions." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reviews (Demo) | Ridgeline HVAC</title>
+  <meta name="description" content="Demo reviews page with trust signals and conversion CTAs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <div class="demo-banner">
-    <strong>DEMO SITE</strong> <span>— portfolio example. Reviews are placeholders.</span>
+    <div class="demo-banner__inner">
+      <strong>DEMO SITE</strong>
+      <span>Portfolio example by <strong>Ghost Digital Co</strong>. Not a real HVAC company.</span>
+      <a class="demo-banner__link" href="../index.html#work">Back to Ghost Digital Co</a>
+    </div>
   </div>
 
-  <div class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="index.html">
-          <div class="logo-mark"></div>
-          <div class="brand-name">
-            <div class="top">RIDGELINE HVAC</div>
-            <div class="sub">Demo HVAC Website</div>
-          </div>
-        </a>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">RL</span>
+        <span class="brand__text">
+          <span class="brand__name">RIDGELINE</span>
+          <span class="brand__sub">HVAC • Demo</span>
+        </span>
+      </a>
 
-        <div class="nav-links">
+      <nav class="nav">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+        <div class="nav__menu" id="navMenu">
           <a href="services.html">Services</a>
-          <a href="reviews.html">Reviews</a>
+          <a class="active" href="reviews.html">Reviews</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a class="btn btn--primary btn--sm" href="quote.html">Free Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div>
+          <p class="eyebrow"><span class="dot dot--hot"></span> Reviews</p>
+          <h1 class="h1">Trust sells. So we make it unavoidable.</h1>
+          <p class="lead">These are demo reviews — but the structure is real: rating first, proof second, CTA always visible.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="tel:+18651234567">Call Now</a>
+            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
+          </div>
         </div>
 
-        <div class="nav-cta">
-          <a class="btn btn-ghost" href="tel:8651234567">(865) 123-4567</a>
-          <a class="btn btn-heat" href="quote.html">Get a Quote</a>
-          <button class="hamburger" data-hamburger aria-label="Open menu">☰</button>
+        <div class="page-hero__box reveal">
+          <div class="rating">
+            <div class="rating__stars">★★★★★</div>
+            <div class="rating__score">4.9 / 5.0</div>
+            <div class="rating__note">Based on demo testimonials</div>
+          </div>
+          <div class="fineprint">Demo brand. Portfolio only.</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="mobile-panel" data-mobile-panel>
+    <section class="section section--alt">
       <div class="container">
-        <a href="services.html">Services</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <div class="mctas">
-          <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-          <a class="btn btn-heat" href="quote.html">Get Quote</a>
+        <div class="grid-3">
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“No upsell. Just fixed it and showed me what failed.”</p><div class="review-meta">— Chris P. • Knoxville</div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Fast arrival and clean work. Explained options clearly.”</p><div class="review-meta">— Jenna R. • Powell</div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Quoted a replacement and didn’t pressure. Great experience.”</p><div class="review-meta">— Aaron M. • Farragut</div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Heat pump issue solved same day. Professional tech.”</p><div class="review-meta">— Olivia S. • Halls</div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“Pricing was upfront. Exactly what a service company should be.”</p><div class="review-meta">— Nate B. • Oak Ridge</div></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><p>“From call to cold air was quick. Would recommend.”</p><div class="review-meta">— Mia T. • Maryville</div></article>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="page-hero">
-    <div class="container">
-      <div class="wrap">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> → <span>Reviews</span>
-        </div>
-        <h1>Trust Wins Jobs. <span class="ice">Proof</span> Helps.</h1>
-        <p class="lead" style="margin-top:10px">
-          Demo reviews to show how a real company page would read and convert.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-
-      <div class="grid3">
-        <div class="card" data-reveal>
-          <div class="review">
-            <div class="stars" aria-label="5 stars">
-              <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            </div>
-            <p>“Tech showed up fast, explained the issue, and had cold air back within the hour. No upsell nonsense.”</p>
-            <div class="who">— Homeowner, Knoxville (Demo)</div>
+        <div class="cta-slab reveal">
+          <div>
+            <h3 class="h3">Ready to stop sweating?</h3>
+            <p class="muted">Tap call. That’s the whole conversion goal.</p>
           </div>
-        </div>
-
-        <div class="card" data-reveal>
-          <div class="review">
-            <div class="stars">
-              <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            </div>
-            <p>“Clean install, respectful crew, and the system is noticeably quieter. Quote process was simple.”</p>
-            <div class="who">— Replacement Install (Demo)</div>
-          </div>
-        </div>
-
-        <div class="card" data-reveal>
-          <div class="review">
-            <div class="stars">
-              <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
-            </div>
-            <p>“They picked up the phone right away and got us scheduled. That’s all I wanted.”</p>
-            <div class="who">— Emergency Call (Demo)</div>
+          <div class="cta-slab__btns">
+            <a class="btn btn--primary" href="tel:+18651234567">Call Now</a>
+            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <section class="section">
-        <div class="split-cta" data-reveal>
-          <div class="split-inner">
-            <div>
-              <h3>Ready for your own version?</h3>
-              <p>This is exactly the type of “real-feeling” demo clients can click through.</p>
-            </div>
-            <div class="split-actions">
-              <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-              <a class="btn btn-heat" href="quote.html">Get Quote</a>
-              <a class="btn btn-ghost" href="services.html">Services</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="tiny">© 2026 Ridgeline HVAC (Demo). Reviews are placeholders. Built by Ghost Digital Co.</div>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>Ridgeline HVAC (Demo) • Portfolio only</span>
+      <span class="dim">Built by Ghost Digital Co</span>
     </div>
   </footer>
 
-  <div class="sticky-bar">
-    <div class="sticky-inner">
-      <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-      <a class="btn btn-heat" href="quote.html">Get Quote</a>
-    </div>
+  <div class="mobile-bar">
+    <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+18651234567">Call</a>
+    <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
   </div>
 
   <script src="assets/js/main.js"></script>
