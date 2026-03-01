@@ -1,28 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Reveal Elements on Scroll
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+    // 1. Reveal Animation Logic
+    const revealElements = () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
             }
         });
-    }, { threshold: 0.1 });
+    };
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Run on scroll and on load
+    window.addEventListener('scroll', revealElements);
+    revealElements();
 
-    // 2. Dropdown Toggle logic
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // 2. Mobile Menu Toggle
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', (e) => {
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            navMenu.classList.toggle('open');
+            menu.classList.toggle('open');
         });
     }
 
-    // Close menu when clicking outside
+    // Close menu if clicking outside
     document.addEventListener('click', () => {
-        if (navMenu) navMenu.classList.remove('open');
+        if (menu) menu.classList.remove('open');
     });
 });
