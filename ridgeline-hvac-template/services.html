@@ -2,126 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Ridgeline HVAC (Demo)</title>
 
-  <!-- IMPORTANT: points to assets folder -->
-  <link rel="stylesheet" href="assets/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FIX: CSS is inside /assets -->
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-  <!-- Demo notice (still looks pro) -->
-  <div class="demo-bar">
-    <div class="container demo-bar__inner">
+  <!-- DEMO BANNER (keeps it clear this is not a real company) -->
+  <div class="demo-banner" role="note" aria-label="Demo site notice">
+    <div class="demo-banner__inner">
       <strong>DEMO SITE</strong>
-      <span>This is a portfolio example by Ghost Digital Co. Not a real HVAC company.</span>
-      <a class="demo-bar__link" href="../index.html">Back to Ghost Digital Co</a>
+      <span>This is a portfolio example by <strong>Ghost Digital Co.</strong> Not a real HVAC company.</span>
+      <a class="demo-link" href="https://zmouso.github.io/ghostdigitalco-site/" rel="noopener">Back to Ghost Digital Co →</a>
     </div>
   </div>
 
+  <!-- NAV -->
   <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="index.html">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Ridgeline HVAC home">
         <span class="brand__name">RIDGELINE</span>
         <span class="brand__tag">Heating • Air • Plumbing</span>
       </a>
 
-      <div class="nav__actions">
-        <a class="btn btn--ghost btn--sm hide-desktop" href="tel:8651234567" aria-label="Call Ridgeline (Demo)">
-          Call
-        </a>
+      <div class="nav__right">
+        <a class="nav__call" href="tel:8651234567" aria-label="Call now">(865) 123-4567</a>
 
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navPanel">
-          <span class="nav__toggleLines" aria-hidden="true"></span>
-          <span class="sr-only">Open menu</span>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleBars" aria-hidden="true"></span>
+          <span class="nav__toggleText">Menu</span>
         </button>
       </div>
 
-      <div class="nav__panel" id="navPanel">
-        <a class="nav__link" href="services.html" aria-current="page">Services</a>
-        <a class="nav__link" href="reviews.html">Reviews</a>
-        <a class="nav__link" href="about.html">About</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-        <a class="btn btn--primary btn--sm nav__cta" href="quote.html">Free Quote</a>
+      <div class="nav__menu" id="navMenu">
+        <a href="services.html" class="active">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="quote.html" class="btn btn--nav">Free Quote</a>
       </div>
     </nav>
   </header>
 
-  <!-- Sticky mobile conversion bar -->
-  <div class="sticky-cta">
-    <a class="sticky-cta__call" href="tel:8651234567">Call Now</a>
-    <a class="sticky-cta__quote" href="quote.html">Free Quote</a>
-  </div>
-
+  <!-- HERO -->
   <main>
     <section class="page-hero">
-      <div class="container page-hero__grid">
-        <div class="page-hero__content reveal">
-          <span class="kicker">Fast response • Upfront pricing</span>
-          <h1 class="h1">Services built for one thing: <span class="accent">calls & booked jobs.</span></h1>
-          <p class="lead">
-            This demo layout is designed to make it stupid-easy for a homeowner to call or request a quote.
-            Big buttons, clear service options, and trust signals where they matter.
-          </p>
+      <div class="container">
+        <div class="page-hero__grid">
+          <div class="page-hero__copy reveal">
+            <p class="eyebrow">Built for calls & booked jobs</p>
+            <h1 class="h1">HVAC service that shows up fast — and fixes it right.</h1>
+            <p class="lead">
+              Simple options. No fluff. Every service page pushes the same outcome:
+              <strong>tap to call</strong> or <strong>request a quote</strong>.
+            </p>
 
-          <div class="btnRow">
-            <a class="btn btn--primary" href="tel:8651234567">Call (865) 123-4567</a>
-            <a class="btn btn--ghost" href="quote.html">Start Free Quote</a>
+            <div class="cta-row">
+              <a class="btn btn--primary" href="tel:8651234567">Tap to Call Now</a>
+              <a class="btn btn--ghost" href="quote.html">Start Free Quote</a>
+            </div>
+
+            <div class="trust-row">
+              <div class="trust">
+                <span class="trust__top">4.9★</span>
+                <span class="trust__sub">Avg rating (demo)</span>
+              </div>
+              <div class="trust">
+                <span class="trust__top">Same-day</span>
+                <span class="trust__sub">Service windows</span>
+              </div>
+              <div class="trust">
+                <span class="trust__top">Licensed</span>
+                <span class="trust__sub">& insured (demo)</span>
+              </div>
+            </div>
           </div>
 
-          <div class="trustRow">
-            <div class="trustPill"><strong>4.9★</strong><span>Avg rating (demo)</span></div>
-            <div class="trustPill"><strong>Same-Day</strong><span>Service windows</span></div>
-            <div class="trustPill"><strong>Licensed</strong><span>& insured (demo)</span></div>
-          </div>
-        </div>
-
-        <div class="page-hero__media reveal">
-          <div class="mediaCard">
-            <img
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1600&auto=format&fit=crop"
-              alt="Technician working on HVAC unit"
-              loading="lazy"
-            />
-            <div class="mediaCard__badge">
-              <span>24/7 Emergency</span>
-              <strong>Dispatch (Demo)</strong>
+          <div class="page-hero__media reveal">
+            <div class="media-card">
+              <img
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1400&auto=format&fit=crop"
+                alt="Technician working on HVAC equipment"
+                loading="lazy"
+              />
+              <div class="media-card__badge">24/7 Emergency Dispatch (Demo)</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SERVICES LIST -->
     <section class="section">
       <div class="container">
-        <div class="sectionHead reveal">
+        <div class="section-head reveal">
           <h2 class="h2">What we do</h2>
-          <p class="sub">
-            Clear options. No fluff. Each service page pushes the same outcome: call or quote.
-          </p>
+          <p class="muted">Clear options. No weird upsells. Pick a service and either call or request a quote.</p>
         </div>
 
-        <div class="cards cards--3">
+        <div class="cards">
           <article class="card reveal">
-            <div class="card__icon">❄️</div>
+            <div class="card__icon" aria-hidden="true">❄️</div>
             <h3 class="h3">AC Repair</h3>
-            <p>Warm air? Short cycling? We diagnose fast and fix the real issue — not the symptoms.</p>
+            <p>No cold air? We diagnose fast and fix the real issue — not the symptoms.</p>
             <ul class="bullets">
               <li>Same-day appointments (demo)</li>
               <li>Upfront pricing before work</li>
               <li>Repair-first mindset</li>
             </ul>
-            <div class="card__cta">
-              <a class="btn btn--primary btn--block" href="tel:8651234567">Call for AC Repair</a>
-              <a class="btn btn--ghost btn--block" href="quote.html">Get a Quote</a>
+            <div class="card__actions">
+              <a class="btn btn--primary btn--sm" href="tel:8651234567">Call for AC Repair</a>
+              <a class="link" href="quote.html">Get a Quote →</a>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__icon">🔥</div>
+            <div class="card__icon" aria-hidden="true">🔥</div>
             <h3 class="h3">Heating Repair</h3>
             <p>Cold house? Strange smells? We keep your system safe and your home comfortable.</p>
             <ul class="bullets">
@@ -129,14 +131,14 @@
               <li>Thermostat + airflow testing</li>
               <li>Clean, respectful techs (demo)</li>
             </ul>
-            <div class="card__cta">
-              <a class="btn btn--primary btn--block" href="tel:8651234567">Call for Heat Repair</a>
-              <a class="btn btn--ghost btn--block" href="quote.html">Get a Quote</a>
+            <div class="card__actions">
+              <a class="btn btn--primary btn--sm" href="tel:8651234567">Call for Heat Repair</a>
+              <a class="link" href="quote.html">Get a Quote →</a>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card__icon">🛠️</div>
+            <div class="card__icon" aria-hidden="true">🧰</div>
             <h3 class="h3">New Systems</h3>
             <p>Replace your unit with a high-efficiency system sized correctly for your home.</p>
             <ul class="bullets">
@@ -144,38 +146,58 @@
               <li>Financing section ready</li>
               <li>Install checklist included</li>
             </ul>
-            <div class="card__cta">
-              <a class="btn btn--primary btn--block" href="quote.html">Request Install Quote</a>
-              <a class="btn btn--ghost btn--block" href="contact.html">Ask a Question</a>
+            <div class="card__actions">
+              <a class="btn btn--primary btn--sm" href="tel:8651234567">Call for Install</a>
+              <a class="link" href="quote.html">Request Quote →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🧪</div>
+            <h3 class="h3">Maintenance</h3>
+            <p>Prevent breakdowns and keep efficiency high with seasonal tune-ups.</p>
+            <ul class="bullets">
+              <li>21-point inspection (demo)</li>
+              <li>Priority scheduling</li>
+              <li>Filter + airflow check</li>
+            </ul>
+            <div class="card__actions">
+              <a class="btn btn--primary btn--sm" href="quote.html">Start Maintenance Quote</a>
+              <a class="link" href="tel:8651234567">Or Call →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="band band--dark">
-      <div class="container band__grid reveal">
-        <div>
-          <h2 class="h2">No pressure. No weird upsells.</h2>
-          <p class="sub sub--light">
-            This is how a top-tier HVAC site should feel: confident, simple, and built to convert.
-          </p>
-        </div>
-        <div class="band__cta">
-          <a class="btn btn--white" href="tel:8651234567">Tap to Call</a>
-          <a class="btn btn--ghostOnDark" href="quote.html">Start Free Quote</a>
+    <!-- BIG CTA -->
+    <section class="section section--cta">
+      <div class="container">
+        <div class="cta-slab reveal">
+          <div>
+            <h2 class="h2">No pressure. No weird upsells.</h2>
+            <p class="muted">This is what a top-tier HVAC site should feel like: fast, confident, and built to convert.</p>
+          </div>
+          <div class="cta-slab__actions">
+            <a class="btn btn--dark" href="tel:8651234567">Tap to Call</a>
+            <a class="btn btn--primary" href="quote.html">Start Free Quote</a>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- STICKY MOBILE BAR -->
+    <div class="mobile-bar">
+      <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:8651234567">Call Now</a>
+      <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container footer__grid">
       <div>
-        <div class="footer__brand">RIDGELINE <span class="accent">HVAC</span></div>
-        <p class="footer__note">
-          Demo website example built by Ghost Digital Co. Not a real company.
-        </p>
+        <div class="footer__brand">RIDGELINE <span>(Demo)</span></div>
+        <p class="footer__muted">Portfolio website example built by Ghost Digital Co. Not a real company.</p>
       </div>
       <div class="footer__links">
         <a href="services.html">Services</a>
@@ -184,14 +206,15 @@
         <a href="contact.html">Contact</a>
         <a href="quote.html">Free Quote</a>
       </div>
-      <div class="footer__meta">
-        <a class="footer__phone" href="tel:8651234567">(865) 123-4567</a>
-        <div class="footer__small">© <span id="year"></span> Ridgeline HVAC (Demo)</div>
+      <div class="footer__contact">
+        <a href="tel:8651234567">(865) 123-4567</a>
+        <span>Knoxville, TN</span>
+        <span>© <span data-year></span> Ridgeline (Demo)</span>
       </div>
     </div>
   </footer>
 
-  <!-- IMPORTANT: points to assets folder -->
+  <!-- FIX: JS is inside /assets -->
   <script src="assets/main.js" defer></script>
 </body>
 </html>
