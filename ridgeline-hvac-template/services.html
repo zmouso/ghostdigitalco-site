@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Ridgeline HVAC services — AC repair, heating, furnace, maintenance, emergency service. Knoxville, TN."/>
-<title>Services | Ridgeline HVAC — Knoxville, TN</title>
+<title>Our Services | Ridgeline HVAC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-:root{--black:#0A0A0A;--dark:#111111;--charcoal:#1C1C1C;--orange:#E05C00;--orange-light:#FF6B1A;--cream:#F5F0EA;--silver:#9A9A9A;--white:#FFFFFF;--text:#1C1C1C}
+/* EXACT SAME CSS AS INDEX */
+:root{ --black:#0A0A0A; --dark:#111111; --charcoal:#1C1C1C; --orange:#E05C00; --orange-light:#FF6B1A; --cream:#F5F0EA; --silver:#9A9A9A; --white:#FFFFFF; --text:#1C1C1C; }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
@@ -20,47 +20,40 @@ nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;hei
 .nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
 .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
 .nav-call:hover{background:var(--orange-light)}
-.page-hero{background:var(--black);padding:64px 24px 56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.breadcrumb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.breadcrumb a{color:var(--orange-light);text-decoration:none}
-.page-title{font-family:'DM Serif Display',serif;font-size:clamp(40px,9vw,72px);line-height:.95;color:var(--white);margin-bottom:16px}
-.page-title em{font-style:italic;color:var(--orange-light)}
-.page-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:400px;line-height:1.65}
-.estrip{background:var(--orange);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.estrip-text{font-size:13px;font-weight:600;color:var(--white)}
-.estrip-num{font-family:'DM Serif Display',serif;font-size:22px;color:var(--white);text-decoration:none}
-.sec{padding:64px 24px}
+.nav-menu{position:relative}
+.nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;letter-spacing:.5px;transition:border-color .2s}
+.nav-toggle:hover{border-color:var(--orange);color:var(--orange)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--charcoal);min-width:180px;border-top:2px solid var(--orange);z-index:300}
+.nav-dropdown a{display:block;padding:14px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:all .2s}
+.nav-dropdown a:last-child{border-bottom:none}
+.nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
+.nav-menu.open .nav-dropdown{display:block}
+
+/* UTILITY CLASSES */
 .con{max-width:1200px;margin:0 auto}
+.page-header { background: var(--black); padding: 80px 24px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.page-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 8vw, 70px); color: var(--white); line-height: 1; margin-bottom: 16px; }
+.page-header p { color: rgba(255,255,255,0.6); font-size: 16px; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+.services{background:var(--cream);padding:80px 24px}
 .section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
 .section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
-.section-title-sm{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,42px);line-height:1;color:var(--text);margin-bottom:40px}
-.srv-full{display:flex;flex-direction:column;gap:2px}
-.srv-block{background:var(--cream);padding:36px 28px;border-left:3px solid transparent;transition:all .3s}
-.srv-block:hover{background:var(--white);border-left-color:var(--orange);box-shadow:0 8px 32px rgba(0,0,0,.06)}
-.srv-block-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
-.srv-block-ico{font-size:28px;flex-shrink:0;margin-top:2px}
-.srv-block-title{font-family:'DM Serif Display',serif;font-size:24px;color:var(--text);margin-bottom:4px}
-.srv-block-price{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);font-weight:600}
-.srv-block-body{font-size:14px;color:var(--silver);line-height:1.7;margin-bottom:20px}
-.srv-includes{list-style:none;display:flex;flex-direction:column;gap:8px}
-.srv-includes li{font-size:13px;color:var(--text);display:flex;align-items:flex-start;gap:10px}
-.srv-includes li::before{content:'→';color:var(--orange);font-weight:700;flex-shrink:0}
-.plan-box{background:var(--black);padding:40px 28px;margin-top:2px;border-top:3px solid var(--orange)}
-.plan-box h3{font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);margin-bottom:6px}
-.plan-price{font-family:'DM Serif Display',serif;font-size:60px;color:var(--orange);line-height:1;margin:16px 0 4px}
-.plan-price sup{font-size:24px;vertical-align:top;margin-top:12px;display:inline-block}
-.plan-note{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:24px}
-.plan-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.plan-list li{font-size:14px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:10px}
-.plan-list li::before{content:'✓';color:var(--orange);font-weight:700}
-.btn-primary{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:var(--white);font-size:15px;font-weight:600;padding:18px 32px;text-decoration:none;transition:background .2s}
-.btn-primary:hover{background:var(--orange-light)}
-.btn-white{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:16px 32px;text-decoration:none;transition:all .2s}
-.btn-white:hover{background:var(--cream)}
-.cta-block{background:var(--orange);padding:64px 24px;text-align:center}
-.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,7vw,52px);color:var(--white);line-height:1;margin-bottom:12px}
-.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:360px;margin-left:auto;margin-right:auto}
-.cta-phone{display:block;margin-top:14px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
+.srv-list{display:flex;flex-direction:column;gap:2px}
+.srv-item{background:var(--white);padding:40px;display:flex;align-items:flex-start;gap:20px;transition:all .25s; border-left: 4px solid transparent;}
+.srv-item:hover{background:var(--black); border-left-color: var(--orange); transform:translateX(4px)}
+.srv-item:hover .srv-name{color:var(--white)}
+.srv-item:hover .srv-desc{color:rgba(255,255,255,.5)}
+.srv-num{font-family:'DM Serif Display',serif;font-size:16px;color:var(--silver);min-width:24px; margin-top: 4px;}
+.srv-body{flex:1}
+.srv-name{font-size:22px;font-weight:600;color:var(--text);margin-bottom:12px;transition:color .25s; font-family: 'DM Serif Display', serif;}
+.srv-desc{font-size:15px;color:var(--silver);line-height:1.7;transition:color .25s}
+
+/* CTA & FOOTER */
+.cta-block{background:var(--orange);padding:72px 24px;text-align:center}
+.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto}
+.btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:18px 40px;text-decoration:none;transition:all .2s}
+.btn-white:hover{background:var(--black);color:var(--white)}
+.cta-phone{display:block;margin-top:16px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
 footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
 .footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
@@ -80,13 +73,12 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
 .sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
 @media(min-width:768px){
-  body{padding-bottom:0}
-  .sticky-cta{display:none}
-  .page-hero{padding:80px 64px 72px}
-  .estrip{padding:16px 64px}
-  .sec{padding:100px 64px}
-  .srv-full{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  body{padding-bottom:0} .sticky-cta{display:none}
+  .page-header { padding: 120px 64px; }
+  .services{padding:100px 64px}
+  .srv-list{display:grid;grid-template-columns:1fr 1fr;gap:2px}
   .cta-block{padding:100px 64px}
   footer{padding:64px 64px 40px}
   footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
@@ -104,65 +96,38 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
     <span class="nav-name">Ridgeline HVAC</span>
     <span class="nav-sub">Knoxville, TN</span>
   </a>
-  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
-</nav>
-
-<div class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
-  <h1 class="page-title">Everything<br>Your Home<br><em>Needs.</em></h1>
-  <p class="page-sub">From emergency repairs to full system installs — every HVAC need in Knoxville and surrounding areas.</p>
-</div>
-
-<div class="estrip">
-  <span class="estrip-text">🔥 Emergency? We answer 24/7 —</span>
-  <a href="tel:8651234567" class="estrip-num">(865) 123-4567</a>
-</div>
-
-<section class="sec">
-  <div class="con">
-    <p class="section-label reveal">Our Services</p>
-    <h2 class="section-title-sm reveal">What We Fix,<br>Install & Maintain.</h2>
-    <div class="srv-full">
-      <div class="srv-block reveal">
-        <div class="srv-block-top"><div class="srv-block-ico">❄️</div><div><div class="srv-block-title">AC Repair & Service</div><div class="srv-block-price">Service Call: $89 → credited toward repair</div></div></div>
-        <p class="srv-block-body">When your AC goes out in a Knoxville summer, you can't wait. We aim to be on-site within 2 hours with a straight diagnosis and honest price before we touch anything.</p>
-        <ul class="srv-includes"><li>Full system diagnostic</li><li>Refrigerant recharge</li><li>Capacitor & relay repair</li><li>Thermostat troubleshooting</li><li>Ductwork leak inspection</li></ul>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-top"><div class="srv-block-ico">🏠</div><div><div class="srv-block-title">AC Replacement & Install</div><div class="srv-block-price">Free Estimates — No Obligation</div></div></div>
-        <p class="srv-block-body">Need a new system? We'll walk you through exactly what fits your home and budget — no pressure, no upsell. Same-week installation available.</p>
-        <ul class="srv-includes"><li>Free in-home assessment</li><li>Multiple brand options</li><li>Same-week install available</li><li>Old equipment haul-away</li><li>Full walkthrough on completion</li></ul>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-top"><div class="srv-block-ico">🔥</div><div><div class="srv-block-title">Heating & Furnace</div><div class="srv-block-price">Service Call: $89 → credited toward repair</div></div></div>
-        <p class="srv-block-body">Gas furnaces, heat pumps, electric heat strips — we service, repair, and replace all of it. Don't wait until the coldest night of the year.</p>
-        <ul class="srv-includes"><li>Gas furnace repair & tune-up</li><li>Heat pump service & replacement</li><li>Igniter & pilot light issues</li><li>Blower motor repair</li><li>Carbon monoxide safety check</li></ul>
-      </div>
-      <div class="srv-block reveal">
-        <div class="srv-block-top"><div class="srv-block-ico">🌬️</div><div><div class="srv-block-title">Indoor Air Quality</div><div class="srv-block-price">Free consultation with any service</div></div></div>
-        <p class="srv-block-body">Dusty home? Humidity issues? Allergies? Your HVAC system may be the cause. We install equipment that makes a real difference.</p>
-        <ul class="srv-includes"><li>Air purifier installation</li><li>Whole-home dehumidifiers</li><li>UV light systems</li><li>Filter upgrade consultations</li><li>Duct cleaning referrals</li></ul>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="nav-menu">
+      <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">Menu ☰</button>
+      <div class="nav-dropdown">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get a Quote</a>
       </div>
     </div>
-    <div class="plan-box reveal">
-      <h3>Comfort Club Plan</h3>
-      <div class="plan-price"><sup>$</sup>199</div>
-      <p class="plan-note">Per year — spring + fall covered</p>
-      <ul class="plan-list">
-        <li>Spring AC tune-up</li>
-        <li>Fall heating tune-up</li>
-        <li>Priority scheduling</li>
-        <li>15% off all repairs</li>
-        <li>Free service call (normally $89)</li>
-      </ul>
-      <a href="contact.html" class="btn-white">Sign Up for a Plan →</a>
+    <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  </div>
+</nav>
+
+<header class="page-header">
+    <h1>Our Services</h1>
+    <p>Comprehensive climate engineering for Knoxville homes and businesses. We bring the right tools to fix it right the first time.</p>
+</header>
+
+<section class="services">
+  <div class="con">
+    <div class="srv-list">
+      <div class="srv-item reveal"><span class="srv-num">01</span><div class="srv-body"><div class="srv-name">AC Repair & Restoration</div><div class="srv-desc">Tennessee summers are brutal. If your AC goes down, our dispatch team will have a technician to your door fast. We repair all major brands, fix freon leaks, and replace bad compressors.</div></div></div>
+      <div class="srv-item reveal"><span class="srv-num">02</span><div class="srv-body"><div class="srv-name">Heating & Furnace Systems</div><div class="srv-desc">Don't get caught in the cold. We specialize in gas furnace safety, heat pump calibration, and dual-fuel systems to ensure your family stays warm efficiently.</div></div></div>
+      <div class="srv-item reveal"><span class="srv-num">03</span><div class="srv-body"><div class="srv-name">Preventative Maintenance</div><div class="srv-desc">Stop paying for expensive midnight emergencies. Our 21-point seasonal tune-ups clean your coils, check your electrical loads, and optimize your airflow to lower your monthly bills.</div></div></div>
+      <div class="srv-item reveal"><span class="srv-num">04</span><div class="srv-body"><div class="srv-name">Full System Replacements</div><div class="srv-desc">When a system is too old to repair, we design and install high-efficiency SEER2 replacements perfectly sized for your home's square footage. Zero high-pressure sales tactics.</div></div></div>
     </div>
   </div>
 </section>
 
 <div class="cta-block">
-  <h2>Need Service<br>Today?</h2>
-  <p>Get a free quote or call us directly. We respond fast.</p>
+  <h2>Ready to Get<br>Comfortable?</h2>
+  <p>Get a free quote today. No pressure, no obligation — just a straight answer.</p>
   <a href="contact.html" class="btn-white">Request a Free Quote →</a>
   <a href="tel:8651234567" class="cta-phone">(865) 123-4567</a>
 </div>
@@ -197,6 +162,11 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
 }, {threshold: 0.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.addEventListener('click', e => {
+  const menu = document.querySelector('.nav-menu');
+  if(menu && !menu.contains(e.target)) menu.classList.remove('open');
+});
 </script>
 </body>
 </html>
