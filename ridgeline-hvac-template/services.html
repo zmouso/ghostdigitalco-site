@@ -1,172 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Our Services | Ridgeline HVAC</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
-<style>
-/* EXACT SAME CSS AS INDEX */
-:root{ --black:#0A0A0A; --dark:#111111; --charcoal:#1C1C1C; --orange:#E05C00; --orange-light:#FF6B1A; --cream:#F5F0EA; --silver:#9A9A9A; --white:#FFFFFF; --text:#1C1C1C; }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
-.demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
-nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
-.nav-name{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);letter-spacing:.5px}
-.nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
-.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
-.nav-call:hover{background:var(--orange-light)}
-.nav-menu{position:relative}
-.nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;letter-spacing:.5px;transition:border-color .2s}
-.nav-toggle:hover{border-color:var(--orange);color:var(--orange)}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--charcoal);min-width:180px;border-top:2px solid var(--orange);z-index:300}
-.nav-dropdown a{display:block;padding:14px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:all .2s}
-.nav-dropdown a:last-child{border-bottom:none}
-.nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
-.nav-menu.open .nav-dropdown{display:block}
-
-/* UTILITY CLASSES */
-.con{max-width:1200px;margin:0 auto}
-.page-header { background: var(--black); padding: 80px 24px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
-.page-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 8vw, 70px); color: var(--white); line-height: 1; margin-bottom: 16px; }
-.page-header p { color: rgba(255,255,255,0.6); font-size: 16px; max-width: 500px; margin: 0 auto; line-height: 1.6; }
-.services{background:var(--cream);padding:80px 24px}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
-.srv-list{display:flex;flex-direction:column;gap:2px}
-.srv-item{background:var(--white);padding:40px;display:flex;align-items:flex-start;gap:20px;transition:all .25s; border-left: 4px solid transparent;}
-.srv-item:hover{background:var(--black); border-left-color: var(--orange); transform:translateX(4px)}
-.srv-item:hover .srv-name{color:var(--white)}
-.srv-item:hover .srv-desc{color:rgba(255,255,255,.5)}
-.srv-num{font-family:'DM Serif Display',serif;font-size:16px;color:var(--silver);min-width:24px; margin-top: 4px;}
-.srv-body{flex:1}
-.srv-name{font-size:22px;font-weight:600;color:var(--text);margin-bottom:12px;transition:color .25s; font-family: 'DM Serif Display', serif;}
-.srv-desc{font-size:15px;color:var(--silver);line-height:1.7;transition:color .25s}
-
-/* CTA & FOOTER */
-.cta-block{background:var(--orange);padding:72px 24px;text-align:center}
-.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
-.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto}
-.btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:18px 40px;text-decoration:none;transition:all .2s}
-.btn-white:hover{background:var(--black);color:var(--white)}
-.cta-phone{display:block;margin-top:16px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
-footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
-.footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
-.footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
-.footer-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:280px;margin-bottom:32px}
-.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px}
-.footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:10px}
-.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
-.footer-col ul li a:hover{color:var(--orange-light)}
-.footer-bot{padding-top:20px;border-top:1px solid rgba(255,255,255,.05);display:flex;flex-direction:column;gap:6px}
-.footer-bot p{font-size:11px;color:rgba(255,255,255,.2)}
-.footer-bot a{color:var(--orange-light);text-decoration:none}
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.sticky-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;text-align:center}
-.sticky-call{background:var(--orange);color:var(--white)}
-.sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-@media(min-width:768px){
-  body{padding-bottom:0} .sticky-cta{display:none}
-  .page-header { padding: 120px 64px; }
-  .services{padding:100px 64px}
-  .srv-list{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-  .cta-block{padding:100px 64px}
-  footer{padding:64px 64px 40px}
-  footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
-  .footer-links{display:contents}
-  .footer-desc{margin-bottom:0}
-}
-</style>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Our Services | Ridgeline HVAC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background: var(--cream);">
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <span class="nav-name">Ridgeline HVAC</span>
+            <span class="nav-sub">Knoxville, TN</span>
+        </a>
+        <div class="nav-menu">
+            <button class="nav-toggle">Menu ☰</button>
+            <div class="nav-dropdown">
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
 
-<div class="demo">⚠ Demo site — not a real company — built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a></div>
+    <section class="con reveal" style="padding: 80px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+        <div class="img-frame">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ead?auto=format&fit=crop&w=1200&q=80" alt="HVAC Technician at work">
+        </div>
+        <div>
+            <p class="section-label">Expertise</p>
+            <h1 style="font-family:'DM Serif Display'; font-size: 50px; margin-bottom: 24px;">Precision HVAC<br>Solutions.</h1>
+            <p style="line-height: 1.8; color: #555;">From 24/7 emergency repairs to full system engineering, we handle the climate so you don't have to.</p>
+        </div>
+    </section>
 
-<nav>
-  <a href="index.html" class="nav-logo">
-    <span class="nav-name">Ridgeline HVAC</span>
-    <span class="nav-sub">Knoxville, TN</span>
-  </a>
-  <div style="display:flex;align-items:center;gap:12px">
-    <div class="nav-menu">
-      <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">Menu ☰</button>
-      <div class="nav-dropdown">
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Get a Quote</a>
-      </div>
+    <div class="cta-block">
+        <h2>Need a Tune-Up?</h2>
+        <a href="contact.html" class="btn-white">Schedule Now →</a>
     </div>
-    <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
-  </div>
-</nav>
 
-<header class="page-header">
-    <h1>Our Services</h1>
-    <p>Comprehensive climate engineering for Knoxville homes and businesses. We bring the right tools to fix it right the first time.</p>
-</header>
-
-<section class="services">
-  <div class="con">
-    <div class="srv-list">
-      <div class="srv-item reveal"><span class="srv-num">01</span><div class="srv-body"><div class="srv-name">AC Repair & Restoration</div><div class="srv-desc">Tennessee summers are brutal. If your AC goes down, our dispatch team will have a technician to your door fast. We repair all major brands, fix freon leaks, and replace bad compressors.</div></div></div>
-      <div class="srv-item reveal"><span class="srv-num">02</span><div class="srv-body"><div class="srv-name">Heating & Furnace Systems</div><div class="srv-desc">Don't get caught in the cold. We specialize in gas furnace safety, heat pump calibration, and dual-fuel systems to ensure your family stays warm efficiently.</div></div></div>
-      <div class="srv-item reveal"><span class="srv-num">03</span><div class="srv-body"><div class="srv-name">Preventative Maintenance</div><div class="srv-desc">Stop paying for expensive midnight emergencies. Our 21-point seasonal tune-ups clean your coils, check your electrical loads, and optimize your airflow to lower your monthly bills.</div></div></div>
-      <div class="srv-item reveal"><span class="srv-num">04</span><div class="srv-body"><div class="srv-name">Full System Replacements</div><div class="srv-desc">When a system is too old to repair, we design and install high-efficiency SEER2 replacements perfectly sized for your home's square footage. Zero high-pressure sales tactics.</div></div></div>
+    <div class="sticky-cta">
+        <a href="tel:8651234567" class="sticky-btn sticky-call">📞 Call Now</a>
+        <a href="contact.html" class="sticky-btn sticky-quote">Free Quote</a>
     </div>
-  </div>
-</section>
 
-<div class="cta-block">
-  <h2>Ready to Get<br>Comfortable?</h2>
-  <p>Get a free quote today. No pressure, no obligation — just a straight answer.</p>
-  <a href="contact.html" class="btn-white">Request a Free Quote →</a>
-  <a href="tel:8651234567" class="cta-phone">(865) 123-4567</a>
-</div>
-
-<footer>
-  <div class="con">
-    <div>
-      <div class="footer-logo">Ridgeline HVAC</div>
-      <div class="footer-tag">Knoxville, TN · Licensed & Insured</div>
-      <p class="footer-desc">Serving Knoxville, Farragut, Powell, Oak Ridge, and surrounding areas. Available 24/7 for emergencies.</p>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">AC Repair</a></li><li><a href="services.html">Heating & Furnace</a></li><li><a href="services.html">Maintenance</a></li><li><a href="services.html">Emergency Service</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Get a Quote</a></li><li><a href="tel:8651234567">(865) 123-4567</a></li></ul></div>
-    </div>
-  </div>
-  <div style="max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)">
-    <div class="footer-bot">
-      <p>© 2026 Ridgeline HVAC. Demo site only — not a real company.</p>
-      <p>Built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a> — Knoxville Web Design</p>
-    </div>
-  </div>
-</footer>
-
-<div class="sticky-cta">
-  <a href="tel:8651234567" class="sticky-btn sticky-call">📞 Call Now</a>
-  <a href="contact.html" class="sticky-btn sticky-quote">Get Free Quote</a>
-</div>
-
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
-}, {threshold: 0.08});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-document.addEventListener('click', e => {
-  const menu = document.querySelector('.nav-menu');
-  if(menu && !menu.contains(e.target)) menu.classList.remove('open');
-});
-</script>
+    <script src="main.js"></script>
 </body>
 </html>
