@@ -7,11 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-/* EXACT SAME CSS AS INDEX */
+/* MASTER CSS ENGINE */
 :root{ --black:#0A0A0A; --dark:#111111; --charcoal:#1C1C1C; --orange:#E05C00; --orange-light:#FF6B1A; --cream:#F5F0EA; --silver:#9A9A9A; --white:#FFFFFF; --text:#1C1C1C; }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
 .demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
 nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -29,14 +29,22 @@ nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;hei
 .nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
 .nav-menu.open .nav-dropdown{display:block}
 
-/* PAGE SPECIFIC */
+/* ABOUT PAGE SPECIFIC */
 .con{max-width:1200px;margin:0 auto}
-.about-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 80px 24px; }
-.about-text h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 6vw, 60px); color: var(--text); line-height: 1; margin-bottom: 24px; }
-.about-text p { font-size: 16px; color: var(--silver); line-height: 1.8; margin-bottom: 20px; }
-.about-image { background: var(--black); min-height: 300px; } /* Empty placeholder box to match style */
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+.about-text h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 6vw, 60px); color: var(--text); line-height: 1.1; margin-bottom: 24px; }
+.about-text p { font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 20px; }
 
-/* CTA & FOOTER */
+/* FIX: POPULATED IMAGE STYLING */
+.about-image { 
+    background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ead?auto=format&fit=crop&w=1200&q=80'); 
+    background-size: cover; 
+    background-position: center;
+    min-height: 400px; 
+    box-shadow: 20px 20px 0px var(--cream);
+}
+
+/* FOOTER & CTA */
 .cta-block{background:var(--orange);padding:72px 24px;text-align:center}
 .cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
 .cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto}
