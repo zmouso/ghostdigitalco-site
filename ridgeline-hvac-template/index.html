@@ -1,86 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Ridgeline HVAC | Knoxville's Trusted AC & Heating</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --navy: #0B1622; --orange: #E8610A; --white: #FFFFFF; --light: #F4F7F9; --black: #050a0f; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; }
-        
-        /* UNIVERSAL NAV */
-        nav { background: var(--navy); height: 85px; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--orange); }
-        .logo { font-family: 'Barlow Condensed'; font-size: 28px; font-weight: 900; color: white; text-decoration: none; text-transform: uppercase; }
-        .logo span { color: var(--orange); }
-        .nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--orange); }
-        .cta-nav { background: var(--orange); padding: 12px 22px; border-radius: 4px; color: white !important; }
-
-        /* HERO & SECTIONS */
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?auto=format&fit=crop&w=2000') center/cover; height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 5%; }
-        .section { padding: 100px 8%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
-        .card { background: var(--light); padding: 50px; border-radius: 5px; border-bottom: 5px solid var(--orange); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        
-        h1, h2, h3 { font-family: 'Barlow Condensed'; text-transform: uppercase; line-height: 1; }
-        .btn { background: var(--orange); color: white; padding: 20px 40px; text-decoration: none; font-weight: 900; border-radius: 4px; display: inline-block; }
-
-        /* FOOTER */
-        footer { background: var(--black); color: white; padding: 60px 5%; text-align: center; }
-        .agency-tag { position: fixed; bottom: 20px; left: 20px; background: rgba(0,0,0,0.9); color: white; padding: 10px 15px; font-size: 10px; font-weight: 900; border-left: 3px solid var(--orange); z-index: 999; }
-        @media (max-width: 768px) { .nav-links { display: none; } .section { padding: 60px 5%; } }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ridgeline HVAC (DEMO) | Knoxville AC & Heating</title>
+  <meta name="description" content="DEMO HVAC website. Conversion-focused design: call now, request a quote, and mobile-first layout." />
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <div class="agency-tag">Built by // Ghost Digital Co.</div>
-    <nav>
-        <a href="index.html" class="logo">RIDGELINE<span>HVAC</span></a>
-        <ul class="nav-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html" class="cta-nav">Free Quote</a></li>
-        </ul>
-    </nav>
 
-    <header class="hero">
+  <div class="demo-banner">
+    <strong>DEMO SITE</strong> <span>— this is a portfolio example built by Ghost Digital Co. Not a real company.</span>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html" aria-label="Ridgeline HVAC Home">
+          <div class="logo-mark" aria-hidden="true"></div>
+          <div class="brand-name">
+            <div class="top">RIDGELINE HVAC</div>
+            <div class="sub">Demo HVAC Website</div>
+          </div>
+        </a>
+
+        <div class="nav-links" role="navigation" aria-label="Primary">
+          <a href="services.html">Services</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="btn btn-ghost" href="tel:8651234567" aria-label="Call Ridgeline HVAC">(865) 123-4567</a>
+          <a class="btn btn-heat" href="quote.html">Get a Quote</a>
+          <button class="hamburger" data-hamburger aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-panel" data-mobile-panel>
+      <div class="container">
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mctas">
+          <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+          <a class="btn btn-heat" href="quote.html">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="hero">
+    <div class="container">
+      <div class="hero-wrap">
+        <section class="hero-left" aria-label="Hero">
+          <div class="hero-content">
+            <div class="kicker"><span class="dot"></span> Knoxville HVAC Service (DEMO)</div>
+            <h1>
+              Fast Repairs.<br />
+              <span class="heat">Zero BS.</span><br />
+              Built for Calls.
+            </h1>
+            <p>
+              This is a conversion-first demo site: the goal is simple—get the homeowner to
+              tap once and call, or request a quote without friction.
+            </p>
+
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+              <a class="btn btn-heat" href="quote.html">Request a Quote</a>
+              <a class="btn btn-ghost" href="#services">See Services</a>
+            </div>
+
+            <div class="hero-badges">
+              <span class="badge"><i class="ice"></i> Same-Day Availability</span>
+              <span class="badge"><i class="heat"></i> Emergency Repairs</span>
+              <span class="badge"><i></i> Upfront Pricing (Demo)</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="hero-right" aria-label="Quick info">
+          <div class="hero-card" data-reveal>
+            <div class="top">
+              <h3>Tap-to-Call Ready</h3>
+              <p class="sub">Mobile-first layout + sticky bottom bar.</p>
+            </div>
+            <div class="body">
+              <div class="mini-row">
+                <div class="lbl">Phone</div>
+                <div class="val">(865) 123-4567</div>
+              </div>
+              <div class="mini-row">
+                <div class="lbl">Service Area</div>
+                <div class="val">Knoxville + Surrounding</div>
+              </div>
+              <div class="mini-row">
+                <div class="lbl">Hours</div>
+                <div class="val">24/7 (Demo)</div>
+              </div>
+              <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+                <span class="pill ice"><span class="p-dot"></span><span class="txt">Cooling</span></span>
+                <span class="pill heat"><span class="p-dot"></span><span class="txt">Heating</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" data-reveal>
+            <div class="top">
+              <h3>Free Quote Flow</h3>
+              <p class="sub">Short form. No clutter. Fast send.</p>
+            </div>
+            <div class="body">
+              <p style="margin:0; color:var(--muted); font-weight:650;">
+                If the homeowner doesn’t want to call, the quote form is the next-best conversion.
+              </p>
+              <div style="margin-top:14px; display:flex; gap:10px;">
+                <a class="btn btn-heat" style="flex:1" href="quote.html">Get Quote</a>
+                <a class="btn btn-ghost" style="flex:1" href="reviews.html">Trust</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="services" class="section">
+        <div class="head">
+          <div>
+            <div class="eyebrow">Services</div>
+            <h2 class="h2">Cooling. Heating. <span class="ice">Air Quality.</span></h2>
+            <p class="lead">Structured like a real HVAC company site, but labeled as a demo. Clear options, fast CTAs.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card" data-reveal>
+            <div class="card-pad">
+              <div class="icon" aria-hidden="true"></div>
+              <h3>AC Repair</h3>
+              <p>Home warming up? Get quick diagnostics and a clear path to repair.</p>
+              <div class="meta">
+                <span class="chip">Same-day</span>
+                <span class="chip">Tap to call</span>
+                <span class="chip">Upfront quote</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card-pad">
+              <div class="icon" aria-hidden="true"></div>
+              <h3>Heating Repair</h3>
+              <p>Furnace/heat pump issues handled fast—especially when it’s cold.</p>
+              <div class="meta">
+                <span class="chip">Emergency</span>
+                <span class="chip">Licensed (Demo)</span>
+                <span class="chip">Warranty-friendly</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card-pad">
+              <div class="icon" aria-hidden="true"></div>
+              <h3>New Systems</h3>
+              <p>Install-ready layout: highlight efficiency, financing, and fast scheduling.</p>
+              <div class="meta">
+                <span class="chip">Efficiency</span>
+                <span class="chip">Fast install</span>
+                <span class="chip">Quote-first</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="split-cta" data-reveal>
+          <div class="split-inner">
+            <div>
+              <h3>One tap. One call. That’s the point.</h3>
+              <p>
+                Homeowners don’t want to “browse.” They want relief. This demo is built to convert.
+              </p>
+            </div>
+            <div class="split-actions">
+              <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+              <a class="btn btn-heat" href="quote.html">Request Quote</a>
+              <a class="btn btn-ghost" href="services.html">All Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
         <div>
-            <p style="text-transform:uppercase; letter-spacing:5px; font-weight:700; margin-bottom:15px;">Knoxville's Reliable Choice</p>
-            <h1 style="font-size: clamp(50px, 9vw, 110px);">FAST REPAIRS.<br><span style="color:var(--orange)">HONEST PEOPLE.</span></h1>
-            <p style="font-size: 22px; margin: 30px 0;">Quality HVAC service shouldn't be a luxury. We're here to help.</p>
-            <a href="contact.html" class="btn">Schedule Your Free Quote</a>
+          <div style="font-weight:1000; letter-spacing:.16em; text-transform:uppercase;">Ridgeline HVAC</div>
+          <div style="margin-top:8px; color:rgba(255,255,255,.72); font-weight:650;">
+            Demo HVAC website example for client preview.
+          </div>
+          <div class="demo-note">
+            <strong>Demo disclaimer:</strong> name/phone/reviews are placeholders. This site is not affiliated with a real company.
+          </div>
         </div>
-    </header>
-
-    <section class="section">
-        <h2 style="font-size: 55px; text-align:center;">HOW WE <span style="color:var(--orange)">HELP YOU</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>AC Repair</h3>
-                <p>Is your house heating up? Our technicians arrive fast and fix it right the first time.</p>
-            </div>
-            <div class="card">
-                <h3>New Systems</h3>
-                <p>Lower your energy bills with a brand new, high-efficiency system installed in one day.</p>
-            </div>
-            <div class="card">
-                <h3>Maintenance</h3>
-                <p>Prevent expensive middle-of-the-night breakdowns with our 21-point check-up.</p>
-            </div>
+        <div>
+          <div style="font-weight:1000; letter-spacing:.16em; text-transform:uppercase;">Pages</div>
+          <div style="margin-top:10px; display:grid; gap:8px;">
+            <a href="services.html">Services</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
-    </section>
+        <div>
+          <div style="font-weight:1000; letter-spacing:.16em; text-transform:uppercase;">Conversion</div>
+          <div style="margin-top:10px; display:grid; gap:10px;">
+            <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+            <a class="btn btn-heat" href="quote.html">Get a Quote</a>
+          </div>
+        </div>
+      </div>
 
-    <section class="section" style="background: var(--navy); color:white; text-align:center;">
-        <h2 style="font-size: 50px;">NO SALES GIMMICKS. EVER.</h2>
-        <p style="max-width: 800px; margin: 20px auto; font-size: 20px;">We don't work on commission. Our only goal is to get your home back to a comfortable temperature at a price that makes sense.</p>
-        <a href="tel:8651234567" class="btn" style="background:white; color:var(--navy); margin-top:20px;">Call (865) 123-4567</a>
-    </section>
+      <div class="tiny">
+        © 2026 Ridgeline HVAC (Demo). Built by Ghost Digital Co.
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-        <p>© 2026 Ridgeline HVAC | Knoxville, TN | Licensed & Insured</p>
-    </footer>
+  <!-- Mobile sticky CTA bar -->
+  <div class="sticky-bar" aria-label="Sticky actions">
+    <div class="sticky-inner">
+      <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+      <a class="btn btn-heat" href="quote.html">Get Quote</a>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
