@@ -1,49 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Services | Ridgeline HVAC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Ridgeline HVAC (Demo)</title>
+
+  <!-- Fonts (match index) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- ✅ Correct CSS path -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <span class="nav-name">Ridgeline HVAC</span>
-            <span class="nav-sub">Knoxville, TN</span>
-        </a>
-        <div class="nav-menu">
-            <button class="nav-toggle">MENU ☰</button>
-            <div class="nav-dropdown">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
 
-    <main class="con">
-        <section class="split-section reveal">
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop" alt="HVAC Technician">
-            </div>
-            <div class="text-content">
-                <span class="label">Expertise</span>
-                <h1>Precision HVAC<br>Solutions.</h1>
-                <p>From 24/7 emergency repairs to full system engineering, we handle the climate so you don't have to. Our technicians are NATE certified and locally based.</p>
-                <br>
-                <a href="contact.html" class="btn">View Maintenance Plans →</a>
-            </div>
-        </section>
-    </main>
-
-    <div class="cta-footer">
-        <h2>Need a Tune-Up?</h2>
-        <p style="margin-bottom: 20px;">Protect your investment with seasonal maintenance.</p>
-        <a href="contact.html" class="btn" style="background: white; color: var(--orange);">Schedule Now →</a>
+  <!-- DEMO NOTICE -->
+  <div class="demo-banner">
+    <div class="container demo-inner">
+      <strong>DEMO SITE</strong>
+      <span>Portfolio example by Ghost Digital Co. Not a real HVAC company.</span>
+      <a href="../index.html">Back to Ghost Digital Co</a>
     </div>
+  </div>
 
-    <script src="main.js"></script>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">RL</span>
+        <div>
+          <div class="logo-title">RIDGELINE HVAC</div>
+          <div class="logo-sub">Knoxville, TN</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navMenu">
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn-primary" href="quote.html">Free Quote</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-call" href="tel:8651234567">📞 Call Now</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h1>HVAC help that’s built for speed.</h1>
+      <p class="sub">
+        This demo layout is designed for one thing: make it stupid-easy for a homeowner to call or request a quote.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="tel:8651234567">Call (865) 123-4567</a>
+        <a class="btn btn-secondary" href="quote.html">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="section">
+    <div class="container">
+      <h2>What we do</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>AC Repair</h3>
+          <p>No cold air? We diagnose fast and fix the real issue — not the symptoms.</p>
+          <ul class="bullets">
+            <li>Same-day availability (demo)</li>
+            <li>Clear pricing before work</li>
+            <li>Repairs that last</li>
+          </ul>
+          <a class="card-cta" href="quote.html">Request AC Repair →</a>
+        </div>
+
+        <div class="card">
+          <h3>Heating Repair</h3>
+          <p>Furnace and heat pump troubleshooting, repairs, and safety checks.</p>
+          <ul class="bullets">
+            <li>Ignition & airflow issues</li>
+            <li>Thermostat + controls</li>
+            <li>Heat pump diagnostics</li>
+          </ul>
+          <a class="card-cta" href="quote.html">Request Heating Help →</a>
+        </div>
+
+        <div class="card">
+          <h3>New System Install</h3>
+          <p>Proper sizing + clean installs = comfort and lower monthly bills.</p>
+          <ul class="bullets">
+            <li>Load-based recommendations</li>
+            <li>High-efficiency options</li>
+            <li>Clean install standards</li>
+          </ul>
+          <a class="card-cta" href="quote.html">Get Install Quote →</a>
+        </div>
+
+        <div class="card">
+          <h3>Maintenance Plans</h3>
+          <p>Seasonal tune-ups that prevent breakdowns when you need HVAC most.</p>
+          <ul class="bullets">
+            <li>Spring + Fall visits</li>
+            <li>Priority scheduling</li>
+            <li>Discounted repairs (demo)</li>
+          </ul>
+          <a class="card-cta" href="quote.html">See Plan Options →</a>
+        </div>
+
+        <div class="card">
+          <h3>Indoor Air Quality</h3>
+          <p>Better filtration and airflow for allergies, dust, and humidity.</p>
+          <ul class="bullets">
+            <li>Whole-home filtration</li>
+            <li>Dehumidification</li>
+            <li>Duct airflow improvement</li>
+          </ul>
+          <a class="card-cta" href="quote.html">Ask About IAQ →</a>
+        </div>
+
+        <div class="card">
+          <h3>Emergency Service</h3>
+          <p>When it’s urgent, “contact us” is too slow. Call is the CTA.</p>
+          <ul class="bullets">
+            <li>24/7 label (demo)</li>
+            <li>Priority dispatch (demo)</li>
+            <li>Fast intake flow</li>
+          </ul>
+          <a class="card-cta" href="tel:8651234567">Call Emergency Line →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="cta-strip">
+    <div class="container cta-row">
+      <div>
+        <h3>Not sure what you need?</h3>
+        <p>Two taps: call now or request a quote. That’s the whole conversion strategy.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
+        <a class="btn btn-secondary" href="quote.html">Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <strong>Ridgeline HVAC (Demo)</strong><br>
+        Portfolio example only
+      </div>
+      <div>© 2026 Ghost Digital Co</div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-bar">
+    <a href="tel:8651234567">📞 Call</a>
+    <a href="quote.html">Free Quote</a>
+  </div>
+
+  <!-- ✅ Correct JS path -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
