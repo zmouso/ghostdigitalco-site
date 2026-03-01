@@ -2,130 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Ridgeline HVAC (Demo)</title>
-  <meta name="description" content="Demo about page for an HVAC company — written to feel real while clearly labeled as a demo." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About (Demo) | Ridgeline HVAC</title>
+  <meta name="description" content="About page demo: trust building + conversion layout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <div class="demo-banner">
-    <strong>DEMO SITE</strong> <span>— portfolio example. Details are placeholders.</span>
+    <div class="demo-banner__inner">
+      <strong>DEMO SITE</strong>
+      <span>Portfolio example by <strong>Ghost Digital Co</strong>. Not a real HVAC company.</span>
+      <a class="demo-banner__link" href="../index.html#work">Back to Ghost Digital Co</a>
+    </div>
   </div>
 
-  <div class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="index.html">
-          <div class="logo-mark"></div>
-          <div class="brand-name">
-            <div class="top">RIDGELINE HVAC</div>
-            <div class="sub">Demo HVAC Website</div>
-          </div>
-        </a>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">RL</span>
+        <span class="brand__text">
+          <span class="brand__name">RIDGELINE</span>
+          <span class="brand__sub">HVAC • Demo</span>
+        </span>
+      </a>
 
-        <div class="nav-links">
+      <nav class="nav">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+        <div class="nav__menu" id="navMenu">
           <a href="services.html">Services</a>
           <a href="reviews.html">Reviews</a>
-          <a href="about.html">About</a>
+          <a class="active" href="about.html">About</a>
           <a href="contact.html">Contact</a>
+          <a class="btn btn--primary btn--sm" href="quote.html">Free Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div>
+          <p class="eyebrow"><span class="dot dot--mix"></span> About</p>
+          <h1 class="h1">The “why” behind the service.</h1>
+          <p class="lead">This page is built to remove doubt: credibility, process, and guarantees — then a CTA.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="tel:+18651234567">Call Now</a>
+            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
+          </div>
         </div>
 
-        <div class="nav-cta">
-          <a class="btn btn-ghost" href="tel:8651234567">(865) 123-4567</a>
-          <a class="btn btn-heat" href="quote.html">Get a Quote</a>
-          <button class="hamburger" data-hamburger aria-label="Open menu">☰</button>
+        <div class="page-hero__box reveal">
+          <div class="box-line"><span>Upfront Pricing</span><strong>✅</strong></div>
+          <div class="box-line"><span>No Pushy Sales</span><strong>✅</strong></div>
+          <div class="box-line"><span>Clean, Respectful Techs</span><strong>✅</strong></div>
+          <div class="fineprint">All demo positioning for portfolio.</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="mobile-panel" data-mobile-panel>
+    <section class="section">
       <div class="container">
-        <a href="services.html">Services</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <div class="mctas">
-          <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-          <a class="btn btn-heat" href="quote.html">Get Quote</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-hero">
-    <div class="container">
-      <div class="wrap">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> → <span>About</span>
-        </div>
-        <h1>Built Like a Real Company. <span class="ice">Clearly a Demo.</span></h1>
-        <p class="lead" style="margin-top:10px">
-          Clients want to see you can deliver a premium look that still converts.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-
-      <div class="grid3">
-        <div class="card" data-reveal>
-          <div class="card-pad">
-            <div class="icon"></div>
-            <h3>Our “Promise” (Demo)</h3>
-            <p>Pick up fast. Show up when we say. Fix the problem without drama.</p>
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h2 class="h2">Our approach</h2>
+            <p class="muted">
+              Home service sites fail when they bury the phone number and make the customer think. This demo is the opposite:
+              clear services, visible proof, and call buttons everywhere that matter.
+            </p>
+            <ul class="check">
+              <li>Answer fast</li>
+              <li>Explain clearly</li>
+              <li>Fix it right</li>
+              <li>Leave your home clean</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card" data-reveal>
-          <div class="card-pad">
-            <div class="icon"></div>
-            <h3>Upfront Pricing (Demo)</h3>
-            <p>Clear options, no mystery. Homeowners don’t want surprises.</p>
-          </div>
-        </div>
-
-        <div class="card" data-reveal>
-          <div class="card-pad">
-            <div class="icon"></div>
-            <h3>Respect the Home</h3>
-            <p>Shoe covers, clean workspace, and explain what’s happening.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="split-cta" data-reveal>
-          <div class="split-inner">
-            <div>
-              <h3>Want this style for a real business?</h3>
-              <p>Swap the branding, phone number, and reviews—keep the conversion machine.</p>
-            </div>
-            <div class="split-actions">
-              <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-              <a class="btn btn-heat" href="quote.html">Get Quote</a>
-              <a class="btn btn-ghost" href="contact.html">Contact</a>
+          <div class="panel reveal">
+            <h2 class="h2">What makes this convert</h2>
+            <p class="muted">This is what your real clients are buying when they pay you:</p>
+            <div class="grid-2 tight">
+              <div class="mini-card"><strong>Sticky call actions</strong><span>Mobile-first</span></div>
+              <div class="mini-card"><strong>Proof on page 1</strong><span>Trust early</span></div>
+              <div class="mini-card"><strong>Simple quote flow</strong><span>No friction</span></div>
+              <div class="mini-card"><strong>Clean layout</strong><span>Premium feel</span></div>
             </div>
           </div>
         </div>
+
+        <div class="cta-slab reveal">
+          <div>
+            <h3 class="h3">Want this for your business?</h3>
+            <p class="muted">This is a demo brand. The build style is real.</p>
+          </div>
+          <div class="cta-slab__btns">
+            <a class="btn btn--primary" href="../index.html#contact">Hire Ghost Digital Co</a>
+            <a class="btn btn--ghost" href="quote.html">View Quote Flow</a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="tiny">© 2026 Ridgeline HVAC (Demo). Not affiliated with any real company. Built by Ghost Digital Co.</div>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>Ridgeline HVAC (Demo) • Portfolio only</span>
+      <span class="dim">Built by Ghost Digital Co</span>
     </div>
   </footer>
 
-  <div class="sticky-bar">
-    <div class="sticky-inner">
-      <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-      <a class="btn btn-heat" href="quote.html">Get Quote</a>
-    </div>
+  <div class="mobile-bar">
+    <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+18651234567">Call</a>
+    <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
   </div>
 
   <script src="assets/js/main.js"></script>
