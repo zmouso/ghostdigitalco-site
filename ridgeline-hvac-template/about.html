@@ -1,125 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About (Demo) | Ridgeline HVAC</title>
-  <meta name="description" content="About page demo: trust building + conversion layout." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="About Ridgeline HVAC — family-owned, Knoxville-based heating and cooling since 2008."/>
+<title>About | Ridgeline HVAC — Knoxville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+:root{--black:#0A0A0A;--dark:#111111;--charcoal:#1C1C1C;--orange:#E05C00;--orange-light:#FF6B1A;--cream:#F5F0EA;--silver:#9A9A9A;--white:#FFFFFF;--text:#1C1C1C}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+.demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
+nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.nav-name{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);letter-spacing:.5px}
+.nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
+.nav-call:hover{background:var(--orange-light)}
+.page-hero{background:var(--black);padding:64px 24px 56px;border-bottom:1px solid rgba(255,255,255,.06)}
+.breadcrumb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.breadcrumb a{color:var(--orange-light);text-decoration:none}
+.page-title{font-family:'DM Serif Display',serif;font-size:clamp(40px,9vw,72px);line-height:.95;color:var(--white);margin-bottom:16px}
+.page-title em{font-style:italic;color:var(--orange-light)}
+.page-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:400px;line-height:1.65}
+.sec{padding:64px 24px}
+.con{max-width:1200px;margin:0 auto}
+.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.section-title-sm{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,42px);line-height:1;color:var(--text);margin-bottom:32px}
+.story-text p{font-size:15px;color:#555;line-height:1.85;margin-bottom:18px}
+.story-text strong{color:var(--text);font-weight:600}
+.pullquote{background:var(--black);padding:40px 28px;margin:40px 0;border-left:3px solid var(--orange)}
+.pullquote blockquote{font-family:'DM Serif Display',serif;font-size:clamp(20px,4vw,28px);font-style:italic;color:var(--white);line-height:1.3;margin-bottom:16px}
+.pullquote cite{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
+.stat-box{background:var(--black);padding:28px 20px;text-align:center}
+.stat-n{font-family:'DM Serif Display',serif;font-size:40px;color:var(--white);line-height:1}
+.stat-n sup{font-size:18px;color:var(--orange)}
+.stat-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px}
+.values-sec{background:var(--black);padding:64px 24px}
+.values-grid{display:flex;flex-direction:column;gap:2px;margin-top:40px}
+.val-item{background:var(--charcoal);padding:28px 24px;display:flex;gap:20px;align-items:flex-start}
+.val-ico{font-size:24px;flex-shrink:0;margin-top:2px}
+.val-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:6px}
+.val-body{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}
+.areas-sec{background:var(--cream);padding:64px 24px}
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:28px}
+.area-tag{background:var(--white);padding:16px 20px;font-size:14px;font-weight:500;color:var(--text);border-left:2px solid var(--orange)}
+.cta-block{background:var(--orange);padding:64px 24px;text-align:center}
+.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,7vw,52px);color:var(--white);line-height:1;margin-bottom:12px}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:360px;margin-left:auto;margin-right:auto}
+.btn-white{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:16px 32px;text-decoration:none;transition:all .2s}
+.btn-white:hover{background:var(--cream)}
+.cta-phone{display:block;margin-top:14px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
+footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
+.footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:280px;margin-bottom:32px}
+.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--orange-light)}
+.footer-bot{padding-top:20px;border-top:1px solid rgba(255,255,255,.05);display:flex;flex-direction:column;gap:6px}
+.footer-bot p{font-size:11px;color:rgba(255,255,255,.2)}
+.footer-bot a{color:var(--orange-light);text-decoration:none}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.sticky-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;text-align:center}
+.sticky-call{background:var(--orange);color:var(--white)}
+.sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(min-width:768px){
+  body{padding-bottom:0}
+  .sticky-cta{display:none}
+  .page-hero{padding:80px 64px 72px}
+  .sec{padding:100px 64px}
+  .values-sec{padding:100px 64px}
+  .areas-sec{padding:100px 64px}
+  .values-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .areas-grid{grid-template-columns:repeat(4,1fr)}
+  .cta-block{padding:100px 64px}
+  footer{padding:64px 64px 40px}
+  footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
+  .footer-links{display:contents}
+  .footer-desc{margin-bottom:0}
+}
+</style>
 </head>
 <body>
 
-  <div class="demo-banner">
-    <div class="demo-banner__inner">
-      <strong>DEMO SITE</strong>
-      <span>Portfolio example by <strong>Ghost Digital Co</strong>. Not a real HVAC company.</span>
-      <a class="demo-banner__link" href="../index.html#work">Back to Ghost Digital Co</a>
+<div class="demo">⚠ Demo site — not a real company — built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-name">Ridgeline HVAC</span>
+    <span class="nav-sub">Knoxville, TN</span>
+  </a>
+  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+  <h1 class="page-title">Built on<br><em>Honest Work.</em></h1>
+  <p class="page-sub">Ridgeline started with one truck and a simple belief: do the job right, charge a fair price, and treat people well.</p>
+</div>
+
+<section class="sec">
+  <div class="con">
+    <p class="section-label reveal">Our Story</p>
+    <h2 class="section-title-sm reveal">Started With<br>One Truck.</h2>
+    <div class="story-text">
+      <p class="reveal">Ridgeline HVAC was founded in Knoxville in 2008. The business started small — one van, one technician, and a commitment to doing things differently than the big companies in town.</p>
+      <p class="reveal">The goal was simple: <strong>show up on time, diagnose the problem honestly, and charge what the job is worth — not what the customer can be pushed into.</strong> That approach built a reputation through word of mouth faster than any advertising could.</p>
+      <p class="reveal">Today Ridgeline runs six service trucks across Knox County and surrounding areas. The size has grown but the principles haven't. Every technician on the team is held to the same standard that built the business.</p>
+    </div>
+    <div class="pullquote reveal">
+      <blockquote>"Honest work speaks louder than any ad you can run."</blockquote>
+      <cite>— Ridgeline HVAC, Founded 2008</cite>
+    </div>
+    <div class="stats-row reveal">
+      <div class="stat-box"><div class="stat-n">15<sup>+</sup></div><div class="stat-l">Years Serving Knoxville</div></div>
+      <div class="stat-box"><div class="stat-n">6</div><div class="stat-l">Service Trucks</div></div>
+      <div class="stat-box"><div class="stat-n">24<sup>/7</sup></div><div class="stat-l">Emergency Line</div></div>
     </div>
   </div>
+</section>
 
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="index.html">
-        <span class="brand__mark">RL</span>
-        <span class="brand__text">
-          <span class="brand__name">RIDGELINE</span>
-          <span class="brand__sub">HVAC • Demo</span>
-        </span>
-      </a>
-
-      <nav class="nav">
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
-        <div class="nav__menu" id="navMenu">
-          <a href="services.html">Services</a>
-          <a href="reviews.html">Reviews</a>
-          <a class="active" href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn btn--primary btn--sm" href="quote.html">Free Quote</a>
-        </div>
-      </nav>
+<section class="values-sec">
+  <div class="con">
+    <p class="section-label reveal" style="color:var(--orange)">How We Operate</p>
+    <h2 class="section-title-sm reveal" style="color:var(--white)">What We<br>Stand For.</h2>
+    <div class="values-grid">
+      <div class="val-item reveal"><div class="val-ico">🤝</div><div><div class="val-title">Honesty First</div><p class="val-body">We tell you what you need — not what makes us the most money. If a $200 repair fixes your problem, that's what we recommend.</p></div></div>
+      <div class="val-item reveal"><div class="val-ico">⚡</div><div><div class="val-title">Fast Response</div><p class="val-body">A broken AC in July is an emergency. We treat it like one — aiming to be at your door within 2 hours.</p></div></div>
+      <div class="val-item reveal"><div class="val-ico">💬</div><div><div class="val-title">Clear Communication</div><p class="val-body">No jargon. We explain what's wrong, how we'll fix it, and what it costs — before we start anything.</p></div></div>
+      <div class="val-item reveal"><div class="val-ico">🛡️</div><div><div class="val-title">We Stand Behind It</div><p class="val-body">Every repair and install is backed by our satisfaction guarantee. If something's not right, we come back and make it right.</p></div></div>
     </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container page-hero__grid">
-        <div>
-          <p class="eyebrow"><span class="dot dot--mix"></span> About</p>
-          <h1 class="h1">The “why” behind the service.</h1>
-          <p class="lead">This page is built to remove doubt: credibility, process, and guarantees — then a CTA.</p>
-          <div class="cta-row">
-            <a class="btn btn--primary" href="tel:+18651234567">Call Now</a>
-            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
-          </div>
-        </div>
-
-        <div class="page-hero__box reveal">
-          <div class="box-line"><span>Upfront Pricing</span><strong>✅</strong></div>
-          <div class="box-line"><span>No Pushy Sales</span><strong>✅</strong></div>
-          <div class="box-line"><span>Clean, Respectful Techs</span><strong>✅</strong></div>
-          <div class="fineprint">All demo positioning for portfolio.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <div class="panel reveal">
-            <h2 class="h2">Our approach</h2>
-            <p class="muted">
-              Home service sites fail when they bury the phone number and make the customer think. This demo is the opposite:
-              clear services, visible proof, and call buttons everywhere that matter.
-            </p>
-            <ul class="check">
-              <li>Answer fast</li>
-              <li>Explain clearly</li>
-              <li>Fix it right</li>
-              <li>Leave your home clean</li>
-            </ul>
-          </div>
-
-          <div class="panel reveal">
-            <h2 class="h2">What makes this convert</h2>
-            <p class="muted">This is what your real clients are buying when they pay you:</p>
-            <div class="grid-2 tight">
-              <div class="mini-card"><strong>Sticky call actions</strong><span>Mobile-first</span></div>
-              <div class="mini-card"><strong>Proof on page 1</strong><span>Trust early</span></div>
-              <div class="mini-card"><strong>Simple quote flow</strong><span>No friction</span></div>
-              <div class="mini-card"><strong>Clean layout</strong><span>Premium feel</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta-slab reveal">
-          <div>
-            <h3 class="h3">Want this for your business?</h3>
-            <p class="muted">This is a demo brand. The build style is real.</p>
-          </div>
-          <div class="cta-slab__btns">
-            <a class="btn btn--primary" href="../index.html#contact">Hire Ghost Digital Co</a>
-            <a class="btn btn--ghost" href="quote.html">View Quote Flow</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <span>Ridgeline HVAC (Demo) • Portfolio only</span>
-      <span class="dim">Built by Ghost Digital Co</span>
-    </div>
-  </footer>
-
-  <div class="mobile-bar">
-    <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+18651234567">Call</a>
-    <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
   </div>
+</section>
 
-  <script src="assets/js/main.js"></script>
+<section class="areas-sec">
+  <div class="con">
+    <p class="section-label reveal">Service Area</p>
+    <h2 class="section-title-sm reveal">We Come<br>To You.</h2>
+    <p class="reveal" style="font-size:15px;color:#666;max-width:440px;line-height:1.7">We serve Knoxville and surrounding communities. Not sure if we cover your area? Give us a call.</p>
+    <div class="areas-grid">
+      <div class="area-tag reveal">Knoxville</div>
+      <div class="area-tag reveal">Farragut</div>
+      <div class="area-tag reveal">Powell</div>
+      <div class="area-tag reveal">Oak Ridge</div>
+      <div class="area-tag reveal">Maryville</div>
+      <div class="area-tag reveal">Lenoir City</div>
+      <div class="area-tag reveal">Kingston</div>
+      <div class="area-tag reveal">Seymour</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block">
+  <h2>Work with a Team<br>You Can Trust.</h2>
+  <p>Get a free quote or call us directly. No pressure, no runaround.</p>
+  <a href="contact.html" class="btn-white">Get a Free Quote →</a>
+  <a href="tel:8651234567" class="cta-phone">(865) 123-4567</a>
+</div>
+
+<footer>
+  <div class="con">
+    <div>
+      <div class="footer-logo">Ridgeline HVAC</div>
+      <div class="footer-tag">Knoxville, TN · Licensed & Insured</div>
+      <p class="footer-desc">Serving Knoxville, Farragut, Powell, Oak Ridge, and surrounding areas. Available 24/7 for emergencies.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">AC Repair</a></li><li><a href="services.html">Heating & Furnace</a></li><li><a href="services.html">Maintenance</a></li><li><a href="services.html">Emergency Service</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Get a Quote</a></li><li><a href="tel:8651234567">(865) 123-4567</a></li></ul></div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)">
+    <div class="footer-bot">
+      <p>© 2026 Ridgeline HVAC. Demo site only — not a real company.</p>
+      <p>Built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a> — Knoxville Web Design</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="tel:8651234567" class="sticky-btn sticky-call">📞 Call Now</a>
+  <a href="contact.html" class="sticky-btn sticky-quote">Get Free Quote</a>
+</div>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
