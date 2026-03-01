@@ -2,174 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Ridgeline HVAC (Demo)</title>
-  <meta name="description" content="Contact demo page with tap-to-call and quick form." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact (Demo) | Ridgeline HVAC</title>
+  <meta name="description" content="Contact page demo built to convert calls and quote requests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <div class="demo-banner">
-    <strong>DEMO SITE</strong> <span>— portfolio example. Form routes to Ghost Digital Co Formspree.</span>
+    <div class="demo-banner__inner">
+      <strong>DEMO SITE</strong>
+      <span>Portfolio example by <strong>Ghost Digital Co</strong>. Not a real HVAC company.</span>
+      <a class="demo-banner__link" href="../index.html#work">Back to Ghost Digital Co</a>
+    </div>
   </div>
 
-  <div class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="index.html">
-          <div class="logo-mark"></div>
-          <div class="brand-name">
-            <div class="top">RIDGELINE HVAC</div>
-            <div class="sub">Demo HVAC Website</div>
-          </div>
-        </a>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">RL</span>
+        <span class="brand__text">
+          <span class="brand__name">RIDGELINE</span>
+          <span class="brand__sub">HVAC • Demo</span>
+        </span>
+      </a>
 
-        <div class="nav-links">
+      <nav class="nav">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+        <div class="nav__menu" id="navMenu">
           <a href="services.html">Services</a>
           <a href="reviews.html">Reviews</a>
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a class="active" href="contact.html">Contact</a>
+          <a class="btn btn--primary btn--sm" href="quote.html">Free Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div>
+          <p class="eyebrow"><span class="dot dot--cool"></span> Contact</p>
+          <h1 class="h1">Talk to a human. Get help fast.</h1>
+          <p class="lead">This page keeps it simple: call button + short form + reassurance.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="tel:+18651234567">Call Now: (865) 123-4567</a>
+            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
+          </div>
         </div>
 
-        <div class="nav-cta">
-          <a class="btn btn-ghost" href="tel:8651234567">(865) 123-4567</a>
-          <a class="btn btn-heat" href="quote.html">Get a Quote</a>
-          <button class="hamburger" data-hamburger aria-label="Open menu">☰</button>
+        <div class="page-hero__box reveal">
+          <div class="box-line"><span>Dispatch Window</span><strong>Today</strong></div>
+          <div class="box-line"><span>Service Area</span><strong>Knoxville</strong></div>
+          <div class="box-line"><span>Emergency</span><strong>24/7</strong></div>
+          <div class="fineprint">All demo data for portfolio.</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="mobile-panel" data-mobile-panel>
+    <section class="section section--alt">
       <div class="container">
-        <a href="services.html">Services</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <div class="mctas">
-          <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-          <a class="btn btn-heat" href="quote.html">Get Quote</a>
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h2 class="h2">Direct contact</h2>
+            <p class="muted">The fastest conversion path is still a phone call.</p>
+            <div class="contact-cards">
+              <a class="contact-card" href="tel:+18651234567">
+                <span class="contact-ico">📞</span>
+                <div>
+                  <strong>Call</strong>
+                  <span>(865) 123-4567</span>
+                </div>
+              </a>
+              <a class="contact-card" href="quote.html">
+                <span class="contact-ico">🧾</span>
+                <div>
+                  <strong>Free Quote</strong>
+                  <span>1–2 minutes</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="fineprint">Ridgeline HVAC is a demo brand. This does not represent a real company.</div>
+          </div>
+
+          <div class="panel reveal">
+            <h2 class="h2">Message (demo)</h2>
+            <p class="muted">Short form. No friction. Still feels premium.</p>
+
+            <form class="form" action="quote.html" method="get">
+              <div class="form-row">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" placeholder="John Smith" required>
+                </label>
+                <label>
+                  <span>Phone</span>
+                  <input type="tel" name="phone" placeholder="(865) 555-0123" required>
+                </label>
+              </div>
+
+              <label>
+                <span>What do you need help with?</span>
+                <select name="service" required>
+                  <option value="" disabled selected>Select service</option>
+                  <option>AC Repair</option>
+                  <option>Heating Repair</option>
+                  <option>New System Quote</option>
+                  <option>Maintenance</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="4" placeholder="Tell us what's going on..." required></textarea>
+              </label>
+
+              <button class="btn btn--primary btn--block" type="submit">Send</button>
+              <div class="fineprint">Demo only. Submits to quote page.</div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="page-hero">
-    <div class="container">
-      <div class="wrap">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> → <span>Contact</span>
-        </div>
-        <h1>Contact (Demo) — <span class="ice">Tap to Call</span> or Message</h1>
-        <p class="lead" style="margin-top:10px">
-          Homeowners should be able to call in one tap. The form is backup.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container" style="display:grid; grid-template-columns: .9fr 1.1fr; gap:14px;">
-      <div class="hero-card" data-reveal>
-        <div class="top">
-          <h3>Fastest Option</h3>
-          <p class="sub">Call now and get scheduled (demo).</p>
-        </div>
-        <div class="body">
-          <div class="mini-row">
-            <div class="lbl">Phone</div>
-            <div class="val"><a href="tel:8651234567" style="text-decoration:none; font-weight:1000;">(865) 123-4567</a></div>
-          </div>
-          <div class="mini-row">
-            <div class="lbl">Service Area</div>
-            <div class="val">Knoxville + Nearby</div>
-          </div>
-          <div class="mini-row">
-            <div class="lbl">Hours</div>
-            <div class="val">24/7 (Demo)</div>
-          </div>
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn btn-primary" style="flex:1" href="tel:8651234567">Call Now</a>
-            <a class="btn btn-heat" style="flex:1" href="quote.html">Get Quote</a>
-          </div>
-          <p class="help" style="margin-top:10px">
-            Demo disclaimer: phone number is placeholder.
-          </p>
-        </div>
-      </div>
-
-      <form class="form" data-reveal action="https://formspree.io/f/mreajqyy" method="POST">
-        <div class="form-top">
-          <h3>Send a Message (Demo)</h3>
-          <p>Short form. Easy submit. Routes to your Formspree.</p>
-        </div>
-        <div class="form-body">
-          <input type="hidden" name="_subject" value="Ridgeline HVAC Demo Lead">
-          <input type="hidden" name="_next" value="https://zmouso.github.io/ghostdigitalco-site/ridgeline-hvac-template/thanks.html">
-          <input class="hidden-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-
-          <div class="row">
-            <div class="field">
-              <label>Name</label>
-              <input name="name" type="text" placeholder="John Doe" required>
-            </div>
-            <div class="field">
-              <label>Phone</label>
-              <input name="phone" type="tel" placeholder="(865) 555-1234">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="field">
-              <label>Email</label>
-              <input name="email" type="email" placeholder="john@email.com" required>
-            </div>
-            <div class="field">
-              <label>Need</label>
-              <select name="need">
-                <option>AC Repair</option>
-                <option>Heating Repair</option>
-                <option>New System Quote</option>
-                <option>Maintenance</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field">
-            <label>Message</label>
-            <textarea name="message" placeholder="What’s going on?" required></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn btn-heat" type="submit">Send Request</button>
-            <a class="btn btn-ghost" href="tel:8651234567">Or Call Now</a>
-          </div>
-
-          <p class="help">Spam prevention: hidden field included. Redirect uses Formspree _next.  [oai_citation:1‡Tosbourn – Belfast based Ruby developers](https://tosbourn.com/using-formspree-for-contact-form/?utm_source=chatgpt.com)</p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="tiny">© 2026 Ridgeline HVAC (Demo). Not a real business. Built by Ghost Digital Co.</div>
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>Ridgeline HVAC (Demo) • Portfolio only</span>
+      <span class="dim">Built by Ghost Digital Co</span>
     </div>
   </footer>
 
-  <div class="sticky-bar">
-    <div class="sticky-inner">
-      <a class="btn btn-primary" href="tel:8651234567">Call Now</a>
-      <a class="btn btn-heat" href="quote.html">Get Quote</a>
-    </div>
+  <div class="mobile-bar">
+    <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+18651234567">Call</a>
+    <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
   </div>
 
   <script src="assets/js/main.js"></script>
-
-  <style>
-    @media (max-width: 980px){
-      .container[style]{grid-template-columns:1fr !important;}
-    }
-  </style>
 </body>
 </html>
