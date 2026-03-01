@@ -1,42 +1,39 @@
+// Mobile nav toggle
 (() => {
-  // Set year
-  document.querySelectorAll("[data-year]").forEach(el => {
-    el.textContent = new Date().getFullYear();
+  const toggle = document.querySelector('.nav__toggle');
+  const menu = document.getElementById('mobileMenu');
+  if (!toggle || !menu) return;
+
+  const setOpen = (open) => {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) menu.removeAttribute('hidden');
+    else menu.setAttribute('hidden', '');
+  };
+
+  setOpen(false);
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    setOpen(!isOpen);
   });
 
-  // Mobile menu toggle
-  const toggle = document.querySelector(".nav__toggle");
-  const menu = document.querySelector(".nav__menu");
+  // close menu when clicking a link
+  menu.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (a) setOpen(false);
+  });
+})();
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      const open = menu.style.display === "block";
-      menu.style.display = open ? "none" : "block";
-      toggle.setAttribute("aria-expanded", String(!open));
+// Reveal on scroll
+(() => {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
+  }, { threshold: 0.12 });
 
-    // Close menu when clicking a link (mobile)
-    menu.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        if (window.matchMedia("(max-width: 899px)").matches) {
-          menu.style.display = "none";
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    });
-  }
-
-  // Reveal on scroll
-  const els = document.querySelectorAll(".reveal");
-  if (els.length) {
-    const io = new IntersectionObserver(
-      entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.12 }
-    );
-    els.forEach(el => io.observe(el));
-  }
+  items.forEach(el => obs.observe(el));
 })();
