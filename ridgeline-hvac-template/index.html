@@ -1,280 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ridgeline HVAC (Demo) | Knoxville AC & Heating</title>
-  <meta name="description" content="DEMO HVAC website built to convert calls + quote requests. Ridgeline HVAC is a demo brand for Ghost Digital Co." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Ridgeline HVAC — Knoxville's heating and cooling experts. Fast repairs, honest pricing, 24/7 emergency service."/>
+<title>Ridgeline HVAC | Knoxville, TN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --black:#0A0A0A;
+  --dark:#111111;
+  --charcoal:#1C1C1C;
+  --orange:#E05C00;
+  --orange-light:#FF6B1A;
+  --cream:#F5F0EA;
+  --silver:#9A9A9A;
+  --white:#FFFFFF;
+  --text:#1C1C1C;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+.demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
+nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.nav-name{font-family:'DM Serif Display',serif;font-size:20px;color:var(--white);letter-spacing:.5px}
+.nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
+.nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
+.nav-call:hover{background:var(--orange-light)}
+.hero{min-height:92svh;background:var(--black);position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(10,10,10,.3) 0%,rgba(10,10,10,.75) 60%,rgba(10,10,10,.97) 100%),url('../assets/hero.jpg');background-size:cover;background-position:center top}
+.hero-content{position:relative;z-index:2;padding:48px 24px 56px;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}
+.hero-dot{width:7px;height:7px;background:var(--orange);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-tag span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(44px,11vw,80px);line-height:1;color:var(--white);margin-bottom:20px;max-width:600px}
+h1 em{font-style:italic;color:var(--orange-light)}
+.hero-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.65;max-width:420px;margin-bottom:36px}
+.hero-btns{display:flex;flex-direction:column;gap:12px;max-width:360px}
+.btn-primary{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:var(--white);font-size:15px;font-weight:600;padding:18px 32px;text-decoration:none;transition:background .2s}
+.btn-primary:hover{background:var(--orange-light)}
+.btn-outline{display:flex;align-items:center;justify-content:center;background:transparent;color:var(--white);font-size:15px;font-weight:500;padding:17px 32px;border:1px solid rgba(255,255,255,.25);text-decoration:none;transition:all .2s}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);margin-top:48px}
+.stat{background:rgba(255,255,255,.04);padding:20px 16px;text-align:center}
+.stat-n{font-family:'DM Serif Display',serif;font-size:32px;color:var(--white);line-height:1}
+.stat-n sup{font-size:16px;color:var(--orange)}
+.stat-l{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
+.estrip{background:var(--orange);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.estrip-text{font-size:13px;font-weight:600;color:var(--white)}
+.estrip-num{font-family:'DM Serif Display',serif;font-size:22px;color:var(--white);text-decoration:none}
+.services{background:var(--cream);padding:80px 24px}
+.con{max-width:1200px;margin:0 auto}
+.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,6vw,52px);line-height:1;color:var(--text);margin-bottom:48px}
+.srv-list{display:flex;flex-direction:column;gap:2px}
+.srv-item{background:var(--white);padding:28px 24px;display:flex;align-items:center;gap:20px;transition:all .25s}
+.srv-item:hover{background:var(--black);transform:translateX(4px)}
+.srv-item:hover .srv-name{color:var(--white)}
+.srv-item:hover .srv-desc{color:rgba(255,255,255,.5)}
+.srv-item:hover .srv-arrow{color:var(--orange)}
+.srv-num{font-family:'DM Serif Display',serif;font-size:13px;color:var(--silver);min-width:24px}
+.srv-ico{width:44px;height:44px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;transition:background .25s}
+.srv-item:hover .srv-ico{background:var(--charcoal)}
+.srv-body{flex:1}
+.srv-name{font-size:17px;font-weight:600;color:var(--text);margin-bottom:4px;transition:color .25s}
+.srv-desc{font-size:13px;color:var(--silver);line-height:1.5;transition:color .25s}
+.srv-arrow{font-size:20px;color:var(--cream);transition:color .25s;margin-left:auto;flex-shrink:0}
+.why{background:var(--black);padding:80px 24px}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
+.why-card{background:var(--charcoal);padding:28px 22px}
+.why-ico{font-size:24px;margin-bottom:14px}
+.why-title{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
+.why-text{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+.cta-block{background:var(--orange);padding:72px 24px;text-align:center}
+.cta-block h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
+.cta-block p{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto}
+.btn-white{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--orange);font-size:15px;font-weight:700;padding:18px 40px;text-decoration:none;transition:all .2s}
+.btn-white:hover{background:var(--black);color:var(--white)}
+.cta-phone{display:block;margin-top:16px;font-family:'DM Serif Display',serif;font-size:28px;color:var(--white);text-decoration:none}
+footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
+.footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
+.footer-desc{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:280px;margin-bottom:32px}
+.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px}
+.footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--orange-light)}
+.footer-bot{padding-top:20px;border-top:1px solid rgba(255,255,255,.05);display:flex;flex-direction:column;gap:6px}
+.footer-bot p{font-size:11px;color:rgba(255,255,255,.2)}
+.footer-bot a{color:var(--orange-light);text-decoration:none}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:200;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.sticky-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;text-align:center}
+.sticky-call{background:var(--orange);color:var(--white)}
+.sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(min-width:768px){
+  body{padding-bottom:0}
+  .sticky-cta{display:none}
+  .hero-content{padding:80px 64px;max-width:1200px;margin:0 auto;width:100%}
+  .hero-btns{flex-direction:row;max-width:none}
+  .hero-stats{max-width:480px}
+  .estrip{padding:16px 64px}
+  .services{padding:100px 64px}
+  .srv-list{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .why{padding:100px 64px}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .cta-block{padding:100px 64px}
+  footer{padding:64px 64px 40px}
+  footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
+  .footer-links{display:contents}
+  .footer-desc{margin-bottom:0}
+}
+</style>
 </head>
 <body>
 
-  <!-- DEMO BANNER -->
-  <div class="demo-banner" role="note" aria-label="Demo site notice">
-    <div class="demo-banner__inner">
-      <strong>DEMO SITE</strong>
-      <span>This is a portfolio example by <strong>Ghost Digital Co</strong>. Not a real HVAC company.</span>
-      <a class="demo-banner__link" href="../index.html#work">Back to Ghost Digital Co</a>
+<div class="demo">⚠ Demo site — not a real company — built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-name">Ridgeline HVAC</span>
+    <span class="nav-sub">Knoxville, TN</span>
+  </a>
+  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><div class="hero-dot"></div><span>24/7 Emergency Service</span></div>
+    <h1>Heating &amp; Cooling<br><em>Done Right.</em></h1>
+    <p class="hero-sub">Fast repairs, honest pricing, and technicians who show up when they say they will. Serving Knoxville since 2008.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-primary">Get a Free Quote →</a>
+      <a href="services.html" class="btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">15<sup>+</sup></div><div class="stat-l">Years Serving Knoxville</div></div>
+      <div class="stat"><div class="stat-n">2<sup>hr</sup></div><div class="stat-l">Avg Response</div></div>
+      <div class="stat"><div class="stat-n">24<sup>/7</sup></div><div class="stat-l">Emergency Line</div></div>
     </div>
   </div>
+</section>
 
-  <!-- HEADER -->
-  <header class="site-header" id="top">
-    <div class="container header-row">
-      <a class="brand" href="index.html" aria-label="Ridgeline HVAC home">
-        <span class="brand__mark" aria-hidden="true">RL</span>
-        <span class="brand__text">
-          <span class="brand__name">RIDGELINE</span>
-          <span class="brand__sub">HVAC • Knoxville, TN</span>
-        </span>
-      </a>
+<div class="estrip">
+  <span class="estrip-text">🔥 AC down? Furnace out? We answer around the clock.</span>
+  <a href="tel:8651234567" class="estrip-num">(865) 123-4567</a>
+</div>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Open menu</span>
-        </button>
-
-        <div class="nav__menu" id="navMenu">
-          <a href="services.html">Services</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn btn--primary btn--sm" href="quote.html">Free Quote</a>
-        </div>
-      </nav>
+<section class="services">
+  <div class="con">
+    <p class="section-label reveal">What We Do</p>
+    <h2 class="section-title reveal">Every HVAC Service<br>You Need.</h2>
+    <div class="srv-list">
+      <div class="srv-item reveal"><span class="srv-num">01</span><div class="srv-ico">❄️</div><div class="srv-body"><div class="srv-name">AC Repair & Installation</div><div class="srv-desc">Same-day diagnosis. Honest repair or replacement — no upsell.</div></div><span class="srv-arrow">→</span></div>
+      <div class="srv-item reveal"><span class="srv-num">02</span><div class="srv-ico">🔥</div><div class="srv-body"><div class="srv-name">Heating & Furnace</div><div class="srv-desc">Gas furnaces, heat pumps, electric heat. Repair and full replacement.</div></div><span class="srv-arrow">→</span></div>
+      <div class="srv-item reveal"><span class="srv-num">03</span><div class="srv-ico">🛠️</div><div class="srv-body"><div class="srv-name">Maintenance & Tune-Ups</div><div class="srv-desc">Spring and fall service. Catch small problems before they get expensive.</div></div><span class="srv-arrow">→</span></div>
+      <div class="srv-item reveal"><span class="srv-num">04</span><div class="srv-ico">🌬️</div><div class="srv-body"><div class="srv-name">Indoor Air Quality</div><div class="srv-desc">Purifiers, dehumidifiers, UV systems. Cleaner air throughout your home.</div></div><span class="srv-arrow">→</span></div>
+      <div class="srv-item reveal"><span class="srv-num">05</span><div class="srv-ico">⚡</div><div class="srv-body"><div class="srv-name">Emergency Repairs</div><div class="srv-desc">We answer 24/7 including weekends and holidays. Because breakdowns don't wait.</div></div><span class="srv-arrow">→</span></div>
+      <div class="srv-item reveal"><span class="srv-num">06</span><div class="srv-ico">🏠</div><div class="srv-body"><div class="srv-name">Full System Replacement</div><div class="srv-desc">When repair isn't worth it, we'll tell you straight and get you the right system.</div></div><span class="srv-arrow">→</span></div>
     </div>
-  </header>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <div class="pill">
-            <span class="dot dot--cool"></span>
-            <span>Same-day service • Upfront pricing • No pressure</span>
-          </div>
-
-          <h1 class="h1">
-            AC & Heating that shows up fast —
-            <span class="grad">and fixes it right.</span>
-          </h1>
-
-          <p class="lead">
-            This is a <strong>conversion-focused demo</strong> built for busy homeowners: big call buttons, simple quote flow, and trust signals where they matter.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn btn--primary" href="tel:+18651234567">Call Now: (865) 123-4567</a>
-            <a class="btn btn--ghost" href="quote.html">Get a Free Quote</a>
-          </div>
-
-          <div class="trust-strip">
-            <div class="trust-item">
-              <div class="trust-num">24/7</div>
-              <div class="trust-label">Emergency Support</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-num">4.9★</div>
-              <div class="trust-label">Average Rating</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-num">60m</div>
-              <div class="trust-label">Avg Response (Demo)</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__card reveal">
-          <div class="card-top">
-            <div class="badge badge--hot">Fast Dispatch</div>
-            <div class="badge badge--cool">Free Estimate</div>
-          </div>
-
-          <h2 class="h3">Book a technician</h2>
-          <p class="muted">Two taps. We call you back. (Demo form)</p>
-
-          <form class="mini-form" action="quote.html" method="get">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="John Smith" required>
-            </label>
-            <label>
-              <span>Phone</span>
-              <input type="tel" name="phone" placeholder="(865) 555-0123" required>
-            </label>
-            <label>
-              <span>Service</span>
-              <select name="service" required>
-                <option value="" disabled selected>Select one</option>
-                <option>AC Repair</option>
-                <option>Heating Repair</option>
-                <option>New System Quote</option>
-                <option>Maintenance</option>
-              </select>
-            </label>
-
-            <button class="btn btn--primary btn--block" type="submit">Start Free Quote</button>
-            <div class="fineprint">By submitting, you agree to a callback. Demo brand only.</div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- VALUE PROPS -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow"><span class="dot dot--cool"></span> What you actually get</p>
-          <h2 class="h2">Built to drive calls, not just “look nice.”</h2>
-          <p class="sub">This layout is what converts: clarity + urgency + proof.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="feature reveal">
-            <div class="feature-ico">❄️</div>
-            <h3>AC Repair</h3>
-            <p>Quick diagnosis, clear options, and repairs that last. No mystery invoices.</p>
-            <a class="link" href="services.html#ac">See AC service</a>
-          </article>
-
-          <article class="feature reveal">
-            <div class="feature-ico">🔥</div>
-            <h3>Heating</h3>
-            <p>Furnaces, heat pumps, and winter reliability. Keep your home comfortable.</p>
-            <a class="link" href="services.html#heat">See heating service</a>
-          </article>
-
-          <article class="feature reveal">
-            <div class="feature-ico">🛠️</div>
-            <h3>New Systems</h3>
-            <p>Right-sized systems, clean installs, and efficiency recommendations you can trust.</p>
-            <a class="link" href="services.html#install">See install options</a>
-          </article>
-        </div>
-
-        <div class="cta-slab reveal">
-          <div>
-            <h3 class="h3">Need help today?</h3>
-            <p class="muted">Tap to call or request a quote — this is the conversion moment.</p>
-          </div>
-          <div class="cta-slab__btns">
-            <a class="btn btn--primary" href="tel:+18651234567">Call Now</a>
-            <a class="btn btn--ghost" href="quote.html">Free Quote</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow"><span class="dot dot--hot"></span> Proof</p>
-          <h2 class="h2">Homeowners choose the company that feels safe.</h2>
-          <p class="sub">So we show proof fast: ratings, badges, reviews, and guarantees.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>“Tech showed up fast and explained everything. No upsell.”</p>
-            <div class="review-meta">— Sarah T. • Knoxville</div>
-          </article>
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>“Same day repair, fair price, and my AC is ice cold again.”</p>
-            <div class="review-meta">— Marcus W. • Farragut</div>
-          </article>
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>“Quoted a new system and actually sized it correctly. Clean install.”</p>
-            <div class="review-meta">— Dana L. • Halls</div>
-          </article>
-        </div>
-
-        <div class="center">
-          <a class="btn btn--primary" href="reviews.html">Read More Reviews</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow"><span class="dot dot--cool"></span> Quick answers</p>
-          <h2 class="h2">FAQ</h2>
-        </div>
-
-        <div class="faq">
-          <button class="faq-q" type="button">Do you offer emergency service? <span>+</span></button>
-          <div class="faq-a"><p>Yes — 24/7 emergency dispatch is shown prominently because it converts.</p></div>
-
-          <button class="faq-q" type="button">Is the estimate really free? <span>+</span></button>
-          <div class="faq-a"><p>On installs, yes. Repairs are diagnosed quickly with upfront pricing.</p></div>
-
-          <button class="faq-q" type="button">Is this a real HVAC company? <span>+</span></button>
-          <div class="faq-a"><p>No. This is a demo site for portfolio purposes. “Ridgeline HVAC” is a sample brand.</p></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">
-          <span class="brand__mark" aria-hidden="true">RL</span>
-          <div>
-            <div class="footer-name">Ridgeline HVAC <span class="dim">(Demo)</span></div>
-            <div class="footer-sub">Conversion demo built by Ghost Digital Co</div>
-          </div>
-        </div>
-        <p class="footer-text">
-          This website is a <strong>portfolio demo</strong>. The company name, phone, reviews, and claims are placeholders for showcasing design + conversion flow.
-        </p>
-      </div>
-
-      <div>
-        <div class="footer-head">Pages</div>
-        <div class="footer-links">
-          <a href="services.html">Services</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="quote.html">Free Quote</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="footer-head">Tap to Convert</div>
-        <div class="footer-links">
-          <a href="tel:+18651234567">Call: (865) 123-4567</a>
-          <a href="quote.html">Request a Quote</a>
-          <a href="../index.html#contact">Hire Ghost Digital Co</a>
-        </div>
-      </div>
+    <div style="margin-top:32px;text-align:center">
+      <a href="services.html" class="btn-primary" style="display:inline-flex;max-width:320px">See All Services →</a>
     </div>
-
-    <div class="container footer-bottom">
-      <span>© 2026 Ridgeline HVAC (Demo). All rights reserved.</span>
-      <span class="dim">Not a real business.</span>
-    </div>
-  </footer>
-
-  <!-- MOBILE CONVERSION BAR -->
-  <div class="mobile-bar" role="navigation" aria-label="Quick actions">
-    <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+18651234567">Call</a>
-    <a class="mobile-bar__btn mobile-bar__btn--quote" href="quote.html">Free Quote</a>
   </div>
+</section>
 
-  <script src="assets/js/main.js"></script>
+<section class="why">
+  <div class="con">
+    <p class="section-label reveal" style="color:var(--orange)">Why Ridgeline</p>
+    <h2 class="section-title reveal" style="color:var(--white)">The Way HVAC<br>Should Be Done.</h2>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-ico">⚡</div><div class="why-title">Fast Response</div><p class="why-text">We aim to be at your door within 2 hours. Emergencies get priority — always.</p></div>
+      <div class="why-card reveal"><div class="why-ico">💰</div><div class="why-title">Upfront Pricing</div><p class="why-text">You know the full cost before we start. No surprise charges when the job is done.</p></div>
+      <div class="why-card reveal"><div class="why-ico">✅</div><div class="why-title">Licensed & Insured</div><p class="why-text">Every technician is certified and background-checked. You're in good hands.</p></div>
+      <div class="why-card reveal"><div class="why-ico">🛡️</div><div class="why-title">Satisfaction Guarantee</div><p class="why-text">If something's not right, we come back and fix it. No charge. No argument.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-block">
+  <h2>Ready to Get<br>Comfortable?</h2>
+  <p>Get a free quote today. No pressure, no obligation — just a straight answer.</p>
+  <a href="contact.html" class="btn-white">Request a Free Quote →</a>
+  <a href="tel:8651234567" class="cta-phone">(865) 123-4567</a>
+</div>
+
+<footer>
+  <div class="con">
+    <div>
+      <div class="footer-logo">Ridgeline HVAC</div>
+      <div class="footer-tag">Knoxville, TN · Licensed & Insured</div>
+      <p class="footer-desc">Serving Knoxville, Farragut, Powell, Oak Ridge, and surrounding areas. Available 24/7 for emergencies.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">AC Repair</a></li><li><a href="services.html">Heating & Furnace</a></li><li><a href="services.html">Maintenance</a></li><li><a href="services.html">Emergency Service</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Get a Quote</a></li><li><a href="tel:8651234567">(865) 123-4567</a></li></ul></div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)">
+    <div class="footer-bot">
+      <p>© 2026 Ridgeline HVAC. Demo site only — not a real company.</p>
+      <p>Built by <a href="https://zmouso.github.io/ghostdigitalco-site" target="_blank">Ghost Digital Co</a> — Knoxville Web Design</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="tel:8651234567" class="sticky-btn sticky-call">📞 Call Now</a>
+  <a href="contact.html" class="sticky-btn sticky-quote">Get Free Quote</a>
+</div>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
