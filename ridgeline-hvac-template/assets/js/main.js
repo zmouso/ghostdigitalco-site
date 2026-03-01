@@ -1,58 +1,57 @@
 (() => {
   // Year
-  const yearEl = document.querySelector("[data-year]");
+  const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile nav
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const nav = document.querySelector("[data-nav]");
+  // Mobile menu
+  const toggle = document.querySelector(".nav__toggle");
+  const panel = document.querySelector(".nav__panel");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
+  if (toggle && panel) {
+    const setState = (open) => {
+      panel.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    toggle.addEventListener("click", () => {
+      const open = !panel.classList.contains("is-open");
+      setState(open);
     });
 
-    // Close menu when clicking a link (mobile)
-    nav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+    // close when clicking a link
+    panel.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => setState(false));
     });
 
-    // Close menu on outside click
+    // close on outside click
     document.addEventListener("click", (e) => {
-      if (!nav.classList.contains("is-open")) return;
-      const clickedInside = nav.contains(e.target) || toggle.contains(e.target);
-      if (!clickedInside) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
+      if (!panel.classList.contains("is-open")) return;
+      const clickedInside = panel.contains(e.target) || toggle.contains(e.target);
+      if (!clickedInside) setState(false);
+    });
+
+    // close on escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setState(false);
     });
   }
 
   // Reveal on scroll
-  const revealEls = Array.from(document.querySelectorAll(".reveal"));
-  if ("IntersectionObserver" in window && revealEls.length) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");
-      });
-    }, { threshold: 0.12 });
-
-    revealEls.forEach(el => io.observe(el));
+  const els = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && els.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => io.observe(el));
   } else {
-    revealEls.forEach(el => el.classList.add("is-visible"));
+    els.forEach((el) => el.classList.add("is-visible"));
   }
-
-  // Accordion (FAQ)
-  const accButtons = Array.from(document.querySelectorAll("[data-acc]"));
-  accButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const panel = btn.nextElementSibling;
-      const isOpen = btn.classList.toggle("is-open");
-      if (panel) panel.classList.toggle("is-open", isOpen);
-    });
-  });
 })();
