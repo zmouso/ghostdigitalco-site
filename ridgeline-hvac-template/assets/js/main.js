@@ -1,42 +1,29 @@
-// Ridgeline HVAC Demo — interactions (mobile menu + reveal on scroll)
-
+// Mobile menu toggle + small UX helpers
 (function(){
-  const hamburger = document.querySelector('[data-hamburger]');
-  const mobilePanel = document.querySelector('[data-mobile-panel]');
-
-  if(hamburger && mobilePanel){
-    hamburger.addEventListener('click', () => {
-      const open = mobilePanel.getAttribute('data-open') === 'true';
-      mobilePanel.setAttribute('data-open', (!open).toString());
-      mobilePanel.style.display = open ? 'none' : 'block';
-      hamburger.setAttribute('aria-expanded', (!open).toString());
+  const btn = document.querySelector('[data-menu-btn]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  if(btn && menu){
+    btn.addEventListener('click', () => {
+      const open = menu.getAttribute('data-open') === 'true';
+      menu.setAttribute('data-open', String(!open));
+      menu.style.display = open ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', String(!open));
     });
-
-    // close on link click
-    mobilePanel.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobilePanel.setAttribute('data-open','false');
-        mobilePanel.style.display = 'none';
-        hamburger.setAttribute('aria-expanded','false');
-      });
-    });
-
-    // default hidden on mobile until opened
-    mobilePanel.style.display = 'none';
-    mobilePanel.setAttribute('data-open','false');
-    hamburger.setAttribute('aria-expanded','false');
   }
 
-  // reveal
-  const els = document.querySelectorAll('[data-reveal]');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting){
-        e.target.classList.add('revealed');
-        obs.unobserve(e.target);
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if(!id || id === '#') return;
+      const el = document.querySelector(id);
+      if(!el) return;
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      if(menu){
+        menu.style.display = 'none';
+        menu.setAttribute('data-open', 'false');
       }
     });
-  }, { threshold: 0.12 });
-
-  els.forEach(el => obs.observe(el));
+  });
 })();
