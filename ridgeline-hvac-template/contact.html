@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Contact Ridgeline HVAC — get a free quote for heating and cooling service in Knoxville, TN."/>
-<title>Contact & Free Quote | Ridgeline HVAC — Knoxville, TN</title>
+<title>Contact Us | Ridgeline HVAC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
 <style>
-:root{--black:#0A0A0A;--dark:#111111;--charcoal:#1C1C1C;--orange:#E05C00;--orange-light:#FF6B1A;--cream:#F5F0EA;--silver:#9A9A9A;--white:#FFFFFF;--text:#1C1C1C}
+/* EXACT SAME CSS AS INDEX */
+:root{ --black:#0A0A0A; --dark:#111111; --charcoal:#1C1C1C; --orange:#E05C00; --orange-light:#FF6B1A; --cream:#F5F0EA; --silver:#9A9A9A; --white:#FFFFFF; --text:#1C1C1C; }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden;padding-bottom:72px}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;padding-bottom:72px}
 .demo{background:var(--black);padding:9px 20px;text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .demo a{color:var(--orange-light);text-decoration:none;font-weight:600}
 nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -20,44 +20,32 @@ nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;hei
 .nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
 .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
 .nav-call:hover{background:var(--orange-light)}
-.page-hero{background:var(--black);padding:64px 24px 56px;border-bottom:1px solid rgba(255,255,255,.06)}
-.breadcrumb{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.breadcrumb a{color:var(--orange-light);text-decoration:none}
-.page-title{font-family:'DM Serif Display',serif;font-size:clamp(40px,9vw,72px);line-height:.95;color:var(--white);margin-bottom:16px}
-.page-title em{font-style:italic;color:var(--orange-light)}
-.page-sub{font-size:15px;font-weight:300;color:rgba(255,255,255,.5);max-width:400px;line-height:1.65}
-.quick-links{display:flex;flex-direction:column;gap:2px;margin-top:32px}
-.qlink{display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);text-decoration:none;transition:all .2s}
-.qlink:hover{border-color:var(--orange);background:rgba(224,92,0,.08)}
-.qlink-ico{width:40px;height:40px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.qlink-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:3px}
-.qlink-val{font-family:'DM Serif Display',serif;font-size:18px;color:var(--white)}
-.form-sec{background:var(--cream);padding:64px 24px}
+.nav-menu{position:relative}
+.nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;letter-spacing:.5px;transition:border-color .2s}
+.nav-toggle:hover{border-color:var(--orange);color:var(--orange)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--charcoal);min-width:180px;border-top:2px solid var(--orange);z-index:300}
+.nav-dropdown a{display:block;padding:14px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:all .2s}
+.nav-dropdown a:last-child{border-bottom:none}
+.nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
+.nav-menu.open .nav-dropdown{display:block}
+
+/* PAGE SPECIFIC & FORM CSS */
 .con{max-width:1200px;margin:0 auto}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
-.section-title-sm{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,42px);line-height:1;color:var(--text);margin-bottom:32px}
-.form-box{background:var(--white);padding:36px 28px;border-top:3px solid var(--orange)}
-.fg{margin-bottom:16px}
-.fg label{display:block;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:8px}
-.fg input,.fg select,.fg textarea{width:100%;padding:14px 16px;background:var(--cream);border:1px solid rgba(0,0,0,.08);border-bottom:2px solid rgba(0,0,0,.12);font-family:'DM Sans',sans-serif;font-size:15px;color:var(--text);outline:none;transition:all .2s;-webkit-appearance:none}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange);background:var(--white)}
-.fg textarea{min-height:100px;resize:vertical}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fsub{width:100%;margin-top:8px;background:var(--orange);border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--white);padding:18px;transition:background .2s}
-.fsub:hover{background:var(--orange-light)}
-.fsub:disabled{opacity:.5;cursor:not-allowed}
-.form-note{margin-top:12px;font-size:14px;min-height:20px;line-height:1.5}
-.form-note.ok{color:#16a34a;font-weight:600}
-.form-note.err{color:#dc2626;font-weight:600}
-.form-guarantee{margin-top:16px;padding:14px 16px;background:rgba(224,92,0,.06);border-left:2px solid var(--orange);font-size:13px;color:#666;line-height:1.6}
-.form-guarantee strong{color:var(--orange)}
-.emergency-sec{background:var(--black);padding:64px 24px;text-align:center}
-.emergency-sec h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,8vw,60px);color:var(--white);line-height:1;margin-bottom:12px}
-.emergency-sec h2 em{font-style:italic;color:var(--orange-light)}
-.emergency-sec p{font-size:15px;color:rgba(255,255,255,.5);margin-bottom:32px}
-.btn-emergency{display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:var(--white);font-family:'DM Serif Display',serif;font-size:22px;padding:20px 44px;text-decoration:none;transition:background .2s}
-.btn-emergency:hover{background:var(--orange-light)}
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 60px; padding: 80px 24px; align-items: start; }
+.contact-text h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 8vw, 70px); color: var(--text); line-height: 1; margin-bottom: 24px; }
+.contact-text p { font-size: 16px; color: var(--silver); line-height: 1.8; margin-bottom: 30px; max-width: 400px; }
+.emergency-box { background: var(--black); padding: 32px; color: white; border-left: 4px solid var(--orange); }
+.emergency-box h3 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.emergency-box a { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--white); text-decoration: none; display: block; }
+
+.form-box { background: var(--white); padding: 40px 32px; }
+label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text); font-weight: 600; margin-bottom: 8px; }
+input, select, textarea { width: 100%; background: var(--cream); border: 1px solid transparent; padding: 18px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--text); outline: none; margin-bottom: 24px; transition: border .2s; border-radius: 0; }
+input:focus, select:focus, textarea:focus { border-color: var(--orange); }
+.btn-submit { display: flex; width: 100%; align-items: center; justify-content: center; background: var(--orange); color: var(--white); font-size: 15px; font-weight: 600; padding: 20px; border: none; cursor: pointer; transition: background .2s; }
+.btn-submit:hover { background: var(--orange-light); }
+
+/* CTA & FOOTER */
 footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(255,255,255,.06)}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--white);margin-bottom:8px}
 .footer-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--silver);margin-bottom:20px}
@@ -77,15 +65,11 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
 .sticky-quote{background:var(--black);color:var(--white);border-top:1px solid rgba(255,255,255,.1)}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
 @media(min-width:768px){
-  body{padding-bottom:0}
-  .sticky-cta{display:none}
-  .page-hero{padding:80px 64px 72px}
-  .page-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1200px;margin:0 auto}
-  .quick-links{margin-top:0}
-  .form-sec{padding:100px 64px}
-  .form-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start}
-  .emergency-sec{padding:100px 64px}
+  body{padding-bottom:0} .sticky-cta{display:none}
+  .contact-grid { grid-template-columns: 1fr 1.2fr; padding: 100px 64px; gap: 80px; }
+  .form-box { padding: 64px; }
   footer{padding:64px 64px 40px}
   footer .con{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px}
   .footer-links{display:contents}
@@ -102,81 +86,64 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
     <span class="nav-name">Ridgeline HVAC</span>
     <span class="nav-sub">Knoxville, TN</span>
   </a>
-  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="nav-menu">
+      <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">Menu ☰</button>
+      <div class="nav-dropdown">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+    <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  </div>
 </nav>
 
-<div class="page-hero">
-  <div class="page-hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
-      <h1 class="page-title">Let's Get<br>You <em>Fixed Up.</em></h1>
-      <p class="page-sub">Fill out the form or call us directly. We respond fast — usually within the hour during business hours.</p>
-    </div>
-    <div class="quick-links">
-      <a href="tel:8651234567" class="qlink"><div class="qlink-ico">📞</div><div><div class="qlink-label">Call or Text</div><div class="qlink-val">(865) 123-4567</div></div></a>
-      <a href="mailto:info@ridgelinehvac.com" class="qlink"><div class="qlink-ico">✉️</div><div><div class="qlink-label">Email Us</div><div class="qlink-val">info@ridgelinehvac.com</div></div></a>
-      <div class="qlink"><div class="qlink-ico">📍</div><div><div class="qlink-label">Service Area</div><div class="qlink-val">Knoxville & Surrounding</div></div></div>
-    </div>
-  </div>
-</div>
-
-<section class="form-sec">
-  <div class="con">
-    <div class="form-inner">
-      <div>
-        <p class="section-label reveal">Get a Free Quote</p>
-        <h2 class="section-title-sm reveal">Tell Us What's<br>Going On.</h2>
-        <p class="reveal" style="font-size:14px;color:#666;line-height:1.75;margin-bottom:24px">We'll give you a straight answer and an honest price. No obligation, no pressure.</p>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div class="reveal" style="padding:16px;background:var(--cream);border-left:2px solid var(--orange)"><div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px">⚡ Fast Response</div><div style="font-size:12px;color:#666">Reply within the hour during business hours. Emergencies get immediate callback.</div></div>
-          <div class="reveal" style="padding:16px;background:var(--cream);border-left:2px solid var(--orange)"><div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px">💰 Upfront Pricing</div><div style="font-size:12px;color:#666">The price we quote is the price you pay. No surprises.</div></div>
+<section class="contact-grid con reveal">
+    <div class="contact-text">
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:1px;background:var(--orange)"></div> Dispatch & Estimates
         </div>
-      </div>
-      <div class="form-box reveal">
-        <form id="hvacForm" action="https://formspree.io/f/mreajqyy" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="New Lead — Ridgeline HVAC Demo"/>
-          <input type="text" name="_gotcha" tabindex="-1" style="display:none"/>
-          <div class="frow">
-            <div class="fg"><label>First Name *</label><input type="text" name="first_name" required/></div>
-            <div class="fg"><label>Last Name *</label><input type="text" name="last_name" required/></div>
-          </div>
-          <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" required/></div>
-          <div class="fg"><label>Email *</label><input type="email" name="email" required/></div>
-          <div class="fg"><label>Service Needed</label>
-            <select name="service">
-              <option value="">Select a service...</option>
-              <option>AC Repair</option>
-              <option>AC Replacement / New Install</option>
-              <option>Heating / Furnace Repair</option>
-              <option>Heat Pump Service</option>
-              <option>Maintenance Plan</option>
-              <option>Indoor Air Quality</option>
-              <option>Not sure — need a diagnosis</option>
-            </select>
-          </div>
-          <div class="fg"><label>How Soon?</label>
-            <select name="urgency">
-              <option>Emergency — ASAP</option>
-              <option>Within 24 hours</option>
-              <option>This week</option>
-              <option>Getting quotes / planning ahead</option>
-            </select>
-          </div>
-          <div class="fg"><label>Tell Us What's Happening</label><textarea name="message" placeholder="Any details help us show up prepared..."></textarea></div>
-          <button type="submit" id="submitBtn" class="fsub">Request My Free Quote →</button>
-          <div id="formNote" class="form-note" role="status"></div>
-          <div class="form-guarantee"><strong>No cost, no commitment.</strong> We'll give you a straight quote and let you decide.</div>
-        </form>
-      </div>
+        <h1>Request<br>Service.</h1>
+        <p>Complete the ticket request and our dispatch center will reach out immediately. For faster service during business hours, please call the direct line below.</p>
+        
+        <div class="emergency-box">
+            <h3>24/7 Priority Hotline</h3>
+            <a href="tel:8651234567">(865) 123-4567</a>
+        </div>
     </div>
-  </div>
-</section>
 
-<div class="emergency-sec">
-  <h2>AC Down?<br>Furnace <em>Out?</em></h2>
-  <p>We answer emergency calls 24/7 — including weekends and holidays.</p>
-  <a href="tel:8651234567" class="btn-emergency">📞 (865) 123-4567</a>
-</div>
+    <div class="form-box">
+        <form>
+            <div style="display:flex; gap:20px;">
+                <div style="flex:1;">
+                    <label>First Name</label>
+                    <input type="text" placeholder="John" required>
+                </div>
+                <div style="flex:1;">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Doe" required>
+                </div>
+            </div>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(865) 000-0000" required>
+
+            <label>How Can We Help?</label>
+            <select>
+                <option>Emergency Repair Needed</option>
+                <option>Need a Quote for a New System</option>
+                <option>Routine Maintenance / Tune-up</option>
+                <option>Other Question</option>
+            </select>
+
+            <label>Details</label>
+            <textarea rows="4" placeholder="Briefly describe what's going on..."></textarea>
+
+            <button type="submit" class="btn-submit">Submit Request →</button>
+        </form>
+    </div>
+</section>
 
 <footer>
   <div class="con">
@@ -209,30 +176,9 @@ const obs = new IntersectionObserver(entries => {
 }, {threshold: 0.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-const form = document.getElementById('hvacForm');
-const note = document.getElementById('formNote');
-const btn = document.getElementById('submitBtn');
-function setNote(msg,type){note.textContent=msg;note.className='form-note'+(type?' '+type:'')}
-function validate(){
-  const fn=form.querySelector('[name="first_name"]');
-  const ph=form.querySelector('[name="phone"]');
-  const em=form.querySelector('[name="email"]');
-  if(!fn.value.trim()) return{ok:false,msg:'Please enter your first name.'};
-  if(!ph.value.trim()) return{ok:false,msg:'Please enter your phone number.'};
-  if(!em.value.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) return{ok:false,msg:'Please enter a valid email.'};
-  return{ok:true};
-}
-form.addEventListener('submit',async(e)=>{
-  e.preventDefault();
-  const v=validate();
-  if(!v.ok){setNote(v.msg,'err');return;}
-  btn.disabled=true;btn.textContent='Sending...';setNote('','');
-  try{
-    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-    if(res.ok){setNote('✓ Request received! We\'ll be in touch shortly.','ok');form.reset();}
-    else{setNote('Something went wrong. Please call us at (865) 123-4567.','err');}
-  }catch(err){setNote('Network error. Please call us at (865) 123-4567.','err');}
-  finally{btn.disabled=false;btn.textContent='Request My Free Quote →';}
+document.addEventListener('click', e => {
+  const menu = document.querySelector('.nav-menu');
+  if(menu && !menu.contains(e.target)) menu.classList.remove('open');
 });
 </script>
 </body>
