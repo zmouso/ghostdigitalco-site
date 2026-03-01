@@ -30,6 +30,14 @@ nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 24px;hei
 .nav-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--silver);margin-top:1px}
 .nav-call{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);font-size:13px;font-weight:600;padding:10px 20px;text-decoration:none;transition:background .2s}
 .nav-call:hover{background:var(--orange-light)}
+.nav-menu{position:relative}
+.nav-toggle{background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 16px;cursor:pointer;letter-spacing:.5px;transition:border-color .2s}
+.nav-toggle:hover{border-color:var(--orange);color:var(--orange)}
+.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--charcoal);min-width:180px;border-top:2px solid var(--orange);z-index:300}
+.nav-dropdown a{display:block;padding:14px 20px;font-size:14px;font-weight:500;color:rgba(255,255,255,.75);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);transition:all .2s}
+.nav-dropdown a:last-child{border-bottom:none}
+.nav-dropdown a:hover{background:var(--orange);color:var(--white);padding-left:24px}
+.nav-menu.open .nav-dropdown{display:block}
 .hero{min-height:92svh;background:var(--black);position:relative;display:flex;align-items:flex-end;overflow:hidden}
 .hero-img{position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(10,10,10,.3) 0%,rgba(10,10,10,.75) 60%,rgba(10,10,10,.97) 100%),url('../assets/hero.jpg');background-size:cover;background-position:center top}
 .hero-content{position:relative;z-index:2;padding:48px 24px 56px;width:100%}
@@ -130,7 +138,17 @@ footer{background:var(--dark);padding:48px 24px 28px;border-top:1px solid rgba(2
     <span class="nav-name">Ridgeline HVAC</span>
     <span class="nav-sub">Knoxville, TN</span>
   </a>
-  <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="nav-menu">
+      <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">Menu ☰</button>
+      <div class="nav-dropdown">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+    <a href="tel:8651234567" class="nav-call">📞 Call Now</a>
+  </div>
 </nav>
 
 <section class="hero">
@@ -224,6 +242,11 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
 }, {threshold: 0.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.addEventListener('click', e => {
+  const menu = document.querySelector('.nav-menu');
+  if(menu && !menu.contains(e.target)) menu.classList.remove('open');
+});
 </script>
 </body>
 </html>
