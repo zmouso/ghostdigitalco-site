@@ -29,12 +29,12 @@
     .ns{width:6px;height:6px;background:var(--blue-bright);border-radius:50%;box-shadow:0 0 8px var(--blue-bright);animation:pulse 2s infinite}
     .nd{font-size:10px;font-weight:400;letter-spacing:5px;color:var(--muted);text-transform:uppercase}
     @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px var(--blue-bright)}50%{opacity:.6;box-shadow:0 0 16px var(--blue-bright)}}
-    .nav-links{display:flex;gap:36px;list-style:none;align-items:center}
-    .nav-links a{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s;white-space:nowrap}
     .nav-links a:hover{color:var(--blue-glow)}
-    .ncta{background:var(--blue)!important;color:var(--white)!important;padding:10px 26px;transition:all .2s!important;box-shadow:0 0 20px rgba(37,99,235,.4)}
+    .ncta{background:var(--blue)!important;color:var(--white)!important;padding:10px 20px!important;white-space:nowrap!important;transition:all .2s!important;box-shadow:0 0 20px rgba(37,99,235,.4)}
     .ncta:hover{background:var(--blue-bright)!important;box-shadow:0 0 30px rgba(59,130,246,.6)!important}
-    .nav-mobile-cta{display:none;background:var(--blue);color:var(--white);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;text-decoration:none}
+    .nav-mobile-cta{display:none;background:var(--blue);color:var(--white);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;text-decoration:none;white-space:nowrap}
 
     #home{min-height:100vh;background:var(--black);display:flex;align-items:center;padding-top:70px;position:relative;overflow:hidden}
     .hgb{position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,.06) 1px,transparent 1px);background-size:60px 60px}
@@ -75,7 +75,6 @@
     .st.lt{color:var(--white)}
     .sb{font-size:17px;font-weight:300;color:#64748B;line-height:1.8;max-width:640px;margin-bottom:48px}
 
-    /* PORTFOLIO */
     #portfolio{background:var(--dark)}
     .port-card{background:rgba(255,255,255,.03);border:1px solid rgba(37,99,235,.15);overflow:hidden;transition:all .3s}
     .port-card:hover{border-color:rgba(37,99,235,.4);box-shadow:0 20px 60px rgba(0,0,0,.4)}
@@ -357,34 +356,19 @@
         <div class="wi">🏗️</div>
         <div class="wt">Full Website Build</div>
         <p class="wb">A complete, professional site — not a template you wrestle with yourself.</p>
-        <ul class="wlist">
-          <li>Custom design & copywriting</li>
-          <li>Service pages that convert</li>
-          <li>Click-to-call & quote forms</li>
-          <li>Mobile-first layout</li>
-        </ul>
+        <ul class="wlist"><li>Custom design & copywriting</li><li>Service pages that convert</li><li>Click-to-call & quote forms</li><li>Mobile-first layout</li></ul>
       </div>
       <div class="wc reveal">
         <div class="wi">📲</div>
         <div class="wt">Lead Capture Setup</div>
         <p class="wb">Your site should be generating leads while you sleep. We build that in from day one.</p>
-        <ul class="wlist">
-          <li>Quote request forms</li>
-          <li>Email lead notifications</li>
-          <li>Sticky mobile call bar</li>
-          <li>Conversion-focused CTAs</li>
-        </ul>
+        <ul class="wlist"><li>Quote request forms</li><li>Email lead notifications</li><li>Sticky mobile call bar</li><li>Conversion-focused CTAs</li></ul>
       </div>
       <div class="wc reveal">
         <div class="wi">🔧</div>
         <div class="wt">Site Care & Updates</div>
         <p class="wb">Keep your site sharp and working without lifting a finger.</p>
-        <ul class="wlist">
-          <li>Managed hosting</li>
-          <li>Monthly content updates</li>
-          <li>Form monitoring</li>
-          <li>Priority email support</li>
-        </ul>
+        <ul class="wlist"><li>Managed hosting</li><li>Monthly content updates</li><li>Form monitoring</li><li>Priority email support</li></ul>
       </div>
     </div>
   </div>
