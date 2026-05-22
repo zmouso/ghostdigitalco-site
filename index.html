@@ -3,22 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <meta name="description" content="Ghost Digital Co — professional websites for local service businesses. Knoxville, TN. Built in 7 days. Starting at $800."/>
-  <title>Ghost Digital Co | Websites for Local Service Businesses</title>
+  <meta name="description" content="Ghost Digital Co — professional websites for local small businesses in Knoxville, TN. Built in 7 days. Starting at $800."/>
+  <title>Ghost Digital Co | Websites for Knoxville Small Businesses</title>
   <style>
-    :root{
-      --black:#050810;
-      --dark:#0A0F1A;
-      --steel:#111827;
-      --blue:#2563EB;
-      --blue-bright:#3B82F6;
-      --blue-glow:#60A5FA;
-      --silver:#94A3B8;
-      --muted:#475569;
-      --light:#F1F5F9;
-      --gray:#1E293B;
-      --white:#FFFFFF;
-    }
+    :root{--black:#050810;--dark:#0A0F1A;--steel:#111827;--blue:#2563EB;--blue-bright:#3B82F6;--blue-glow:#60A5FA;--silver:#94A3B8;--muted:#475569;--light:#F1F5F9;--gray:#1E293B;--white:#FFFFFF}
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
     body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--white);color:var(--gray);overflow-x:hidden}
@@ -84,9 +72,16 @@
     .port-desc{font-size:14px;color:var(--silver);line-height:1.65;max-width:560px}
     .port-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue-glow);text-decoration:none;white-space:nowrap;transition:gap .2s}
     .port-link:hover{gap:12px}
-    #process{background:var(--light)}
+    #who{background:var(--light)}
+    .who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px}
+    .who-card{background:var(--white);padding:36px 28px;border-top:3px solid transparent;transition:all .3s;text-align:center}
+    .who-card:hover{border-top-color:var(--blue);transform:translateY(-6px);box-shadow:0 20px 48px rgba(37,99,235,.1)}
+    .who-ico{font-size:36px;margin-bottom:16px}
+    .who-title{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gray);margin-bottom:8px}
+    .who-body{font-size:13px;color:#64748B;line-height:1.65}
+    #process{background:var(--white)}
     .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:64px}
-    .pc{background:var(--white);padding:48px 32px;position:relative;transition:all .3s;overflow:hidden}
+    .pc{background:var(--light);padding:48px 32px;position:relative;transition:all .3s;overflow:hidden}
     .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-glow));transform:scaleX(0);transform-origin:left;transition:transform .4s}
     .pc:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(37,99,235,.12)}
     .pc:hover::before{transform:scaleX(1)}
@@ -210,6 +205,7 @@
       .hproof{grid-template-columns:1fr 1fr;width:100%}
       .pi{padding:16px 20px}
       .pgrid{grid-template-columns:1fr 1fr}
+      .who-grid{grid-template-columns:1fr 1fr}
       .wgrid{grid-template-columns:1fr}
       .prgrid{grid-template-columns:1fr}
       .retainer-box{grid-template-columns:1fr;gap:20px}
@@ -224,6 +220,7 @@
     }
     @media(max-width:480px){
       .pgrid{grid-template-columns:1fr}
+      .who-grid{grid-template-columns:1fr 1fr}
       .ftop{grid-template-columns:1fr}
       .hproof{grid-template-columns:1fr 1fr}
     }
@@ -241,7 +238,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#portfolio">Work</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#who">Who We Serve</a></li>
     <li><a href="#work">Services</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#about">About</a></li>
@@ -253,9 +250,9 @@
 <section id="home">
   <div class="hgb"></div><div class="hgb2"></div><div class="hgl"></div><div class="hgl2"></div>
   <div class="hi">
-    <div class="hew"><div class="hel"></div><span>Local Web Design &mdash; Knoxville, TN</span></div>
-    <h1>We Build<br>The Website.<br><em>You Book<br>The Jobs.</em></h1>
-    <p class="hsub">Ghost Digital Co builds professional websites for local service businesses — HVAC, roofing, plumbing, and more. Done for you. Delivered in 7 days. Built to convert.</p>
+    <div class="hew"><div class="hel"></div><span>Knoxville, TN &mdash; Built for Local Business</span></div>
+    <h1>Your Business<br>Deserves A<br><em>Real Website.</em></h1>
+    <p class="hsub">Ghost Digital Co builds professional websites for Knoxville small businesses. Done for you. Delivered in 7 days. Built to bring in more customers.</p>
     <div class="hbtns">
       <a href="#contact" class="btn-blue">Start Your Project &rarr;</a>
       <a href="#portfolio" class="btn-out">See Our Work</a>
@@ -271,21 +268,21 @@
 
 <div class="mq" aria-hidden="true">
   <div class="mq-inner"><div class="mqi">
-    <span class="mqt">More Calls. More Jobs.</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Knoxville Small Business</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">More Customers</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Professional Web Design</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Lead Capture</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Built in 7 Days</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Done For You</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Local Service Businesses</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Lead Capture</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Starting at $800</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">More Calls. More Jobs.</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Knoxville Small Business</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">More Customers</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Professional Web Design</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Lead Capture</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Built in 7 Days</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Done For You</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
-    <span class="mqt">Local Service Businesses</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Lead Capture</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
+    <span class="mqt">Mobile Optimized</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
     <span class="mqt">Starting at $800</span><span class="mqs">&nbsp;&#9670;&nbsp;</span>
   </div></div>
 </div>
@@ -294,7 +291,7 @@
   <div class="con">
     <p class="ey reveal">Live Example</p>
     <h2 class="st lt reveal">See What We Build.</h2>
-    <p class="sb reveal" style="color:var(--silver)">This is a real site we built as a portfolio example — the same quality and design you get when you work with Ghost Digital Co.</p>
+    <p class="sb reveal" style="color:var(--silver)">We build sites for any local Knoxville business. Here's a real example — the same quality and design you get when you work with Ghost Digital Co.</p>
     <div class="port-card reveal">
       <div class="port-preview">
         <div class="port-tag">HVAC · Demo Site</div>
@@ -308,9 +305,27 @@
         </div>
       </div>
       <div class="port-info">
-        <p class="port-desc">Full 4-page HVAC website with service listings, contact form, mobile sticky call bar, and conversion-focused layout. Delivered in under a week. This is exactly what your business gets.</p>
+        <p class="port-desc">Full 4-page website with service listings, contact form, mobile sticky call bar, and conversion-focused layout. Delivered in under a week. Whatever your business — we build it to this standard.</p>
         <a href="ridgeline-hvac-template/index.html" target="_blank" class="port-link">View Live Site &rarr;</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="who">
+  <div class="con">
+    <p class="ey reveal">Who We Work With</p>
+    <h2 class="st reveal">Built for Every Kind<br>of Local Business.</h2>
+    <p class="sb reveal">If you're in Knoxville and you need more customers, we can build it. Here are some of the businesses we work with.</p>
+    <div class="who-grid">
+      <div class="who-card reveal"><div class="who-ico">🔧</div><div class="who-title">Home Services</div><p class="who-body">HVAC, plumbing, electrical, roofing, landscaping, cleaning — if you work in people's homes, you need a site that gets you called first.</p></div>
+      <div class="who-card reveal"><div class="who-ico">🍽️</div><div class="who-title">Restaurants & Food</div><p class="who-body">Menus, hours, location, online orders, reservations. A clean site that makes people want to come in.</p></div>
+      <div class="who-card reveal"><div class="who-ico">💇</div><div class="who-title">Salons & Wellness</div><p class="who-body">Hair, nails, massage, personal training — showcase your services and make it easy for clients to book.</p></div>
+      <div class="who-card reveal"><div class="who-ico">🏪</div><div class="who-title">Retail & Shops</div><p class="who-body">Local shops, boutiques, specialty stores. Give your business an online presence that matches your in-store experience.</p></div>
+      <div class="who-card reveal"><div class="who-ico">⚖️</div><div class="who-title">Professional Services</div><p class="who-body">Accountants, attorneys, consultants, real estate. Build credibility and get inquiries from the right clients.</p></div>
+      <div class="who-card reveal"><div class="who-ico">🏋️</div><div class="who-title">Fitness & Sports</div><p class="who-body">Gyms, studios, coaches, sports facilities. Show your programs, drive memberships, and fill your schedule.</p></div>
+      <div class="who-card reveal"><div class="who-ico">🐾</div><div class="who-title">Pet Services</div><p class="who-body">Groomers, vets, boarding, trainers. Pet owners want to trust who they hand their dog to — a great site builds that trust.</p></div>
+      <div class="who-card reveal"><div class="who-ico">💡</div><div class="who-title">Any Local Business</div><p class="who-body">Don't see your industry? If you're a local Knoxville business that needs more customers, we can build it. Just ask.</p></div>
     </div>
   </div>
 </section>
@@ -320,10 +335,10 @@
     <p class="ey reveal">How It Works</p>
     <h2 class="st reveal">Simple From Start<br>To Launch.</h2>
     <div class="pgrid">
-      <div class="pc reveal"><div class="pnum">01</div><h3>Tell Us About Your Business</h3><p>Quick intake form. We learn your services, your market, and what you want the site to accomplish — more calls, quotes, or bookings.</p></div>
+      <div class="pc reveal"><div class="pnum">01</div><h3>Tell Us About Your Business</h3><p>Quick intake form. We learn what you do, who your customers are, and what you want the site to accomplish.</p></div>
       <div class="pc reveal"><div class="pnum">02</div><h3>We Build Everything</h3><p>Design, copy, layout, forms. You keep running your business. We handle the entire build — nothing for you to figure out.</p></div>
-      <div class="pc reveal"><div class="pnum">03</div><h3>You Review & Approve</h3><p>We send you the draft. You give feedback. We refine until it's exactly right. One full revision round included in every plan.</p></div>
-      <div class="pc reveal"><div class="pnum">04</div><h3>Live in 7 Days</h3><p>Your site goes live — fast, mobile-optimized, and built to turn visitors into calls. Most projects ship in under a week.</p></div>
+      <div class="pc reveal"><div class="pnum">03</div><h3>You Review & Approve</h3><p>We send you the draft. You give feedback. We refine until it's exactly right. One full revision round included.</p></div>
+      <div class="pc reveal"><div class="pnum">04</div><h3>Live in 7 Days</h3><p>Your site goes live — fast, mobile-optimized, and built to turn visitors into customers. Most projects ship in under a week.</p></div>
     </div>
   </div>
 </section>
@@ -332,19 +347,19 @@
   <div class="con">
     <p class="ey reveal">Our Services</p>
     <h2 class="st lt reveal">What We Build.</h2>
-    <p class="sb reveal" style="color:var(--silver)">Websites for local trades that need more than a digital business card. Built to get you hired.</p>
+    <p class="sb reveal" style="color:var(--silver)">Everything your business needs to look professional online and turn visitors into paying customers.</p>
     <div class="wgrid">
       <div class="wc reveal">
         <div class="wi">🏗️</div>
         <div class="wt">Full Website Build</div>
         <p class="wb">A complete, professional site — not a template you wrestle with yourself.</p>
-        <ul class="wlist"><li>Custom design & copywriting</li><li>Service pages that convert</li><li>Click-to-call & quote forms</li><li>Mobile-first layout</li></ul>
+        <ul class="wlist"><li>Custom design & copywriting</li><li>Pages that convert visitors</li><li>Contact & quote forms</li><li>Mobile-first layout</li></ul>
       </div>
       <div class="wc reveal">
         <div class="wi">📲</div>
-        <div class="wt">Lead Capture Setup</div>
-        <p class="wb">Your site should be generating leads while you sleep. We build that in from day one.</p>
-        <ul class="wlist"><li>Quote request forms</li><li>Email lead notifications</li><li>Sticky mobile call bar</li><li>Conversion-focused CTAs</li></ul>
+        <div class="wt">Lead & Customer Capture</div>
+        <p class="wb">Your site should be bringing in customers while you sleep. We build that in from day one.</p>
+        <ul class="wlist"><li>Contact & inquiry forms</li><li>Email lead notifications</li><li>Click-to-call setup</li><li>Conversion-focused layout</li></ul>
       </div>
       <div class="wc reveal">
         <div class="wi">🔧</div>
@@ -362,16 +377,16 @@
     <h2 class="st lt reveal">Simple, Fixed Pricing.<br>No Surprises.</h2>
     <div class="prgrid">
       <div class="prc reveal">
-        <div class="pbadge">Small Business</div>
+        <div class="pbadge">Getting Started</div>
         <div class="prname">Launch</div>
         <div class="pram"><span class="prsup">$</span>800</div>
         <p class="prnote">One-time payment</p>
-        <div class="prwhy">For businesses that need a professional web presence fast. Clean, credible, and built to get calls.</div>
+        <div class="prwhy">For businesses that need a professional web presence fast. Clean, credible, and built to bring in customers.</div>
         <div class="prdiv"></div>
         <ul class="prft">
           <li>Up to 3 pages</li>
           <li>Custom design & copy</li>
-          <li>Click-to-call & quote form</li>
+          <li>Contact & inquiry form</li>
           <li>Mobile optimized</li>
           <li>Delivered in 7 days</li>
           <li>1 revision round</li>
@@ -384,7 +399,7 @@
         <div class="prname">Pro</div>
         <div class="pram"><span class="prsup">$</span>1,500</div>
         <p class="prnote" style="color:rgba(255,255,255,.6)">One-time payment</p>
-        <div class="prwhy">A complete site that covers all your services and positions you as the go-to in your area.</div>
+        <div class="prwhy">A complete site that covers everything about your business and positions you ahead of the competition.</div>
         <div class="prdiv f"></div>
         <ul class="prft">
           <li>Up to 5 pages</li>
@@ -403,13 +418,13 @@
         <div class="prname">Authority</div>
         <div class="pram"><span class="prsup">$</span>3,000</div>
         <p class="prnote">One-time payment</p>
-        <div class="prwhy">For companies that need a bigger presence — more pages, more complexity, more reach.</div>
+        <div class="prwhy">For businesses that need a bigger presence — more pages, more depth, more market dominance.</div>
         <div class="prdiv"></div>
         <ul class="prft">
           <li>6+ pages</li>
           <li>Full market positioning</li>
-          <li>Multi-location & service area pages</li>
-          <li>Advanced quote & contact forms</li>
+          <li>Multi-location pages</li>
+          <li>Advanced contact forms</li>
           <li>Rush delivery available</li>
           <li>Extended revision rounds</li>
           <li>White-glove delivery</li>
@@ -437,19 +452,19 @@
     <div class="abgrid">
       <div class="reveal">
         <div class="abbox">
-          <div class="abq">Wix Is For Hobbies.<br><em>Ghost Is For<br>Business.</em></div>
-          <p class="abs">Ghost Digital Co helps local service businesses look professional and get more calls. You stay in the field — we handle the web.</p>
+          <div class="abq">Knoxville Businesses<br>Deserve Better Than<br><em>Wix.</em></div>
+          <p class="abs">Ghost Digital Co is based in Knoxville. We build professional websites for local small businesses that want to look credible, get found, and bring in more customers.</p>
           <div class="abtag"><p>Knoxville, TN</p></div>
         </div>
       </div>
       <div>
         <p class="ey reveal">About Us</p>
-        <h2 class="st reveal">Built for Local<br>Businesses That<br>Mean Business.</h2>
-        <p class="sb reveal">We don't build brochures. We build sales tools — sites that work around the clock to bring in calls and fill your schedule.</p>
+        <h2 class="st reveal">Local to Knoxville.<br>Built for Your<br>Customers.</h2>
+        <p class="sb reveal">We're not a big agency. We're a focused operation that builds great websites for local Knoxville businesses — fast, affordable, and done right the first time.</p>
         <div class="abpts">
-          <div class="abpt reveal"><div class="abico">⚡</div><div><h4>Done For You</h4><p>No builder. No writing your own pages. We handle everything while you keep working.</p></div></div>
-          <div class="abpt reveal"><div class="abico">🎯</div><div><h4>Built to Convert</h4><p>CTAs where people actually click. Phone numbers impossible to miss. Forms that get filled out.</p></div></div>
-          <div class="abpt reveal"><div class="abico">👻</div><div><h4>Fast Delivery</h4><p>Launch and Pro sites ship in 7 days after intake. You're not waiting months for a website.</p></div></div>
+          <div class="abpt reveal"><div class="abico">⚡</div><div><h4>Done For You</h4><p>No builder to figure out. No pages to write yourself. We handle everything while you keep running your business.</p></div></div>
+          <div class="abpt reveal"><div class="abico">🎯</div><div><h4>Built to Convert</h4><p>Every site we build is designed to turn visitors into customers — not just look good.</p></div></div>
+          <div class="abpt reveal"><div class="abico">📍</div><div><h4>Knoxville First</h4><p>We know this market. We're starting local and building relationships with Knoxville businesses that want to grow.</p></div></div>
         </div>
       </div>
     </div>
@@ -474,12 +489,12 @@
           <div class="cdico">📍</div>
           <div>
             <div class="cdlbl">Based In</div>
-            <div class="cdval">Knoxville, TN<br><span style="font-size:13px;color:var(--muted)">Serving clients nationwide</span></div>
+            <div class="cdval">Knoxville, TN<br><span style="font-size:13px;color:var(--muted)">Serving Knox County & surrounding areas</span></div>
           </div>
         </div>
         <div class="free-box">
           <h4>Free Consultation</h4>
-          <p>We'll look at what you have now and show you exactly how to get more customers from your website. No fluff, no pitch.</p>
+          <p>Tell us about your business and what you need. We'll show you exactly what we'd build and what it would cost. No pressure, no pitch.</p>
         </div>
       </div>
       <div class="reveal">
@@ -488,7 +503,7 @@
           <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none"/>
           <div class="frow">
             <div class="fg"><label>Name *</label><input type="text" name="name" placeholder="John Smith" required/></div>
-            <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="HVAC, Roofing, etc."/></div>
+            <div class="fg"><label>Type of Business</label><input type="text" name="industry" placeholder="Restaurant, Salon, HVAC..."/></div>
           </div>
           <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="john@yourbusiness.com" required/></div>
           <div class="fg">
@@ -500,7 +515,7 @@
               <option>Just looking for pricing</option>
             </select>
           </div>
-          <div class="fg"><label>Tell Us About Your Business *</label><textarea name="message" placeholder="What do you do, who are your customers, what do you want the site to accomplish..." required></textarea></div>
+          <div class="fg"><label>Tell Us About Your Business *</label><textarea name="message" placeholder="What do you do, where are you located, what do you want the site to do for you..." required></textarea></div>
           <button type="submit" id="submitBtn" class="fsub">Send My Request &rarr;</button>
           <div id="formNote" class="form-note" role="status" aria-live="polite"></div>
         </form>
@@ -513,14 +528,14 @@
   <div class="ftop">
     <div>
       <div class="fbn">GHOST <span>Digital Co</span></div>
-      <div class="ftag">Web Design for Local Service Businesses</div>
-      <p class="fdesc">Professional websites for HVAC, roofing, plumbing, and more. Based in Knoxville, TN. Built fast. Built to convert.</p>
+      <div class="ftag">Web Design for Knoxville Small Businesses</div>
+      <p class="fdesc">Professional websites for local Knoxville businesses. Restaurants, shops, salons, contractors, and more. Built fast. Built to convert.</p>
     </div>
     <div class="fcol">
       <h4>Navigation</h4>
       <ul>
         <li><a href="#portfolio">Our Work</a></li>
-        <li><a href="#process">Process</a></li>
+        <li><a href="#who">Who We Serve</a></li>
         <li><a href="#work">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
@@ -535,8 +550,8 @@
     </div>
   </div>
   <div class="fbot">
-    <p>&copy; 2026 Ghost Digital Co. | Based in Knoxville, TN.</p>
-    <p>Built for <span>Performance.</span></p>
+    <p>&copy; 2026 Ghost Digital Co. | Knoxville, TN.</p>
+    <p>Built for <span>Local Business.</span></p>
   </div>
 </footer>
 
